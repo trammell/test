@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE document SYSTEM "rml.dtd">
+<document filename="image-01.pdf">
+   <pageDrawing>
+
+      <image file="seanconnery.jpg" x="72" y="72" preserveAspectRatio="true" />
+
+      <image
+         file="http://www.google.com/logos/olympics10-xcskiiing2-hp.png"
+         x="72"
+         y="300"
+         showBoundary="true" />
+
+   </pageDrawing>
+</document>
+

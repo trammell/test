@@ -1,0 +1,15 @@
+<!DOCTYPE document SYSTEM "rml_1_0.dtd"> 
+<document filename="test_000_complex.pdf" invariant="1">
+<stylesheet/>
+
+<pageDrawing>
+<catchForms pdfFile="test_000_simple.pdf" pfx="SIMPLE"/>
+<doForm name="SIMPLE0"/>
+<drawString x="1in" y="1in">Page 1 from test_000_simple.pdf</drawString>
+</pageDrawing>
+<pageDrawing>
+<doForm name="SIMPLE1"/>
+<drawString x="1in" y="1in">Page 2 from test_000_simple.pdf</drawString>
+</pageDrawing>
+
+</document>

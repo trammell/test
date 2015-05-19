@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: foo/bar.py:12
+msgid "Phrase 1"
+msgstr ""
+
+#: foo/bar.py:14
+msgid "Phrase 2"
+msgstr ""
+
+#: foo/bar.py:16
+msgid "Phrase 3"
+msgstr ""
+
+#: foo/bar.py:18
+msgid "Phrase 4"
+msgstr ""
+
+#: foo/bar.py:20
+msgid "Phrase 5"
+msgstr ""
+
+#: foo/bar.py:24
+msgid "This is a multiline phrase xxxx"
+msgstr ""
+
+#: foo/bar.py:34
+msgid "This is a unicode multiline phrase"
+msgstr ""
+
+#. Default: "My favorite fruit is ${fruit}\nmultiline phrase"
+#: foo/bar.py:42
+msgid "fruit1"
+msgstr ""
+
+#. Default: "This phrase\nis a multiline phrase\nand it has a separate message ID"
+#: foo/bar.py:30
+msgid "multiline-phrase-msgid"
+msgstr ""
+

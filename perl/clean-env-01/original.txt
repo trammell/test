@@ -1,0 +1,3 @@
+
+perl -e"print(\"DON'T REPEAT ENV.VARS\n\");foreach (split(/\;/,$ENV{PATH})){s/\"//g;chomp;s/\\$//;$rut{lc($_)}++;$urut{lc($ _)}=$_}print\"$_ = $rut{$_} \n\" foreach (keys(%%rut));print \"COPY:\n\n\",'\"'.join('\";\"',(sort(values(%%urut)))).'\"'"
+

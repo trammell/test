@@ -1,0 +1,16 @@
+<META xmlns="http://www.w3.org/2001/09/P3Pv1">
+<POLICY-REFERENCES>
+<POLICY-REF about="/P3P/Policy3.xml">
+<INCLUDE>/cgi-bin/</INCLUDE>
+<INCLUDE>/servlet/</INCLUDE>
+<EXCLUDE>/sevlet/unknown</EXCLUDE>
+</POLICY-REF>
+<POLICY-REF about="/P3P/Policy2.xml">
+<INCLUDE>/catalog/</INCLUDE>
+</POLICY-REF>
+<POLICY-REF about="/P3P/Policy1.xml">
+<INCLUDE>/*</INCLUDE>
+<EXCLUDE>/sevlet/unknown</EXCLUDE>
+</POLICY-REF>
+</POLICY-REFERENCES>
+</META>

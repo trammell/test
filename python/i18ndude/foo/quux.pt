@@ -1,0 +1,44 @@
+<html
+   xmlns="http://www.w3.org/1999/xhtml"
+   xml:lang="en"
+   xmlns:tal="http://xml.zope.org/namespaces/tal"
+   xmlns:metal="http://xml.zope.org/namespaces/metal"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   lang="en"
+   metal:use-macro="context/main_template/macros/master"
+   i18n:domain="myapp">
+
+<body>
+
+<p i18n:translate="simple">A simple paragraph.</p>
+
+<p i18n:translate="">A simple paragraph with no message ID.</p>
+
+<p i18n:translate="">A simple paragraph for
+<span i18n:name="somebody" tal:replace="view/somebody" />
+</p>
+
+<span i18n:translate=""
+   tal:content="view/fullname | default">
+<span i18n:name="nobody">Nobody</span>
+</span>
+
+<h1 i18n:translate="welcome_name">
+Welcome, <span i18n:name="firstname" tal:replace="view/firstname" />
+</h1>
+
+<p i18n:translate="my name is first last">My name is
+<span tal:content="here/first" i18n:name="first" />
+<span tal:content="here/last" i18n:name="last" />
+</p>
+
+<p i18n:translate="">Please visit
+<span i18n:name="about-plone">
+<a href="about" i18n:translate=""
+   i18n:attributes="title" title="Go to About Page">About Plone</a>
+</span>
+for more information.
+</p>
+
+</body>
+</html>

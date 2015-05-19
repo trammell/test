@@ -1,0 +1,8 @@
+default comment delimiter is semicolon
+
+TODO:
+  support alternate comment delimiters (maybe "#"?)
+  line continuation
+  handle spaces in keys?
+  handle quotes in keys/values?
+
