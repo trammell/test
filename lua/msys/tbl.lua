@@ -17,6 +17,7 @@ for k, v in pairs(b) do
     print(k .. ' => ' .. v)
 end
 
+print('------------------')
 local c = { 'foo', 'bar', 'baz', 'quux' }
 for k, v in pairs(c) do
     print(k .. ' => ' .. v)
