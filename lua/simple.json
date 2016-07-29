@@ -1,0 +1,28 @@
+{
+   "options": {
+      "open_tracking": true,
+      "click_tracking": true
+   },
+   "return_path": "john.trammell@outintern.com",
+   "metadata": {},
+   "substitution_data": {
+      "reply_to": "\"John Trammell\" <john.trammell@outintern.com>",
+      "header_from": "\"John Trammell\" <john.trammell@outintern.com>"
+   },
+   "recipients": [
+      {
+         "address": { "email": "john.trammell@outintern.com" },
+         "substitution_data": {
+            "header_to": "\"John Trammell\" <john.trammell@outintern.com>"
+         },
+         "metadata":{
+            "stream": "sendok_high_all_other",
+            "email_address": "john.trammell@outintern.com"
+         },
+         "tags":[]
+      }
+   ],
+   "content": {
+      "email_rfc822": "accept: */*\r\ncontentType: application/json\r\nX-Binding: {{stream}}\r\nFrom: {{header_from}}\r\nReply-To: {{reply_to}}\r\nTo: {{header_to}}\r\nSubject: here's the subject\r\nMIME-Version: 1.0\r\nContent-type: text/html;charset=\"UTF-8\"\r\nMessage-Priority: 1\r\n\r\nhere's the body\r\n"
+   }
+}

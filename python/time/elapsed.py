@@ -5,10 +5,14 @@
 
 import time
 
-start = time.clock()
+starttime = time.clock()
+print(starttime)
 print("hello")
+time.sleep(2)
 end = time.clock()
-print(end - start)
+print(end)
+print("%s" % (end - starttime))
 
+print("elapsed script time: %f" % (time.clock() - starttime))
 
 
