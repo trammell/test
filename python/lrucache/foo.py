@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 
+"""
+Sample LRUCache code. See https://docs.python.org/3/library/functools.html
+for gory details.
+"""
 
 from functools import lru_cache
 import time
 
 @lru_cache(maxsize=4)
 def slowadd(a,b):
+    """Add two numbers, poorly."""
     time.sleep(1)
     return a + b
 
