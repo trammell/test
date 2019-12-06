@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
- 
+
 <head>
   <meta charset="utf-8">
   <title>React! React! React!</title>
@@ -8,24 +8,51 @@
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   <script type="text/babel">
+    class Buttonize extends React.Component {
+      render() {
+        return (
+          <div>
+            <button type={this.props.behavior}>{this.props.children}</button>
+          </div>
+        );
+      }
+    }
+    class HelloWorld extends React.Component {
+      render() {
+        return <p>Hello, {this.props.greetTarget}!</p>
+      }
+    }
+
     ReactDOM.render(
-      <h1>Juanito</h1>,
+      <div>
+        <div>
+          <HelloWorld greetTarget="Fred" />
+        </div>
+        <div>
+          <Buttonize behavior="submit">SEND DATA</Buttonize>
+        </div>
+      </div>
+      ,
       document.querySelector("#container")
     );
+
   </script>
   <style>
-        #container {
-          padding: 50px;
-          background-color: #EEE;
-        }
-        #container h1 {
-          font-size: 144px;
-          font-family: sans-serif;
-           color: #0080A8;
-        }
-      </style>
+    #container {
+      padding: 50px;
+      background-color: #EEE;
+    }
+
+    #container h1 {
+      font-size: 144px;
+      font-family: sans-serif;
+      color: #0080A8;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="container"></div>
+  <div id="container"></div>
 </body>
+
 </html>
