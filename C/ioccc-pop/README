@@ -1,0 +1,4 @@
+
+https://www.ioccc.org/2020/carlini/prog.c
+$ cc -o prog prog.c
+
