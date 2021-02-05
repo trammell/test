@@ -1,0 +1,2432 @@
+[
+  {
+    "sha": "6d4fe183671a3583f61c1340bdb7f0a9374f7a1d",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo2ZDRmZTE4MzY3MWEzNTgzZjYxYzEzNDBiZGI3ZjBhOTM3NGY3YTFk",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2020-11-07T01:17:42Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2020-11-07T01:17:42Z"
+      },
+      "message": "Removes older go version from .travis.yml",
+      "tree": {
+        "sha": "eef680ca07222100895e0be437cd2b36f758731b",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/eef680ca07222100895e0be437cd2b36f758731b"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/6d4fe183671a3583f61c1340bdb7f0a9374f7a1d",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/6d4fe183671a3583f61c1340bdb7f0a9374f7a1d",
+    "html_url": "https://github.com/tomnomnom/gron/commit/6d4fe183671a3583f61c1340bdb7f0a9374f7a1d",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/6d4fe183671a3583f61c1340bdb7f0a9374f7a1d/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+        "html_url": "https://github.com/tomnomnom/gron/commit/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab"
+      }
+    ]
+  },
+  {
+    "sha": "7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo3ZTk1OGY4ZjU0Y2Y3YWNhM2M0MmVhNGE2MmVkMjIxNTIwNWExZGFi",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2020-11-06T21:11:17Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2020-11-06T21:11:17Z"
+      },
+      "message": "Merge pull request #78 from alblue/master\n\nAllow running as ungron to perform --ungron automatically",
+      "tree": {
+        "sha": "ae16a2eb107af2cbf0fd40c73080a2a6b5513e27",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/ae16a2eb107af2cbf0fd40c73080a2a6b5513e27"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJfpbv1CRBK7hj4Ov3rIwAAdHIIAHW1RaYUbMeFs0SiTxHGKUS6\nGpUuhavgzvVvv6buMTPNJgvZ1xfq/vwgozh0dzP7J/2iPuWXzXE3IJFhgkjocPQI\nLq62mpc16eWe4s+3f9i9fPmKpuFAZzRWTBuUdw3a/G9xQMX6+giCmefx89R6Bt9D\nOdyTDHFOjQLZX5VoS6Zsn/faEVPJlFUQf4ehw5ennYLfYFFTipX4/HPiH4dp8a0s\n5IaNLPDoihdJk0G4t1UTmME6HCMI9HniC8V4itrL3qhx4SAWLh2M4zFzzThg8XF2\nEpsdSzx/TOkuaF9aU43BDMVRU1Q45ne2TSreqsfxhXeagNirtqC4VQMlCUWsk7o=\n=oU2y\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree ae16a2eb107af2cbf0fd40c73080a2a6b5513e27\nparent 602235e7546e3c982b41b5492696b1a8f3880514\nparent 33df164523e0e541d8b6f2843b9469b38e29ed33\nauthor Tom Hudson <mail@tomnomnom.com> 1604697077 +0000\ncommitter GitHub <noreply@github.com> 1604697077 +0000\n\nMerge pull request #78 from alblue/master\n\nAllow running as ungron to perform --ungron automatically"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+    "html_url": "https://github.com/tomnomnom/gron/commit/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/7e958f8f54cf7aca3c42ea4a62ed2215205a1dab/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "602235e7546e3c982b41b5492696b1a8f3880514",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/602235e7546e3c982b41b5492696b1a8f3880514",
+        "html_url": "https://github.com/tomnomnom/gron/commit/602235e7546e3c982b41b5492696b1a8f3880514"
+      },
+      {
+        "sha": "33df164523e0e541d8b6f2843b9469b38e29ed33",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/33df164523e0e541d8b6f2843b9469b38e29ed33",
+        "html_url": "https://github.com/tomnomnom/gron/commit/33df164523e0e541d8b6f2843b9469b38e29ed33"
+      }
+    ]
+  },
+  {
+    "sha": "33df164523e0e541d8b6f2843b9469b38e29ed33",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzozM2RmMTY0NTIzZTBlNTQxZDhiNmYyODQzYjk0NjliMzhlMjllZDMz",
+    "commit": {
+      "author": {
+        "name": "Alex Blewitt",
+        "email": "alex.blewitt@gmail.com",
+        "date": "2020-11-06T16:51:02Z"
+      },
+      "committer": {
+        "name": "Alex Blewitt",
+        "email": "alex.blewitt@gmail.com",
+        "date": "2020-11-06T16:51:02Z"
+      },
+      "message": "Allow running as ungron to perform --ungron automatically\n\nThe executable is normally executed as `gron` which performs the gron\noperation. However, in order to install it as `ungron`, an alias is not\nnecessary as a symbolic link can be used instead. When the program\ndetects that it is being run as an executable called `ungron` then it\nwill automatically set the `--ungron` argument.",
+      "tree": {
+        "sha": "ae16a2eb107af2cbf0fd40c73080a2a6b5513e27",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/ae16a2eb107af2cbf0fd40c73080a2a6b5513e27"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/33df164523e0e541d8b6f2843b9469b38e29ed33",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/33df164523e0e541d8b6f2843b9469b38e29ed33",
+    "html_url": "https://github.com/tomnomnom/gron/commit/33df164523e0e541d8b6f2843b9469b38e29ed33",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/33df164523e0e541d8b6f2843b9469b38e29ed33/comments",
+    "author": {
+      "login": "alblue",
+      "id": 76791,
+      "node_id": "MDQ6VXNlcjc2Nzkx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76791?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alblue",
+      "html_url": "https://github.com/alblue",
+      "followers_url": "https://api.github.com/users/alblue/followers",
+      "following_url": "https://api.github.com/users/alblue/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alblue/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alblue/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alblue/subscriptions",
+      "organizations_url": "https://api.github.com/users/alblue/orgs",
+      "repos_url": "https://api.github.com/users/alblue/repos",
+      "events_url": "https://api.github.com/users/alblue/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alblue/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "alblue",
+      "id": 76791,
+      "node_id": "MDQ6VXNlcjc2Nzkx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76791?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/alblue",
+      "html_url": "https://github.com/alblue",
+      "followers_url": "https://api.github.com/users/alblue/followers",
+      "following_url": "https://api.github.com/users/alblue/following{/other_user}",
+      "gists_url": "https://api.github.com/users/alblue/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/alblue/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/alblue/subscriptions",
+      "organizations_url": "https://api.github.com/users/alblue/orgs",
+      "repos_url": "https://api.github.com/users/alblue/repos",
+      "events_url": "https://api.github.com/users/alblue/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/alblue/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "602235e7546e3c982b41b5492696b1a8f3880514",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/602235e7546e3c982b41b5492696b1a8f3880514",
+        "html_url": "https://github.com/tomnomnom/gron/commit/602235e7546e3c982b41b5492696b1a8f3880514"
+      }
+    ]
+  },
+  {
+    "sha": "602235e7546e3c982b41b5492696b1a8f3880514",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo2MDIyMzVlNzU0NmUzYzk4MmI0MWI1NDkyNjk2YjFhOGYzODgwNTE0",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2019-04-03T15:27:56Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2019-04-03T15:27:56Z"
+      },
+      "message": "Merge pull request #59 from akavel/go-mod\n\nadd go.mod & go.sum for go modules support",
+      "tree": {
+        "sha": "113d26783e4fb0ed332908effc95f68e9070242e",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/113d26783e4fb0ed332908effc95f68e9070242e"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/602235e7546e3c982b41b5492696b1a8f3880514",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJcpND8CRBK7hj4Ov3rIwAAdHIIAH+zVHtIL28jAshSR1VsvscJ\nGyswJzq3pG/BJl2gkoBGehe+t89yBEi4BsWiA58R43BPaV2hfNXnMBHdofVrSiPx\nkvsEhurJvWq14vdZgbElsBCSVLxfvx39rkcA9PQn2WT2qQHuohNUlJ/RYqQOSjWa\ndbphRK57g+fNyX2OndK+z1wAlxc1l2ihiPxv5pdUoss0vMbH960NonHrDtufpUql\njula1u0ihsZ+KawJ+PE31S/HJofz4qEXkQ7ytPbMdo6WRLLZtH7wwpS3aWpr4RO0\nIwmtcKFs8xWUDTnXmrYpfvyVoBbbLTxfLEM+Bx5CtY3K11hEGXZHImFYTFgt9RI=\n=N0dJ\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 113d26783e4fb0ed332908effc95f68e9070242e\nparent 16b87ecfde31b189462112b7a1a9089c59f18031\nparent 57a0165fce6b1295fc389807dfa37a6c6c28ed41\nauthor Tom Hudson <mail@tomnomnom.com> 1554305276 +0100\ncommitter GitHub <noreply@github.com> 1554305276 +0100\n\nMerge pull request #59 from akavel/go-mod\n\nadd go.mod & go.sum for go modules support"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/602235e7546e3c982b41b5492696b1a8f3880514",
+    "html_url": "https://github.com/tomnomnom/gron/commit/602235e7546e3c982b41b5492696b1a8f3880514",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/602235e7546e3c982b41b5492696b1a8f3880514/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "16b87ecfde31b189462112b7a1a9089c59f18031",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/16b87ecfde31b189462112b7a1a9089c59f18031",
+        "html_url": "https://github.com/tomnomnom/gron/commit/16b87ecfde31b189462112b7a1a9089c59f18031"
+      },
+      {
+        "sha": "57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+        "html_url": "https://github.com/tomnomnom/gron/commit/57a0165fce6b1295fc389807dfa37a6c6c28ed41"
+      }
+    ]
+  },
+  {
+    "sha": "16b87ecfde31b189462112b7a1a9089c59f18031",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzoxNmI4N2VjZmRlMzFiMTg5NDYyMTEyYjdhMWE5MDg5YzU5ZjE4MDMx",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2019-04-03T15:26:48Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2019-04-03T15:26:48Z"
+      },
+      "message": "Merge pull request #58 from akavel/master\n\nsimplify quoteString (make its code more uniform)",
+      "tree": {
+        "sha": "5d29d7b946446676f30a6d5a497416d6e5244fea",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/5d29d7b946446676f30a6d5a497416d6e5244fea"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/16b87ecfde31b189462112b7a1a9089c59f18031",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJcpNC4CRBK7hj4Ov3rIwAAdHIIACIrIoEVoVtV6kRuHXvQWtam\nae2jmu4EvL8g/dSTibVEZCoWZ/wnpfpEhisEWT1vlhlhphjswFZicsRt+ZUYLnif\nxJyImw+GA4/hl+nBvZRfYj6O99vKNam7X5J/oBmbxnZIax1blnXQNOSYjmvdiRCh\nUsXwYjQlNlb5wszRp61eNkS293gMY+I66XG++Fnj4N/r6+XFUPkOiHiRyx2auDCl\nv+46Un/GZXlCVJ/4mVjFm/7BVzJ0flYRaCg0dKTb2TxecuegDHpGdKsNSgsWPcPi\nvvje82Py4Djb+PI7nh9UvvnWFyEYNpz6yYVow7LAYHkjiRgO6SOVIQC6Z1P9lrU=\n=tFIy\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 5d29d7b946446676f30a6d5a497416d6e5244fea\nparent 07465cfd6596d3a2d0588148a754315ac450264b\nparent d34e9963b79d70a7f15026bf561726f0b55da93e\nauthor Tom Hudson <mail@tomnomnom.com> 1554305208 +0100\ncommitter GitHub <noreply@github.com> 1554305208 +0100\n\nMerge pull request #58 from akavel/master\n\nsimplify quoteString (make its code more uniform)"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/16b87ecfde31b189462112b7a1a9089c59f18031",
+    "html_url": "https://github.com/tomnomnom/gron/commit/16b87ecfde31b189462112b7a1a9089c59f18031",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/16b87ecfde31b189462112b7a1a9089c59f18031/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "07465cfd6596d3a2d0588148a754315ac450264b",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/07465cfd6596d3a2d0588148a754315ac450264b",
+        "html_url": "https://github.com/tomnomnom/gron/commit/07465cfd6596d3a2d0588148a754315ac450264b"
+      },
+      {
+        "sha": "d34e9963b79d70a7f15026bf561726f0b55da93e",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/d34e9963b79d70a7f15026bf561726f0b55da93e",
+        "html_url": "https://github.com/tomnomnom/gron/commit/d34e9963b79d70a7f15026bf561726f0b55da93e"
+      }
+    ]
+  },
+  {
+    "sha": "07465cfd6596d3a2d0588148a754315ac450264b",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzowNzQ2NWNmZDY1OTZkM2EyZDA1ODgxNDhhNzU0MzE1YWM0NTAyNjRi",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2019-04-03T15:24:26Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2019-04-03T15:24:26Z"
+      },
+      "message": "Merge pull request #49 from saka1/long-ungron\n\nUse larger buffer when ungron",
+      "tree": {
+        "sha": "3a3c161d57b7c0cf6fdec2cf73ad19cfbedd117f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/3a3c161d57b7c0cf6fdec2cf73ad19cfbedd117f"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/07465cfd6596d3a2d0588148a754315ac450264b",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJcpNAqCRBK7hj4Ov3rIwAAdHIIAG5Fxnn/iX2s+CSUde/pOqpk\nvcWHXUGpF+MNcfZ94nYstR1KugEd9ysreKQY74qhsIRg+16ez/JTUaYapassz+Jp\nNqgh0aXm/f0tSQBI7ZBYFurvnAF7qtyeN8X4Z8WkC3tJmSc/g+JDRWf74d/TGCUg\n5lMC//vsXmqLG1YhdDTAHbSJKGvel/2Zd7o9z3sAyi/5p4HU9/y+OSdLO/eLF4Po\ndIwVWIG3CCgVRaOWJixepRk5VincMIecwBrwQjet7lF0PiiMlczbfSl58PORs/dv\nYamHCdwnmbwSHtvFVnT7fKuHXpEM8J2of2KaYnpaBuICi48fB3MkpiMp6vqMHeg=\n=bDZk\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 3a3c161d57b7c0cf6fdec2cf73ad19cfbedd117f\nparent 6071b6f9ba580f894ff40d2b4625a39102faca36\nparent a2fa995cab69508e4349be2d9ded481deb20c34f\nauthor Tom Hudson <mail@tomnomnom.com> 1554305066 +0100\ncommitter GitHub <noreply@github.com> 1554305066 +0100\n\nMerge pull request #49 from saka1/long-ungron\n\nUse larger buffer when ungron"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/07465cfd6596d3a2d0588148a754315ac450264b",
+    "html_url": "https://github.com/tomnomnom/gron/commit/07465cfd6596d3a2d0588148a754315ac450264b",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/07465cfd6596d3a2d0588148a754315ac450264b/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "html_url": "https://github.com/tomnomnom/gron/commit/6071b6f9ba580f894ff40d2b4625a39102faca36"
+      },
+      {
+        "sha": "a2fa995cab69508e4349be2d9ded481deb20c34f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/a2fa995cab69508e4349be2d9ded481deb20c34f",
+        "html_url": "https://github.com/tomnomnom/gron/commit/a2fa995cab69508e4349be2d9ded481deb20c34f"
+      }
+    ]
+  },
+  {
+    "sha": "57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo1N2EwMTY1ZmNlNmIxMjk1ZmMzODk4MDdkZmEzN2E2YzZjMjhlZDQx",
+    "commit": {
+      "author": {
+        "name": "Mateusz Czapliński",
+        "email": "czapkofan@gmail.com",
+        "date": "2018-12-06T23:04:39Z"
+      },
+      "committer": {
+        "name": "Mateusz Czapliński",
+        "email": "czapkofan@gmail.com",
+        "date": "2018-12-06T23:04:39Z"
+      },
+      "message": "add go.mod & go.sum for go modules support",
+      "tree": {
+        "sha": "66466dbc25ebb760c7cf883cf875a50a9dab8e3b",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/66466dbc25ebb760c7cf883cf875a50a9dab8e3b"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+    "html_url": "https://github.com/tomnomnom/gron/commit/57a0165fce6b1295fc389807dfa37a6c6c28ed41",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/57a0165fce6b1295fc389807dfa37a6c6c28ed41/comments",
+    "author": {
+      "login": "akavel",
+      "id": 273837,
+      "node_id": "MDQ6VXNlcjI3MzgzNw==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/273837?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/akavel",
+      "html_url": "https://github.com/akavel",
+      "followers_url": "https://api.github.com/users/akavel/followers",
+      "following_url": "https://api.github.com/users/akavel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/akavel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/akavel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/akavel/subscriptions",
+      "organizations_url": "https://api.github.com/users/akavel/orgs",
+      "repos_url": "https://api.github.com/users/akavel/repos",
+      "events_url": "https://api.github.com/users/akavel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/akavel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "akavel",
+      "id": 273837,
+      "node_id": "MDQ6VXNlcjI3MzgzNw==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/273837?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/akavel",
+      "html_url": "https://github.com/akavel",
+      "followers_url": "https://api.github.com/users/akavel/followers",
+      "following_url": "https://api.github.com/users/akavel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/akavel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/akavel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/akavel/subscriptions",
+      "organizations_url": "https://api.github.com/users/akavel/orgs",
+      "repos_url": "https://api.github.com/users/akavel/repos",
+      "events_url": "https://api.github.com/users/akavel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/akavel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "html_url": "https://github.com/tomnomnom/gron/commit/6071b6f9ba580f894ff40d2b4625a39102faca36"
+      }
+    ]
+  },
+  {
+    "sha": "d34e9963b79d70a7f15026bf561726f0b55da93e",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpkMzRlOTk2M2I3OWQ3MGE3ZjE1MDI2YmY1NjE3MjZmMGI1NWRhOTNl",
+    "commit": {
+      "author": {
+        "name": "Mateusz Czapliński",
+        "email": "czapkofan@gmail.com",
+        "date": "2018-12-06T22:58:42Z"
+      },
+      "committer": {
+        "name": "Mateusz Czapliński",
+        "email": "czapkofan@gmail.com",
+        "date": "2018-12-06T22:58:42Z"
+      },
+      "message": "simplify quoteString\n\nBenchmark results comparison:\n\nbenchmark                              old ns/op     new ns/op     delta\nBenchmarkValidIdentifier-4             250           241           -3.60%\nBenchmarkValidIdentifierUnquoted-4     423           418           -1.18%\nBenchmarkValidIdentifierReserved-4     22.0          26.9          +22.27%\nBenchmarkBigJSON-4                     84351117      83896179      -0.54%\nBenchmarkStatementsLess-4              91.9          90.7          -1.31%\nBenchmarkFill-4                        10096         9877          -2.17%\nBenchmarkValueTokenFromInterface-4     2274          1977          -13.06%",
+      "tree": {
+        "sha": "3bbe154cf68a9195d2e4e97f355435c3e7ab4a8f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/3bbe154cf68a9195d2e4e97f355435c3e7ab4a8f"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/d34e9963b79d70a7f15026bf561726f0b55da93e",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/d34e9963b79d70a7f15026bf561726f0b55da93e",
+    "html_url": "https://github.com/tomnomnom/gron/commit/d34e9963b79d70a7f15026bf561726f0b55da93e",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/d34e9963b79d70a7f15026bf561726f0b55da93e/comments",
+    "author": {
+      "login": "akavel",
+      "id": 273837,
+      "node_id": "MDQ6VXNlcjI3MzgzNw==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/273837?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/akavel",
+      "html_url": "https://github.com/akavel",
+      "followers_url": "https://api.github.com/users/akavel/followers",
+      "following_url": "https://api.github.com/users/akavel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/akavel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/akavel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/akavel/subscriptions",
+      "organizations_url": "https://api.github.com/users/akavel/orgs",
+      "repos_url": "https://api.github.com/users/akavel/repos",
+      "events_url": "https://api.github.com/users/akavel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/akavel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "akavel",
+      "id": 273837,
+      "node_id": "MDQ6VXNlcjI3MzgzNw==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/273837?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/akavel",
+      "html_url": "https://github.com/akavel",
+      "followers_url": "https://api.github.com/users/akavel/followers",
+      "following_url": "https://api.github.com/users/akavel/following{/other_user}",
+      "gists_url": "https://api.github.com/users/akavel/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/akavel/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/akavel/subscriptions",
+      "organizations_url": "https://api.github.com/users/akavel/orgs",
+      "repos_url": "https://api.github.com/users/akavel/repos",
+      "events_url": "https://api.github.com/users/akavel/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/akavel/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/6071b6f9ba580f894ff40d2b4625a39102faca36",
+        "html_url": "https://github.com/tomnomnom/gron/commit/6071b6f9ba580f894ff40d2b4625a39102faca36"
+      }
+    ]
+  },
+  {
+    "sha": "6071b6f9ba580f894ff40d2b4625a39102faca36",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo2MDcxYjZmOWJhNTgwZjg5NGZmNDBkMmI0NjI1YTM5MTAyZmFjYTM2",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-10-25T21:30:18Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-10-25T21:30:18Z"
+      },
+      "message": "Merge pull request #54 from HaraldNordgren/go_versions\n\nBump Travis versions",
+      "tree": {
+        "sha": "ca0df9546f0e77736d32458c5dec3b67406733ac",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/ca0df9546f0e77736d32458c5dec3b67406733ac"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/6071b6f9ba580f894ff40d2b4625a39102faca36",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJb0jXqCRBK7hj4Ov3rIwAAdHIIAHvWYLT+6Bz0wADEHUBmP5t+\n+g25QCqKw+56PQnZDmjPVwqNq8lDyyTNyh25WWKuu/hyKy1MrTLkqiCnhoOCDHZK\ngAbqW9O/8i9oy4m5EPKseU23jFPu3KKOvjIgNplwC2EFDGmXA/UUQUAyBOJmO8+T\n+usbFZ74BgpyX7YYSN4m7iqhwPqMhJjJThSG5OBZRYF0cWxThpFYPO5kms2b/qKg\nnuYbv1lq/yjS0DLDkZkQrDOw8ar5ol3V1jb/rZK9onAZ+DcqP4A8Y5jG31udE2J+\nzFoaujA2Eblx6DwOkOn84JiCcYHo4JQTiI15hEeZw/gM56vhs92zz9NSer6sIHU=\n=BpLL\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree ca0df9546f0e77736d32458c5dec3b67406733ac\nparent 1616a25e4b7f3364c4c291e467ecf75755a3a2bf\nparent a33c966433df7ff499eb538df693b04afa0243e0\nauthor Tom Hudson <mail@tomnomnom.com> 1540503018 +0100\ncommitter GitHub <noreply@github.com> 1540503018 +0100\n\nMerge pull request #54 from HaraldNordgren/go_versions\n\nBump Travis versions"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/6071b6f9ba580f894ff40d2b4625a39102faca36",
+    "html_url": "https://github.com/tomnomnom/gron/commit/6071b6f9ba580f894ff40d2b4625a39102faca36",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/6071b6f9ba580f894ff40d2b4625a39102faca36/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+        "html_url": "https://github.com/tomnomnom/gron/commit/1616a25e4b7f3364c4c291e467ecf75755a3a2bf"
+      },
+      {
+        "sha": "a33c966433df7ff499eb538df693b04afa0243e0",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/a33c966433df7ff499eb538df693b04afa0243e0",
+        "html_url": "https://github.com/tomnomnom/gron/commit/a33c966433df7ff499eb538df693b04afa0243e0"
+      }
+    ]
+  },
+  {
+    "sha": "a33c966433df7ff499eb538df693b04afa0243e0",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzphMzNjOTY2NDMzZGY3ZmY0OTllYjUzOGRmNjkzYjA0YWZhMDI0M2Uw",
+    "commit": {
+      "author": {
+        "name": "Harald Nordgren",
+        "email": "haraldnordgren@gmail.com",
+        "date": "2018-10-20T10:03:13Z"
+      },
+      "committer": {
+        "name": "Harald Nordgren",
+        "email": "haraldnordgren@gmail.com",
+        "date": "2018-10-20T10:03:13Z"
+      },
+      "message": "Bump Travis versions",
+      "tree": {
+        "sha": "ca0df9546f0e77736d32458c5dec3b67406733ac",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/ca0df9546f0e77736d32458c5dec3b67406733ac"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/a33c966433df7ff499eb538df693b04afa0243e0",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/a33c966433df7ff499eb538df693b04afa0243e0",
+    "html_url": "https://github.com/tomnomnom/gron/commit/a33c966433df7ff499eb538df693b04afa0243e0",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/a33c966433df7ff499eb538df693b04afa0243e0/comments",
+    "author": {
+      "login": "HaraldNordgren",
+      "id": 9569897,
+      "node_id": "MDQ6VXNlcjk1Njk4OTc=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9569897?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/HaraldNordgren",
+      "html_url": "https://github.com/HaraldNordgren",
+      "followers_url": "https://api.github.com/users/HaraldNordgren/followers",
+      "following_url": "https://api.github.com/users/HaraldNordgren/following{/other_user}",
+      "gists_url": "https://api.github.com/users/HaraldNordgren/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/HaraldNordgren/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/HaraldNordgren/subscriptions",
+      "organizations_url": "https://api.github.com/users/HaraldNordgren/orgs",
+      "repos_url": "https://api.github.com/users/HaraldNordgren/repos",
+      "events_url": "https://api.github.com/users/HaraldNordgren/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/HaraldNordgren/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "HaraldNordgren",
+      "id": 9569897,
+      "node_id": "MDQ6VXNlcjk1Njk4OTc=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/9569897?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/HaraldNordgren",
+      "html_url": "https://github.com/HaraldNordgren",
+      "followers_url": "https://api.github.com/users/HaraldNordgren/followers",
+      "following_url": "https://api.github.com/users/HaraldNordgren/following{/other_user}",
+      "gists_url": "https://api.github.com/users/HaraldNordgren/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/HaraldNordgren/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/HaraldNordgren/subscriptions",
+      "organizations_url": "https://api.github.com/users/HaraldNordgren/orgs",
+      "repos_url": "https://api.github.com/users/HaraldNordgren/repos",
+      "events_url": "https://api.github.com/users/HaraldNordgren/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/HaraldNordgren/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+        "html_url": "https://github.com/tomnomnom/gron/commit/1616a25e4b7f3364c4c291e467ecf75755a3a2bf"
+      }
+    ]
+  },
+  {
+    "sha": "1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzoxNjE2YTI1ZTRiN2YzMzY0YzRjMjkxZTQ2N2VjZjc1NzU1YTNhMmJm",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-10-02T12:10:02Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-10-02T12:10:02Z"
+      },
+      "message": "Merge pull request #52 from kseistrup/fish_completions\n\nCompletions for the fish shell",
+      "tree": {
+        "sha": "b0bd873f11f4d04fe81f751117a966b1db18484f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/b0bd873f11f4d04fe81f751117a966b1db18484f"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJbs2AaCRBK7hj4Ov3rIwAAdHIIADsIS/8JCWEWEsEdH/IAGv20\nEcAWYfe42kfvsguJjt81UI+cD7N4zWiVd4IKfUYNY6BpSP+JkgHXNBzcgrfkMKJY\n087idW7kGyxQrPE6Vm+kvmFJC/uQXyMrt08X3MVDJnNKjiLYRCOXsl83NmjoMBT6\nZ7YxjuCdtEJ8hT/6i+GEbA+LLhaQNyILV1e3tlb4VOA92ZPeyAnFnbNP3AU1BZQk\nRp/MYl1WXg6Mu1V9G7nhBs2ZhZA1601UcEZfd7EFefiIoUZyl8jaHiCZgOWpvIm1\nEIWmFJAMrQX0y/TIgfNGrRlvStbpLMM67iT5hE2vCDBNPGy0obi4VktYUw1ySYI=\n=rj17\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree b0bd873f11f4d04fe81f751117a966b1db18484f\nparent 404b80f96087020be41576afb3793b08b797155c\nparent 7f8323ee05b8f1d849545f812f9b19bc62f2b25b\nauthor Tom Hudson <mail@tomnomnom.com> 1538482202 +0100\ncommitter GitHub <noreply@github.com> 1538482202 +0100\n\nMerge pull request #52 from kseistrup/fish_completions\n\nCompletions for the fish shell"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+    "html_url": "https://github.com/tomnomnom/gron/commit/1616a25e4b7f3364c4c291e467ecf75755a3a2bf",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/1616a25e4b7f3364c4c291e467ecf75755a3a2bf/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "404b80f96087020be41576afb3793b08b797155c",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/404b80f96087020be41576afb3793b08b797155c",
+        "html_url": "https://github.com/tomnomnom/gron/commit/404b80f96087020be41576afb3793b08b797155c"
+      },
+      {
+        "sha": "7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+        "html_url": "https://github.com/tomnomnom/gron/commit/7f8323ee05b8f1d849545f812f9b19bc62f2b25b"
+      }
+    ]
+  },
+  {
+    "sha": "7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo3ZjgzMjNlZTA1YjhmMWQ4NDk1NDVmODEyZjliMTliYzYyZjJiMjVi",
+    "commit": {
+      "author": {
+        "name": "Klaus Alexander Seiﬆrup",
+        "email": "klaus@seistrup.dk",
+        "date": "2018-10-01T19:01:31Z"
+      },
+      "committer": {
+        "name": "Klaus Alexander Seiﬆrup",
+        "email": "klaus@seistrup.dk",
+        "date": "2018-10-01T19:01:31Z"
+      },
+      "message": "Initial commit of completions for the fish shell",
+      "tree": {
+        "sha": "b0bd873f11f4d04fe81f751117a966b1db18484f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/b0bd873f11f4d04fe81f751117a966b1db18484f"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+    "html_url": "https://github.com/tomnomnom/gron/commit/7f8323ee05b8f1d849545f812f9b19bc62f2b25b",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/7f8323ee05b8f1d849545f812f9b19bc62f2b25b/comments",
+    "author": {
+      "login": "kseistrup",
+      "id": 25586,
+      "node_id": "MDQ6VXNlcjI1NTg2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25586?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kseistrup",
+      "html_url": "https://github.com/kseistrup",
+      "followers_url": "https://api.github.com/users/kseistrup/followers",
+      "following_url": "https://api.github.com/users/kseistrup/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kseistrup/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kseistrup/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kseistrup/subscriptions",
+      "organizations_url": "https://api.github.com/users/kseistrup/orgs",
+      "repos_url": "https://api.github.com/users/kseistrup/repos",
+      "events_url": "https://api.github.com/users/kseistrup/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kseistrup/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "kseistrup",
+      "id": 25586,
+      "node_id": "MDQ6VXNlcjI1NTg2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25586?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/kseistrup",
+      "html_url": "https://github.com/kseistrup",
+      "followers_url": "https://api.github.com/users/kseistrup/followers",
+      "following_url": "https://api.github.com/users/kseistrup/following{/other_user}",
+      "gists_url": "https://api.github.com/users/kseistrup/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kseistrup/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kseistrup/subscriptions",
+      "organizations_url": "https://api.github.com/users/kseistrup/orgs",
+      "repos_url": "https://api.github.com/users/kseistrup/repos",
+      "events_url": "https://api.github.com/users/kseistrup/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kseistrup/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "404b80f96087020be41576afb3793b08b797155c",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/404b80f96087020be41576afb3793b08b797155c",
+        "html_url": "https://github.com/tomnomnom/gron/commit/404b80f96087020be41576afb3793b08b797155c"
+      }
+    ]
+  },
+  {
+    "sha": "a2fa995cab69508e4349be2d9ded481deb20c34f",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzphMmZhOTk1Y2FiNjk1MDhlNDM0OWJlMmQ5ZGVkNDgxZGViMjBjMzRm",
+    "commit": {
+      "author": {
+        "name": "saka1",
+        "email": "github@saka1.net",
+        "date": "2018-08-24T18:06:26Z"
+      },
+      "committer": {
+        "name": "saka1",
+        "email": "github@saka1.net",
+        "date": "2018-08-24T18:26:15Z"
+      },
+      "message": "Use larger buffer when ungron",
+      "tree": {
+        "sha": "d8bbdbd0291510b370758346701274616cf0cdee",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/d8bbdbd0291510b370758346701274616cf0cdee"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/a2fa995cab69508e4349be2d9ded481deb20c34f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/a2fa995cab69508e4349be2d9ded481deb20c34f",
+    "html_url": "https://github.com/tomnomnom/gron/commit/a2fa995cab69508e4349be2d9ded481deb20c34f",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/a2fa995cab69508e4349be2d9ded481deb20c34f/comments",
+    "author": {
+      "login": "saka1",
+      "id": 3619579,
+      "node_id": "MDQ6VXNlcjM2MTk1Nzk=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3619579?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/saka1",
+      "html_url": "https://github.com/saka1",
+      "followers_url": "https://api.github.com/users/saka1/followers",
+      "following_url": "https://api.github.com/users/saka1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/saka1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/saka1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/saka1/subscriptions",
+      "organizations_url": "https://api.github.com/users/saka1/orgs",
+      "repos_url": "https://api.github.com/users/saka1/repos",
+      "events_url": "https://api.github.com/users/saka1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/saka1/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "saka1",
+      "id": 3619579,
+      "node_id": "MDQ6VXNlcjM2MTk1Nzk=",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3619579?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/saka1",
+      "html_url": "https://github.com/saka1",
+      "followers_url": "https://api.github.com/users/saka1/followers",
+      "following_url": "https://api.github.com/users/saka1/following{/other_user}",
+      "gists_url": "https://api.github.com/users/saka1/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/saka1/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/saka1/subscriptions",
+      "organizations_url": "https://api.github.com/users/saka1/orgs",
+      "repos_url": "https://api.github.com/users/saka1/repos",
+      "events_url": "https://api.github.com/users/saka1/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/saka1/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "404b80f96087020be41576afb3793b08b797155c",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/404b80f96087020be41576afb3793b08b797155c",
+        "html_url": "https://github.com/tomnomnom/gron/commit/404b80f96087020be41576afb3793b08b797155c"
+      }
+    ]
+  },
+  {
+    "sha": "404b80f96087020be41576afb3793b08b797155c",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo0MDRiODBmOTYwODcwMjBiZTQxNTc2YWZiMzc5M2IwOGI3OTcxNTVj",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:22:56Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:22:56Z"
+      },
+      "message": "Adds 0.5.2, 0.6.0 to CHANGELOG",
+      "tree": {
+        "sha": "fbedda7e3f9160356db149d59724bee93953cf66",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/fbedda7e3f9160356db149d59724bee93953cf66"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/404b80f96087020be41576afb3793b08b797155c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/404b80f96087020be41576afb3793b08b797155c",
+    "html_url": "https://github.com/tomnomnom/gron/commit/404b80f96087020be41576afb3793b08b797155c",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/404b80f96087020be41576afb3793b08b797155c/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "bb64b21c9b54de32834abd8618fe6902367c8b3f",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/bb64b21c9b54de32834abd8618fe6902367c8b3f",
+        "html_url": "https://github.com/tomnomnom/gron/commit/bb64b21c9b54de32834abd8618fe6902367c8b3f"
+      }
+    ]
+  },
+  {
+    "sha": "bb64b21c9b54de32834abd8618fe6902367c8b3f",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpiYjY0YjIxYzliNTRkZTMyODM0YWJkODYxOGZlNjkwMjM2N2M4YjNm",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:17:29Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:17:29Z"
+      },
+      "message": "Adds 0.5.2, 0.6.0 to CHANGELOG",
+      "tree": {
+        "sha": "61e845e087f9d99cc77be43d566acd03d556b5fd",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/61e845e087f9d99cc77be43d566acd03d556b5fd"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/bb64b21c9b54de32834abd8618fe6902367c8b3f",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/bb64b21c9b54de32834abd8618fe6902367c8b3f",
+    "html_url": "https://github.com/tomnomnom/gron/commit/bb64b21c9b54de32834abd8618fe6902367c8b3f",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/bb64b21c9b54de32834abd8618fe6902367c8b3f/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+        "html_url": "https://github.com/tomnomnom/gron/commit/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce"
+      }
+    ]
+  },
+  {
+    "sha": "dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpkYzk1ZjY0ZWJlODljNTdjMzA0ZTA5YjRhM2ZkYzIxMmMzMGIxMmNl",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:11:16Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-07-05T10:11:16Z"
+      },
+      "message": "Trims whitespace on monochrome output; fixes #43",
+      "tree": {
+        "sha": "339c2e78530555376351275cf2db02de124b152d",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/339c2e78530555376351275cf2db02de124b152d"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+    "html_url": "https://github.com/tomnomnom/gron/commit/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/dc95f64ebe89c57c304e09b4a3fdc212c30b12ce/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "9a86739a172d13e57205d48f3bd557b4447e8540",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/9a86739a172d13e57205d48f3bd557b4447e8540",
+        "html_url": "https://github.com/tomnomnom/gron/commit/9a86739a172d13e57205d48f3bd557b4447e8540"
+      }
+    ]
+  },
+  {
+    "sha": "9a86739a172d13e57205d48f3bd557b4447e8540",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo5YTg2NzM5YTE3MmQxM2U1NzIwNWQ0OGYzYmQ1NTdiNDQ0N2U4NTQw",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-05-26T10:17:41Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-05-26T10:17:41Z"
+      },
+      "message": "Merge pull request #42 from csabahenk/master\n\nAdds JSON encoded data format",
+      "tree": {
+        "sha": "6a6774a377de72874fa70ce4a68a9e2c86832984",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/6a6774a377de72874fa70ce4a68a9e2c86832984"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/9a86739a172d13e57205d48f3bd557b4447e8540",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJbCTRFCRBK7hj4Ov3rIwAAdHIIAB5U6OYRQYk3j71Qthc7LXuh\nUr9aJmtzkgQQKUbT55Gr/IiHlcGgx6m92CXPwl3v37fSWGuAkW+vWwQfJVFvQ1xC\nvuSXkSDt/ni+k1zI2RBg+zT7MqrLvfC4U+WDHT7NVlfBO9Je6WG6p9HoYOQyxfOW\nCHyIFb1YUn1R6L8IKEABEWgRXLHR4ZXGymD+eLq6ACSw3f8T3mmLyzbJCyPghaO+\n4yqPYSJRKKB6IK1y7oPeLOpbHxtLJ/dS/X61R6imGnOeb00OtCzDAY2Cj8v74Bio\nfhWAoQBySaH4AKFN499z4p0Y3npJrPHUZDg2GbxXoyevgCln9yEF3T8WqrbhF2I=\n=9od0\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 6a6774a377de72874fa70ce4a68a9e2c86832984\nparent 5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7\nparent 7a90b02aaa57cf2dbc86ac6685607002aee82f2c\nauthor Tom Hudson <mail@tomnomnom.com> 1527329861 +0100\ncommitter GitHub <noreply@github.com> 1527329861 +0100\n\nMerge pull request #42 from csabahenk/master\n\nAdds JSON encoded data format"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/9a86739a172d13e57205d48f3bd557b4447e8540",
+    "html_url": "https://github.com/tomnomnom/gron/commit/9a86739a172d13e57205d48f3bd557b4447e8540",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/9a86739a172d13e57205d48f3bd557b4447e8540/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+        "html_url": "https://github.com/tomnomnom/gron/commit/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7"
+      },
+      {
+        "sha": "7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+        "html_url": "https://github.com/tomnomnom/gron/commit/7a90b02aaa57cf2dbc86ac6685607002aee82f2c"
+      }
+    ]
+  },
+  {
+    "sha": "7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo3YTkwYjAyYWFhNTdjZjJkYmM4NmFjNjY4NTYwNzAwMmFlZTgyZjJj",
+    "commit": {
+      "author": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-04-12T14:01:44Z"
+      },
+      "committer": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-05-21T21:54:54Z"
+      },
+      "message": "Adds JSON encoded data format\n\nThe JSON representation of gron data makes\nit smoother to grep the path component of the\nentries, by virtue of not being rife with '[' and ']'\ncharacters (unlike stadard gron data can be), which\nare special in regex.\n\nAlso it makes it easy to create more complex filters,\nas its easy for such programs to import and to emit\nJSON represention gron of data.",
+      "tree": {
+        "sha": "6a6774a377de72874fa70ce4a68a9e2c86832984",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/6a6774a377de72874fa70ce4a68a9e2c86832984"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+    "html_url": "https://github.com/tomnomnom/gron/commit/7a90b02aaa57cf2dbc86ac6685607002aee82f2c",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/7a90b02aaa57cf2dbc86ac6685607002aee82f2c/comments",
+    "author": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+        "html_url": "https://github.com/tomnomnom/gron/commit/7b5450d0e55ee47b370589ccfd84875e22afd5fc"
+      }
+    ]
+  },
+  {
+    "sha": "7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo3YjU0NTBkMGU1NWVlNDdiMzcwNTg5Y2NmZDg0ODc1ZTIyYWZkNWZj",
+    "commit": {
+      "author": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-04-10T11:55:06Z"
+      },
+      "committer": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-05-21T21:42:29Z"
+      },
+      "message": "Abstracts away statement printing",
+      "tree": {
+        "sha": "082e4a183a9211c397acf8a42e10ba5f0be80cf2",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/082e4a183a9211c397acf8a42e10ba5f0be80cf2"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+    "html_url": "https://github.com/tomnomnom/gron/commit/7b5450d0e55ee47b370589ccfd84875e22afd5fc",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/7b5450d0e55ee47b370589ccfd84875e22afd5fc/comments",
+    "author": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "df86d253811213fa01566a2ab994a9f03a4e4d90",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/df86d253811213fa01566a2ab994a9f03a4e4d90",
+        "html_url": "https://github.com/tomnomnom/gron/commit/df86d253811213fa01566a2ab994a9f03a4e4d90"
+      }
+    ]
+  },
+  {
+    "sha": "df86d253811213fa01566a2ab994a9f03a4e4d90",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpkZjg2ZDI1MzgxMTIxM2ZhMDE1NjZhMmFiOTk0YTlmMDNhNGU0ZDkw",
+    "commit": {
+      "author": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-04-10T11:34:49Z"
+      },
+      "committer": {
+        "name": "Csaba Henk",
+        "email": "csaba@lowlife.hu",
+        "date": "2018-05-21T21:42:29Z"
+      },
+      "message": "Makes it possible to extend bitfield option sequence with powers of two",
+      "tree": {
+        "sha": "ad99762eb0452e29756b9241e1bc775d3abf3c3e",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/ad99762eb0452e29756b9241e1bc775d3abf3c3e"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/df86d253811213fa01566a2ab994a9f03a4e4d90",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/df86d253811213fa01566a2ab994a9f03a4e4d90",
+    "html_url": "https://github.com/tomnomnom/gron/commit/df86d253811213fa01566a2ab994a9f03a4e4d90",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/df86d253811213fa01566a2ab994a9f03a4e4d90/comments",
+    "author": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "csabahenk",
+      "id": 43937,
+      "node_id": "MDQ6VXNlcjQzOTM3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43937?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/csabahenk",
+      "html_url": "https://github.com/csabahenk",
+      "followers_url": "https://api.github.com/users/csabahenk/followers",
+      "following_url": "https://api.github.com/users/csabahenk/following{/other_user}",
+      "gists_url": "https://api.github.com/users/csabahenk/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/csabahenk/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/csabahenk/subscriptions",
+      "organizations_url": "https://api.github.com/users/csabahenk/orgs",
+      "repos_url": "https://api.github.com/users/csabahenk/repos",
+      "events_url": "https://api.github.com/users/csabahenk/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/csabahenk/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+        "html_url": "https://github.com/tomnomnom/gron/commit/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7"
+      }
+    ]
+  },
+  {
+    "sha": "5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo1ZTZkZmNkZjlmYzAyMWQ3YzJkZGVmYTUzYzJiYTU5ZDg3YWNjNmM3",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-05-01T12:13:11Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-05-01T12:13:11Z"
+      },
+      "message": "Merge pull request #44 from cwarden/long-stream\n\nAllow Longer Rows In Stream Mode",
+      "tree": {
+        "sha": "fbbf93bf60d45f6569a1238da0e27cf875c41f60",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/fbbf93bf60d45f6569a1238da0e27cf875c41f60"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJa6FnXCRBK7hj4Ov3rIwAAdHIIAFUWAbsbQSFSCDZvwE+dXgkK\ngfmJ7EGKX7uZKmg1EGR+QOCqMqzSjArr1pSvFFeBR8NpAB1eBEsftGRdCzOhT3IA\nYAEeX4/xXuJGfhZ6C15VXrb8BrzjSsNT8A3+yVuDvksTHnCek9lh4dYiNcGz1pXM\nY5k5a4NPjOtT1uf6J2KyMJaGpIt9nTQN+CK2yuDM8IQcM7a0eNqPPxMEnRlYRA9P\njAoz0nouhxbCDAhHsU4JkDCpkQ6nDawMOYV8Wh3VHboQz7eVeVDlVlFLvdzWiAev\nlr5HlWs4O/eW9DuDPJE0BNxxoxPgVnjGqg+ATiYlPINCZe8ggyyc682tZcsDvCg=\n=OWil\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree fbbf93bf60d45f6569a1238da0e27cf875c41f60\nparent 193ed27b21629986e1b2645776695c76f469a1b2\nparent bd91e9a38df8d53b4d069fb21127921672be3026\nauthor Tom Hudson <mail@tomnomnom.com> 1525176791 +0100\ncommitter GitHub <noreply@github.com> 1525176791 +0100\n\nMerge pull request #44 from cwarden/long-stream\n\nAllow Longer Rows In Stream Mode"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+    "html_url": "https://github.com/tomnomnom/gron/commit/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/5e6dfcdf9fc021d7c2ddefa53c2ba59d87acc6c7/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "193ed27b21629986e1b2645776695c76f469a1b2",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/193ed27b21629986e1b2645776695c76f469a1b2",
+        "html_url": "https://github.com/tomnomnom/gron/commit/193ed27b21629986e1b2645776695c76f469a1b2"
+      },
+      {
+        "sha": "bd91e9a38df8d53b4d069fb21127921672be3026",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/bd91e9a38df8d53b4d069fb21127921672be3026",
+        "html_url": "https://github.com/tomnomnom/gron/commit/bd91e9a38df8d53b4d069fb21127921672be3026"
+      }
+    ]
+  },
+  {
+    "sha": "bd91e9a38df8d53b4d069fb21127921672be3026",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpiZDkxZTlhMzhkZjhkNTNiNGQwNjlmYjIxMTI3OTIxNjcyYmUzMDI2",
+    "commit": {
+      "author": {
+        "name": "Christian G. Warden",
+        "email": "cwarden@xerus.org",
+        "date": "2018-04-25T17:57:16Z"
+      },
+      "committer": {
+        "name": "Christian G. Warden",
+        "email": "cwarden@xerus.org",
+        "date": "2018-04-25T18:02:43Z"
+      },
+      "message": "Allow Longer Rows In Stream Mode\n\nUse a larger buffer in stream mode since the json can't be\npretty-printed before parsing by gron, and therefore may have long\nlines.",
+      "tree": {
+        "sha": "fbbf93bf60d45f6569a1238da0e27cf875c41f60",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/fbbf93bf60d45f6569a1238da0e27cf875c41f60"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/bd91e9a38df8d53b4d069fb21127921672be3026",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\nVersion: GnuPG v1\n\niEYEABECAAYFAlrgwsMACgkQXSJ4OU73l6C48ACfX74+Pm2rNnquXIBJG0hEBRSY\nLDgAn32f2pBMOOvtwnLj/uL8FoTdiVxR\n=IKYl\n-----END PGP SIGNATURE-----",
+        "payload": "tree fbbf93bf60d45f6569a1238da0e27cf875c41f60\nparent 193ed27b21629986e1b2645776695c76f469a1b2\nauthor Christian G. Warden <cwarden@xerus.org> 1524679036 -0700\ncommitter Christian G. Warden <cwarden@xerus.org> 1524679363 -0700\n\nAllow Longer Rows In Stream Mode\n\nUse a larger buffer in stream mode since the json can't be\npretty-printed before parsing by gron, and therefore may have long\nlines.\n"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/bd91e9a38df8d53b4d069fb21127921672be3026",
+    "html_url": "https://github.com/tomnomnom/gron/commit/bd91e9a38df8d53b4d069fb21127921672be3026",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/bd91e9a38df8d53b4d069fb21127921672be3026/comments",
+    "author": {
+      "login": "cwarden",
+      "id": 387035,
+      "node_id": "MDQ6VXNlcjM4NzAzNQ==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/387035?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cwarden",
+      "html_url": "https://github.com/cwarden",
+      "followers_url": "https://api.github.com/users/cwarden/followers",
+      "following_url": "https://api.github.com/users/cwarden/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cwarden/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cwarden/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cwarden/subscriptions",
+      "organizations_url": "https://api.github.com/users/cwarden/orgs",
+      "repos_url": "https://api.github.com/users/cwarden/repos",
+      "events_url": "https://api.github.com/users/cwarden/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cwarden/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "cwarden",
+      "id": 387035,
+      "node_id": "MDQ6VXNlcjM4NzAzNQ==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/387035?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/cwarden",
+      "html_url": "https://github.com/cwarden",
+      "followers_url": "https://api.github.com/users/cwarden/followers",
+      "following_url": "https://api.github.com/users/cwarden/following{/other_user}",
+      "gists_url": "https://api.github.com/users/cwarden/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cwarden/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cwarden/subscriptions",
+      "organizations_url": "https://api.github.com/users/cwarden/orgs",
+      "repos_url": "https://api.github.com/users/cwarden/repos",
+      "events_url": "https://api.github.com/users/cwarden/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cwarden/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "193ed27b21629986e1b2645776695c76f469a1b2",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/193ed27b21629986e1b2645776695c76f469a1b2",
+        "html_url": "https://github.com/tomnomnom/gron/commit/193ed27b21629986e1b2645776695c76f469a1b2"
+      }
+    ]
+  },
+  {
+    "sha": "193ed27b21629986e1b2645776695c76f469a1b2",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzoxOTNlZDI3YjIxNjI5OTg2ZTFiMjY0NTc3NjY5NWM3NmY0NjlhMWIy",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-19T09:27:12Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-04-19T09:27:12Z"
+      },
+      "message": "Merge pull request #41 from mattn/colorable\n\ncolors on Windows",
+      "tree": {
+        "sha": "7703a677cb831f94d43f0b64103647b0b95f9209",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/7703a677cb831f94d43f0b64103647b0b95f9209"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/193ed27b21629986e1b2645776695c76f469a1b2",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJa2GDwCRBK7hj4Ov3rIwAAdHIIAEcqJtEBCkztcnj08McXmFqs\nwQapxP9OWCWk/dkkaCdFupP1awFX6o1DrHuic8+uoFCRBGEVzoTdSCkLNwFi4oEY\nfYtPqrmCHgHsrS0ijMpryeuH6OCSNpVOksd0Jg73Q8T61j4bWopHAokWInURiy1T\nfhlN/HXM35KcG32ZRPJXaaTbW3uvHEqR6K7FnNEyssXrqI0CoXsYdPTkerDxxiQO\nPAGn9P1B5Q2BsDNayAB7E37ELIN+Xxids+Q9a6z4CseDXsgPBEfbpxST7XV46ZBJ\nv0m3h9/9TYgIf7O6lYOmb9YcNU+QZydl6On4yGWgJrFUzuvk9YNEXs9xVYXeUik=\n=w45P\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 7703a677cb831f94d43f0b64103647b0b95f9209\nparent 66934d6bb7b1ff1d6ba05bac02890559a5460720\nparent 23e25bf076474a89aca2995df22d8acde1c6588c\nauthor Tom Hudson <mail@tomnomnom.com> 1524130032 -0700\ncommitter GitHub <noreply@github.com> 1524130032 -0700\n\nMerge pull request #41 from mattn/colorable\n\ncolors on Windows"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/193ed27b21629986e1b2645776695c76f469a1b2",
+    "html_url": "https://github.com/tomnomnom/gron/commit/193ed27b21629986e1b2645776695c76f469a1b2",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/193ed27b21629986e1b2645776695c76f469a1b2/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "66934d6bb7b1ff1d6ba05bac02890559a5460720",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/66934d6bb7b1ff1d6ba05bac02890559a5460720",
+        "html_url": "https://github.com/tomnomnom/gron/commit/66934d6bb7b1ff1d6ba05bac02890559a5460720"
+      },
+      {
+        "sha": "23e25bf076474a89aca2995df22d8acde1c6588c",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/23e25bf076474a89aca2995df22d8acde1c6588c",
+        "html_url": "https://github.com/tomnomnom/gron/commit/23e25bf076474a89aca2995df22d8acde1c6588c"
+      }
+    ]
+  },
+  {
+    "sha": "66934d6bb7b1ff1d6ba05bac02890559a5460720",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo2NjkzNGQ2YmI3YjFmZjFkNmJhMDViYWMwMjg5MDU1OWE1NDYwNzIw",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-19T09:22:09Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-19T09:22:09Z"
+      },
+      "message": "Merge branch 'master' of github.com:tomnomnom/gron",
+      "tree": {
+        "sha": "9f3c3dbf5c609d09e10addc03b0f61cac71ec345",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/9f3c3dbf5c609d09e10addc03b0f61cac71ec345"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/66934d6bb7b1ff1d6ba05bac02890559a5460720",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/66934d6bb7b1ff1d6ba05bac02890559a5460720",
+    "html_url": "https://github.com/tomnomnom/gron/commit/66934d6bb7b1ff1d6ba05bac02890559a5460720",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/66934d6bb7b1ff1d6ba05bac02890559a5460720/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+        "html_url": "https://github.com/tomnomnom/gron/commit/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228"
+      },
+      {
+        "sha": "d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+        "html_url": "https://github.com/tomnomnom/gron/commit/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd"
+      }
+    ]
+  },
+  {
+    "sha": "ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpmZmI1Zjk5ZDM3ZTJhYjBlNmE0N2MxMzk0OTExZDFlM2Q1ODc5MjI4",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-19T09:21:56Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-19T09:21:56Z"
+      },
+      "message": "Switches from MarshalIndent to json.Encoder with SetEscapeHTML(false); #43",
+      "tree": {
+        "sha": "7f1ec9030438d5e3ffd7bc45ad1f5fd030cecf0d",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/7f1ec9030438d5e3ffd7bc45ad1f5fd030cecf0d"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+    "html_url": "https://github.com/tomnomnom/gron/commit/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/ffb5f99d37e2ab0e6a47c1394911d1e3d5879228/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "html_url": "https://github.com/tomnomnom/gron/commit/87d5fcafcc1af46a3a951fb02e5298f10ee837e6"
+      }
+    ]
+  },
+  {
+    "sha": "23e25bf076474a89aca2995df22d8acde1c6588c",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzoyM2UyNWJmMDc2NDc0YTg5YWNhMjk5NWRmMjJkOGFjZGUxYzY1ODhj",
+    "commit": {
+      "author": {
+        "name": "Yasuhiro Matsumoto",
+        "email": "mattn.jp@gmail.com",
+        "date": "2018-04-10T07:33:07Z"
+      },
+      "committer": {
+        "name": "Yasuhiro Matsumoto",
+        "email": "mattn.jp@gmail.com",
+        "date": "2018-04-10T08:02:18Z"
+      },
+      "message": "colors on Windows",
+      "tree": {
+        "sha": "b8a221e283847b08e484c194b0eb7d00c770e5c6",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/b8a221e283847b08e484c194b0eb7d00c770e5c6"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/23e25bf076474a89aca2995df22d8acde1c6588c",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\niQEzBAABCAAdFiEE5qnHTUeSEV12WJ2eYi3jTcSQWEsFAlrMb40ACgkQYi3jTcSQ\nWEuUkwf/XelU6BZGrUED/qKoqlOLemn/W73tThIlUpwPOBxsiKYJ+9+9GsDctYBv\n7/GHMcTdXcHUmuAPQK2qmZaMFBybZV0rLdOZAffKcpvfsQsr/TJp043x4JmNRnHp\nOU6RAID1eTe2VR7LcjQ9a8poG7oQGn94OJaXn7yOf6RAvNZptxoOBhSvSdJaaX7Q\n1RST7pEV62JxV+rKkF3FRK5bCLj49sv/HkcWhPRnsXj8+xWZ+jw4FkK6s3u9lwmL\nQeaIB/IOXke62gVgjnpQ9j0ASlZlSd+7Q4wB1Mb06xrc827ysoZoYs7xsOFZQH4d\npDtUQiu3sz2MMGWTxE3ub3gFfXHMeA==\n=aOZy\n-----END PGP SIGNATURE-----",
+        "payload": "tree b8a221e283847b08e484c194b0eb7d00c770e5c6\nparent d63fa4f72a3c095216ee5710dfdd78e6ae8629bd\nauthor Yasuhiro Matsumoto <mattn.jp@gmail.com> 1523345587 +0900\ncommitter Yasuhiro Matsumoto <mattn.jp@gmail.com> 1523347338 +0900\n\ncolors on Windows\n"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/23e25bf076474a89aca2995df22d8acde1c6588c",
+    "html_url": "https://github.com/tomnomnom/gron/commit/23e25bf076474a89aca2995df22d8acde1c6588c",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/23e25bf076474a89aca2995df22d8acde1c6588c/comments",
+    "author": {
+      "login": "mattn",
+      "id": 10111,
+      "node_id": "MDQ6VXNlcjEwMTEx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10111?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mattn",
+      "html_url": "https://github.com/mattn",
+      "followers_url": "https://api.github.com/users/mattn/followers",
+      "following_url": "https://api.github.com/users/mattn/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mattn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mattn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mattn/subscriptions",
+      "organizations_url": "https://api.github.com/users/mattn/orgs",
+      "repos_url": "https://api.github.com/users/mattn/repos",
+      "events_url": "https://api.github.com/users/mattn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mattn/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "mattn",
+      "id": 10111,
+      "node_id": "MDQ6VXNlcjEwMTEx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10111?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/mattn",
+      "html_url": "https://github.com/mattn",
+      "followers_url": "https://api.github.com/users/mattn/followers",
+      "following_url": "https://api.github.com/users/mattn/following{/other_user}",
+      "gists_url": "https://api.github.com/users/mattn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mattn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mattn/subscriptions",
+      "organizations_url": "https://api.github.com/users/mattn/orgs",
+      "repos_url": "https://api.github.com/users/mattn/repos",
+      "events_url": "https://api.github.com/users/mattn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mattn/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+        "html_url": "https://github.com/tomnomnom/gron/commit/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd"
+      }
+    ]
+  },
+  {
+    "sha": "d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzpkNjNmYTRmNzJhM2MwOTUyMTZlZTU3MTBkZmRkNzhlNmFlODYyOWJk",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-09T10:08:19Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-04-09T10:08:19Z"
+      },
+      "message": "Merge pull request #37 from 0100001001000010/master\n\nAdds ungron shell script suggestion to README.mkd",
+      "tree": {
+        "sha": "2518b4816d0e5b269b153be8332d0b0141dab28d",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/2518b4816d0e5b269b153be8332d0b0141dab28d"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJayzuTCRBK7hj4Ov3rIwAAdHIIAJc0jxpX57DMl8LhnOdBRbUI\n5l1XyfbFuNkXnZqzT3k4o+AwM40HQ9DPuXQALAVkQKoHHRzki2acA0HgL54um4ll\nvWp56uJpN66uRJWixJ8UrptRxpebHRoKZuh7LCxVMFlyuCM88w8d9g6PPmuPP++O\nIQ+b5oTsNa/NmuE5BPLXsmKJlvOgWbFJyZkPOr/yTCQ4HP082NuVoWXfSt5V38om\nC9tHdvZ/JSHGkwMjP9H7mHKGbbJ+Cx2r9ZTFRVJepAR0wjZOEiOlmRJbzRSAStN4\ndLHGCEbeR0VhizfXCeWWbGNtNplAQtvYqTAznTflv5POo+j6aFv/ueccSiYgXbM=\n=HA22\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 2518b4816d0e5b269b153be8332d0b0141dab28d\nparent 87d5fcafcc1af46a3a951fb02e5298f10ee837e6\nparent a9638ea5362baee7d607e179ef3a75588b69ac12\nauthor Tom Hudson <mail@tomnomnom.com> 1523268499 +0100\ncommitter GitHub <noreply@github.com> 1523268499 +0100\n\nMerge pull request #37 from 0100001001000010/master\n\nAdds ungron shell script suggestion to README.mkd"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+    "html_url": "https://github.com/tomnomnom/gron/commit/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/d63fa4f72a3c095216ee5710dfdd78e6ae8629bd/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "html_url": "https://github.com/tomnomnom/gron/commit/87d5fcafcc1af46a3a951fb02e5298f10ee837e6"
+      },
+      {
+        "sha": "a9638ea5362baee7d607e179ef3a75588b69ac12",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/a9638ea5362baee7d607e179ef3a75588b69ac12",
+        "html_url": "https://github.com/tomnomnom/gron/commit/a9638ea5362baee7d607e179ef3a75588b69ac12"
+      }
+    ]
+  },
+  {
+    "sha": "a9638ea5362baee7d607e179ef3a75588b69ac12",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzphOTYzOGVhNTM2MmJhZWU3ZDYwN2UxNzllZjNhNzU1ODhiNjlhYzEy",
+    "commit": {
+      "author": {
+        "name": "Bruce Blore",
+        "email": "32144060+0100001001000010@users.noreply.github.com",
+        "date": "2018-04-05T03:31:45Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-04-05T03:31:45Z"
+      },
+      "message": "Update README.mkd",
+      "tree": {
+        "sha": "2518b4816d0e5b269b153be8332d0b0141dab28d",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/2518b4816d0e5b269b153be8332d0b0141dab28d"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/a9638ea5362baee7d607e179ef3a75588b69ac12",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaxZihCRBK7hj4Ov3rIwAAdHIIABlS3/CME0ZA1eEBf+9Ip+WF\nXuIojCgLlGQ8BEa+Achwd3oSf7pz+Tg6Rvk+8tvUbC9Uq2KQAWY9+NW8eJ07wL2s\nfpPSCFnRAl1dSV75FITFVrF1Ut5xThgP0FO67xE11rFnBCz5OgPvM6jkrlPoVnUM\nxrJ4YdUGqn86HcQWTHQZH297qT8XnKtT1E5aGqBPlnVBvPhLOanfSSM+2V4+yWcv\nAFqa3+G7YTsWSo8bLrINo8flTyRNLEsajT2ua266qHQX364LDw6p9KBbkm8nx8oV\njOH+mwrKOfxS+tJgiKrmcPnRia8ZSnVm9ARfUovFVSO3FpC8BBS+cQG4Juhgo5s=\n=NlyN\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree 2518b4816d0e5b269b153be8332d0b0141dab28d\nparent 87d5fcafcc1af46a3a951fb02e5298f10ee837e6\nauthor Bruce Blore <32144060+0100001001000010@users.noreply.github.com> 1522899105 -0700\ncommitter GitHub <noreply@github.com> 1522899105 -0700\n\nUpdate README.mkd"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/a9638ea5362baee7d607e179ef3a75588b69ac12",
+    "html_url": "https://github.com/tomnomnom/gron/commit/a9638ea5362baee7d607e179ef3a75588b69ac12",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/a9638ea5362baee7d607e179ef3a75588b69ac12/comments",
+    "author": {
+      "login": "0100001001000010",
+      "id": 32144060,
+      "node_id": "MDQ6VXNlcjMyMTQ0MDYw",
+      "avatar_url": "https://avatars.githubusercontent.com/u/32144060?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/0100001001000010",
+      "html_url": "https://github.com/0100001001000010",
+      "followers_url": "https://api.github.com/users/0100001001000010/followers",
+      "following_url": "https://api.github.com/users/0100001001000010/following{/other_user}",
+      "gists_url": "https://api.github.com/users/0100001001000010/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/0100001001000010/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/0100001001000010/subscriptions",
+      "organizations_url": "https://api.github.com/users/0100001001000010/orgs",
+      "repos_url": "https://api.github.com/users/0100001001000010/repos",
+      "events_url": "https://api.github.com/users/0100001001000010/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/0100001001000010/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+        "html_url": "https://github.com/tomnomnom/gron/commit/87d5fcafcc1af46a3a951fb02e5298f10ee837e6"
+      }
+    ]
+  },
+  {
+    "sha": "87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo4N2Q1ZmNhZmNjMWFmNDZhM2E5NTFmYjAyZTUyOThmMTBlZTgzN2U2",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-04T11:08:26Z"
+      },
+      "committer": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-04T11:08:26Z"
+      },
+      "message": "Switches /usr/bin to /usr/local/bin in README; thanks /u/djmattyg007 :)",
+      "tree": {
+        "sha": "3cc6d5b1d75781aaa4ac1eee389236ed6cdc627a",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/3cc6d5b1d75781aaa4ac1eee389236ed6cdc627a"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+      "comment_count": 0,
+      "verification": {
+        "verified": false,
+        "reason": "unsigned",
+        "signature": null,
+        "payload": null
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+    "html_url": "https://github.com/tomnomnom/gron/commit/87d5fcafcc1af46a3a951fb02e5298f10ee837e6",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/87d5fcafcc1af46a3a951fb02e5298f10ee837e6/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "7a83de3fb590b972569adb0eaf3af7d909a44fed",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/7a83de3fb590b972569adb0eaf3af7d909a44fed",
+        "html_url": "https://github.com/tomnomnom/gron/commit/7a83de3fb590b972569adb0eaf3af7d909a44fed"
+      }
+    ]
+  },
+  {
+    "sha": "7a83de3fb590b972569adb0eaf3af7d909a44fed",
+    "node_id": "MDY6Q29tbWl0NTcyNDIyMzo3YTgzZGUzZmI1OTBiOTcyNTY5YWRiMGVhZjNhZjdkOTA5YTQ0ZmVk",
+    "commit": {
+      "author": {
+        "name": "Tom Hudson",
+        "email": "mail@tomnomnom.com",
+        "date": "2018-04-03T13:55:59Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2018-04-03T13:55:59Z"
+      },
+      "message": "Merge pull request #31 from SimePel/master\n\nReduces nesting and inverts validURL condition",
+      "tree": {
+        "sha": "c61f83351dbadfbfff6fd7b311920ef58e602287",
+        "url": "https://api.github.com/repos/tomnomnom/gron/git/trees/c61f83351dbadfbfff6fd7b311920ef58e602287"
+      },
+      "url": "https://api.github.com/repos/tomnomnom/gron/git/commits/7a83de3fb590b972569adb0eaf3af7d909a44fed",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsBcBAABCAAQBQJaw4fvCRBK7hj4Ov3rIwAAdHIIAHYM3RZph0DqFbHT4YPWR4BM\naUJYSbH+f2OBrSvWxzSUaPTk1TgWczxghT5H+2u+tu3eq0mG/UxeBbhDwwVA0PEd\ne2cItKdE1OOZqLQCgbIpuus2ZGrspvyyVmTv13Nsj2LVYEDhdxHibFg6qfR6B5d7\n7AbDFYl8e1/h7DMur5HGyn0Ga1RF28dcUKoyasnifq1PbSdlHSeist+pjDKDr0qE\n4xAJcFnErQ7ja87WBQFl4AQNmhUKpz3odpnzS8FxDsHTjVb2gT0v+xX7WG/o4ogg\nQ+tY9lcXob6k0Lop2vNS1ztDpSMzoJG0oPKcOqBz9BKu11xMHFUeH+n0pnFi7u4=\n=rXZ9\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree c61f83351dbadfbfff6fd7b311920ef58e602287\nparent 68db814beebcadd3b610d6a9c2bb60066354825e\nparent 30431c4fcca4885b3c5d1fc01396ba6e9db34d15\nauthor Tom Hudson <mail@tomnomnom.com> 1522763759 +0100\ncommitter GitHub <noreply@github.com> 1522763759 +0100\n\nMerge pull request #31 from SimePel/master\n\nReduces nesting and inverts validURL condition"
+      }
+    },
+    "url": "https://api.github.com/repos/tomnomnom/gron/commits/7a83de3fb590b972569adb0eaf3af7d909a44fed",
+    "html_url": "https://github.com/tomnomnom/gron/commit/7a83de3fb590b972569adb0eaf3af7d909a44fed",
+    "comments_url": "https://api.github.com/repos/tomnomnom/gron/commits/7a83de3fb590b972569adb0eaf3af7d909a44fed/comments",
+    "author": {
+      "login": "tomnomnom",
+      "id": 58276,
+      "node_id": "MDQ6VXNlcjU4Mjc2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58276?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/tomnomnom",
+      "html_url": "https://github.com/tomnomnom",
+      "followers_url": "https://api.github.com/users/tomnomnom/followers",
+      "following_url": "https://api.github.com/users/tomnomnom/following{/other_user}",
+      "gists_url": "https://api.github.com/users/tomnomnom/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tomnomnom/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tomnomnom/subscriptions",
+      "organizations_url": "https://api.github.com/users/tomnomnom/orgs",
+      "repos_url": "https://api.github.com/users/tomnomnom/repos",
+      "events_url": "https://api.github.com/users/tomnomnom/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tomnomnom/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "68db814beebcadd3b610d6a9c2bb60066354825e",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/68db814beebcadd3b610d6a9c2bb60066354825e",
+        "html_url": "https://github.com/tomnomnom/gron/commit/68db814beebcadd3b610d6a9c2bb60066354825e"
+      },
+      {
+        "sha": "30431c4fcca4885b3c5d1fc01396ba6e9db34d15",
+        "url": "https://api.github.com/repos/tomnomnom/gron/commits/30431c4fcca4885b3c5d1fc01396ba6e9db34d15",
+        "html_url": "https://github.com/tomnomnom/gron/commit/30431c4fcca4885b3c5d1fc01396ba6e9db34d15"
+      }
+    ]
+  }
+]
