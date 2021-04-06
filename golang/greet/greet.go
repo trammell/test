@@ -1,3 +1,5 @@
+// go mod init greet
+
 package main
 
 import (
