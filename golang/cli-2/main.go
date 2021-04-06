@@ -1,4 +1,18 @@
+// go mod init cli-2
+// go mod tidy
+// go run main.go
+// go run main.go -h
+
 package main
+
+import (
+	"fmt"
+	"log"
+	"os"
+	"strings"
+
+	"github.com/urfave/cli"
+)
 
 var pizza = []string{"Enjoy your pizza with some delicious"}
 
