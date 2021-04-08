@@ -16,7 +16,7 @@ func main() {
 	foo := [3]int{1, 2, 3}
 	fmt.Println(foo)
 
-	slice := []int{1,2,3}
+	slice := []int{1, 2, 3}
 	fmt.Println(slice)
 
 	slice = append(slice, 123, 456)
@@ -26,6 +26,5 @@ func main() {
 	s3 := slice[:2]
 	s4 := slice[1:2]
 	fmt.Println(s2, s3, s4)
-
 
 }

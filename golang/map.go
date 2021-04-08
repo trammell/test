@@ -7,7 +7,7 @@ import (
 
 func main() {
 
-	m := map[string]int{"a":33, "foo":42}
+	m := map[string]int{"a": 33, "foo": 42}
 
 	fmt.Println(m)
 	fmt.Println(m["foo"])
