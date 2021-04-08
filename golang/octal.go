@@ -20,4 +20,9 @@ func main() {
 	// output n4 (decimal) in octal (with a 0o prefix)
 	fmt.Printf("octal with prefix : %O\n", n4)
 
+	var roomNumber, floorNumber int = 154, 3
+    fmt.Println(roomNumber, floorNumber)
+
+	roomNumber2, floorNumber2 := 154, 3
+    fmt.Println(roomNumber2, floorNumber2)
 }
