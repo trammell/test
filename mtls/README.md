@@ -5,12 +5,13 @@ https://codeburst.io/mutual-tls-authentication-mtls-de-mystified-11fa2a52e9cf
 ## Create the Certificate Authority (CA)
 
 ```
+# respect my authority! :-D
 openssl req \
   -new \
   -x509 \
   -nodes \
   -days 365 \
-  -subj '/CN=my-ca' \
+  -subj '/CN=authority' \
   -keyout ca.key \
   -out ca.crt
 ```

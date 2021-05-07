@@ -2,6 +2,9 @@
 usage:
 	@echo "make [all|clean]"
 
+clean:
+	rm -f *.key *.crt *.csr *.srl
+
 all:
 	make ca.key
 	make server.key
@@ -12,7 +15,7 @@ all:
 # Create the Certificate Authority (CA)
 
 ca.key ca.crt:
-	openssl req -new -x509 -nodes -days 365 -subj '/CN=juanito' -keyout ca.key -out ca.crt
+	openssl req -new -x509 -nodes -days 365 -subj '/CN=respect' -keyout ca.key -out ca.crt
 	openssl x509 -in ca.crt -text -noout
 
 
