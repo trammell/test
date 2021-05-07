@@ -1,1 +1,4 @@
-curl --cacert ca.crt https://localhost:3000
+curl \
+  --cacert ca.crt \
+  --key client.key \
+  https://localhost:3000
