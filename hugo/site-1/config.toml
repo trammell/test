@@ -2,7 +2,12 @@ baseURL = 'http://flappy.flippy.us/'
 languageCode = 'en-us'
 title = "Flappy McFlipdoodle"
 theme = "basic"
+pygmentsUseClasses = true
 
 [params]
 author = "Hulk Hogan"
 description = "Zip a dee doo dah"
+
+[permalinks]
+posts = "posts/:year/:month/:slug/"
+
