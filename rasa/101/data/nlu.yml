@@ -1,0 +1,137 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - cool
+    - I did
+    - more or less
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - none
+    - absolutely not
+    - no I didn't
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: ask_lower_stress
+  examples: |
+    - What do I do if I'm too stressed?
+    - How can I lower my stress level?
+    - What are some good ways to lower my stress?
+    - What are good ways to relax?
+    - What are things I can do to lower my stress?
+    - I'm a little stressed
+- intent: ask_eat_healthy
+  examples: |
+    - What's considered a healthy diet?
+    - What's a good diet?
+    - How do I follow a healthy diet?
+    - What's an example of a healthy diet?
+    - What goes into a healthy diet?
+    - How can I eat more healthily?
+    - How do I eat more healthy?
+- intent: ask_exercise
+  examples: |
+    - What's a good amount of exercise?
+    - How much exercise should I be getting?
+    - How much exercise is recommended?
+    - Is walking once a day enough exercise?
+    - How many times a week should I exercise?
+- intent: inform
+  examples: |
+    - a full [8 hours](sleep)
+    - a full night's sleep
+    - only [four hours](sleep)
+    - [very](stress)
+    - [high](stress)
+    - medium stress
+    - low stress
+    - I went for a [run](exercise)
+    - I went for a [walk](exercise)
+    - I ate healthily
+- intent: out_of_scope
+  examples: |
+    - that's not what I want to do
+    - wait stop
+    - quit
+    - please stop
+    - rickety cricket
+    - I already answered that
+    - I don't like that
+    - none of your business
