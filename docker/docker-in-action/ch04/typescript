@@ -1,0 +1,959 @@
+Script started on Tue Dec 17 09:23:13 2019
+[?1034ha483e7b0c806:ch04 z004h51$ touch ea[Kxample.log
+a483e7b0c806:ch04 z004h51$ ls -la
+total 8
+drwxr-xr-x  4 z004h51  DHC\Domain Users  128 Dec 17 09:49 .
+drwxr-xr-x  5 z004h51  DHC\Domain Users  160 Dec 17 09:23 ..
+-rw-r--r--  1 z004h51  DHC\Domain Users    0 Dec 17 09:49 example.log
+-rw-r--r--  1 z004h51  DHC\Domain Users   86 Dec 17 09:49 typescript
+a483e7b0c806:ch04 z004h51$ cat >example.conf
+server {
+  ;o  listen 80;
+  server name localhost;
+  access_log /var/log/nginx/custom.host.access.log main;
+  location / {
+    root /usr/sjare    hare/nginx/html;
+    index index.html index.htm;
+  }
+}
+^Da483e7b0c806:ch04 z004h51$ con[K[K[KCONF_SRC=$(pwd)/example.conf
+a483e7b0c806:ch04 z004h51$ cat[K[K[Kecho $CONF_SRC 
+/Users/z004h51/dev/misc/test/docker/docker-in-action/ch04/example.conf
+a483e7b0c806:ch04 z004h51$ echo $CONF_SRC CONF_SRC=$(pwd)/example.conf[1P=$(pwd)/example.conf[1P=$(pwd)/example.conf[1P=$(pwd)/example.confD=$(pwd)/example.confS=$(pwd)/example.confT=$(pwd)/example.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K/etc/nginx/conf.d/default.conf
+a483e7b0c806:ch04 z004h51$ CONF_DST=/etc/nginx/conf.d/default.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pecho $CONF_SRC CONF_DST=/etc/nginx/conf.d/default.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pecho $CONF_SRC CONF_SRC=$(pwd)/example.conf ;\
+> CONF_SRC=$(pwd)/example.conf ;\[C[C[C[C[C[C[CDST=/etc/nginx/conf.d/default.conf ;\
+> LOG_SRC=$(pr[Kwd)/example.log ;\
+> LOG_DST=/var/log/nging[Kx/custom.host.access.log ;\
+> docker run -d --name diaweb --maoun[K[K[K[Kount type=bind,src=${CONF_SRC},dst=${CONF_DST} \
+> --mount type=bind,src=${LOG_SRC},dst=${LOG_DT[KST} \
+> -p 80:80 nging[Kx:latest
+Unable to find image 'nginx:latest' locally
+latest: Pulling from library/nginx
+
+[1A[2K000eee12ec04: Pulling fs layer [1B
+[1A[2Keb22865337de: Pulling fs layer [1B
+[1A[2Kbee5d581ef8b: Pulling fs layer [1B[1A[2Kbee5d581ef8b: Downloading [==================================================>]     203B/203B[1B[1A[2Kbee5d581ef8b: Verifying Checksum [1B[1A[2Kbee5d581ef8b: Download complete [1B[2A[2Keb22865337de: Downloading [>                                                  ]  243.4kB/23.74MB[2B[2A[2Keb22865337de: Downloading [=>                                                 ]  718.5kB/23.74MB[2B[2A[2Keb22865337de: Downloading [===>                                               ]  1.669MB/23.74MB[2B[2A[2Keb22865337de: Downloading [======>                                            ]  3.102MB/23.74MB[2B[2A[2Keb22865337de: Downloading [=========>                                         ]  4.307MB/23.74MB[2B[2A[2Keb22865337de: Downloading [===========>                                       ]  5.511MB/23.74MB[2B[2A[2Keb22865337de: Downloading [===============>                                   ]  7.182MB/23.74MB[2B[2A[2Keb22865337de: Downloading [==================>                                ]  8.894MB/23.74MB[2B[2A[2Keb22865337de: Downloading [====================>                              ]  9.869MB/23.74MB[2B[2A[2Keb22865337de: Downloading [=======================>                           ]  11.29MB/23.74MB[2B[2A[2Keb22865337de: Downloading [==========================>                        ]  12.75MB/23.74MB[2B[2A[2Keb22865337de: Downloading [=============================>                     ]  14.21MB/23.74MB[2B[2A[2Keb22865337de: Downloading [================================>                  ]  15.41MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [>                                                  ]  276.1kB/27.09MB[3B[2A[2Keb22865337de: Downloading [==================================>                ]   16.4MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [==>                                                ]  1.096MB/27.09MB[3B[2A[2Keb22865337de: Downloading [====================================>              ]  17.36MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [===>                                               ]  1.932MB/27.09MB[3B[2A[2Keb22865337de: Downloading [======================================>            ]  18.32MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [====>                                              ]  2.489MB/27.09MB[3B[2A[2Keb22865337de: Downloading [========================================>          ]  19.04MB/23.74MB[2B[2A[2Keb22865337de: Downloading [==========================================>        ]  20.25MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [=====>                                             ]  2.768MB/27.09MB[3B[2A[2Keb22865337de: Downloading [============================================>      ]  21.21MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [======>                                            ]  3.324MB/27.09MB[3B[2A[2Keb22865337de: Downloading [==============================================>    ]  22.18MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [=======>                                           ]  3.889MB/27.09MB[3B[2A[2Keb22865337de: Downloading [================================================>  ]  23.15MB/23.74MB[2B[3A[2K000eee12ec04: Downloading [========>                                          ]  4.716MB/27.09MB[3B[2A[2Keb22865337de: Verifying Checksum [2B[2A[2Keb22865337de: Download complete [2B[3A[2K000eee12ec04: Downloading [==========>                                        ]  5.822MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [============>                                      ]  6.642MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==============>                                    ]  8.027MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [=================>                                 ]  9.411MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [===================>                               ]   10.8MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [=====================>                             ]   11.9MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [========================>                          ]  13.03MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==========================>                        ]  14.13MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [============================>                      ]  15.24MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==============================>                    ]  16.36MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [================================>                  ]  17.46MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==================================>                ]  18.55MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [====================================>              ]  19.65MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [=====================================>             ]  20.49MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [=======================================>           ]  21.59MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==========================================>        ]  22.99MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [============================================>      ]  24.11MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [==============================================>    ]  24.94MB/27.09MB[3B[3A[2K000eee12ec04: Downloading [===============================================>   ]  25.78MB/27.09MB[3B[3A[2K000eee12ec04: Verifying Checksum [3B[3A[2K000eee12ec04: Download complete [3B[3A[2K000eee12ec04: Extracting [>                                                  ]  294.9kB/27.09MB[3B[3A[2K000eee12ec04: Extracting [=======>                                           ]  4.129MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [===================>                               ]  10.32MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [============================>                      ]  15.63MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [==================================>                ]  18.87MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [============================================>      ]  24.18MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [===============================================>   ]  25.66MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [================================================>  ]  26.25MB/27.09MB[3B[3A[2K000eee12ec04: Extracting [==================================================>]  27.09MB/27.09MB[3B[3A[2K000eee12ec04: Pull complete [3B[2A[2Keb22865337de: Extracting [>                                                  ]  262.1kB/23.74MB[2B[2A[2Keb22865337de: Extracting [=========>                                         ]  4.456MB/23.74MB[2B[2A[2Keb22865337de: Extracting [=========================>                         ]  12.06MB/23.74MB[2B[2A[2Keb22865337de: Extracting [========================================>          ]  19.14MB/23.74MB[2B[2A[2Keb22865337de: Extracting [==================================================>]  23.74MB/23.74MB[2B[2A[2Keb22865337de: Pull complete [2B[1A[2Kbee5d581ef8b: Extracting [==================================================>]     203B/203B[1B[1A[2Kbee5d581ef8b: Extracting [==================================================>]     203B/203B[1B[1A[2Kbee5d581ef8b: Pull complete [1BDigest: sha256:50cf965a6e08ec5784009d0fccb380fc479826b6e0e65684d9879170a9df8566
+Status: Downloaded newer image for nginx:latest
+05be71d108656fe1e704e461d5a2391b4d951f2726269bebe752bab5e3dce5a8
+a483e7b0c806:ch04 z004h51$ docker logs da[Kiaweb
+2019/12/17 15:54:46 [emerg] 1#1: "server" directive is not allowed here in /etc/nginx/conf.d/default.conf:3
+nginx: [emerg] "server" directive is not allowed here in /etc/nginx/conf.d/default.conf:3
+a483e7b0c806:ch04 z004h51$ ls -al
+total 32
+drwxr-xr-x  5 z004h51  DHC\Domain Users    160 Dec 17 09:49 .
+drwxr-xr-x  5 z004h51  DHC\Domain Users    160 Dec 17 09:23 ..
+-rw-r--r--  1 z004h51  DHC\Domain Users    189 Dec 17 09:51 example.conf
+-rw-r--r--  1 z004h51  DHC\Domain Users      0 Dec 17 09:49 example.log
+-rw-r--r--  1 z004h51  DHC\Domain Users  10396 Dec 17 09:55 typescript
+a483e7b0c806:ch04 z004h51$ cat example.log 
+a483e7b0c806:ch04 z004h51$ HMM
+bash: HMM: command not found
+a483e7b0c806:ch04 z004h51$ cat example.
+cat: example.: No such file or directory
+a483e7b0c806:ch04 z004h51$ cat example.conf 
+server {
+  listen 80;
+  server name localhost;
+  access_log /var/log/nginx/custom.host.access.log main;
+  location / {
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+  }
+}
+a483e7b0c806:ch04 z004h51$ vi example.conf 
+[?1000h[?1049h[>4;2m[?1h=[?2004h[1;36r[?12h[?12l[22;2t[22;1t[27m[29m[m[H[2J[?25l[36;1H"example.conf" 9L, 189C[2;1H▽[6n[2;1H  [1;1H[>c]10;?]11;?[1;1Hserver {
+  listen 80;
+  server name localhost;
+  access_log /var/log/nginx/custom.host.access.log main;
+  location / {
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+  }
+}
+[94m~                                                                                                                                          [11;1H~                                                                                                                                          [12;1H~                                                                                                                                          [13;1H~                                                                                                                                          [14;1H~                                                                                                                                          [15;1H~                                                                                                                                          [16;1H~                                                                                                                                          [17;1H~                                                                                                                                          [18;1H~                                                                                                                                          [19;1H~                                                                                                                                          [20;1H~                                                                                                                                          [21;1H~                                                                                                                                          [22;1H~                                                                                                                                          [23;1H~                                                                                                                                          [24;1H~                                                                                                                                          [25;1H~                                                                                                                                          [26;1H~                                                                                                                                          [27;1H~                                                                                                                                          [28;1H~                                                                                                                                          [29;1H~                                                                                                                                          [30;1H~                                                                                                                                          [31;1H~                                                                                                                                          [32;1H~                                                                                                                                          [33;1H~                                                                                                                                          [34;1H~                                                                                                                                          [35;1H~                                                                                                                                          [m[36;122H1,1[11CAll[1;1H[?25h[?1000l[?1006h[?1002h[?1006l[?1002l[?1006h[?1002h[?12$p[?25l[36;112H^[[1;1H[36;112H  [1;1H[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112Hj[1;1H[36;112H [2;1H[36;122H2[2;1H[?25h[?25l[36;112Hk[2;1H[36;112H [1;1H[36;122H1[1;1H[?25h[?25l[36;112Hk[1;1H[36;112H [1;1H[?25h[?25l[36;112H^[[1;1H[36;112H  [1;1H[36;112H^[[1;1H[36;112H  [1;1H[?25h[?25l[36;112Hk[1;1H[36;112H [1;1H[?25h[?25l[36;112Hk[1;1H[36;112H [1;1H[?25h[?25l[36;112Hk[1;1H[36;112H [1;1H[?25h[?25l[36;112Hj[1;1H[36;112H [2;1H[36;122H2[2;1H[?25h[?25l[36;112Hj[2;1H[36;112H [3;1H[36;122H3[3;1H[?25h[?25l[36;112H:[3;1H[36;1H[K[36;1H:[?2004h[?25hq![?25l[?1006l[?1002l[?2004l[23;2t[23;1t[36;1H[K[36;1H[?2004l[?1l>[?25h[>4;m[?1049la483e7b0c806:ch04 z004h51$ vi example.conf [1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KHMM[Kcat example.log [10Pls -aldocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[ADST=/etc/nginx/conf.d/default.conf[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pecho $CONF_SRC CONF_SRC=$(pwd)/example.conf[11Pcat >example.conf[11Pls -latouch example.log[1Pbrew search infopinfo[Kls -l[1Pinfodocker images -armi -f d4b e1a 085 231 085 758 a1a 8e9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages -a[Kpull dockerinaction/ch3_myotherappimages -a[Krmi -f d4b e1a 085 231 085 758 a1a 8e9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages -a[Kinfo[Kls -lpinfobrew search infotouch example.log[11Pls -lacat >example.confCONF_SRC=$(pwd)/example.conf[11Pcat >example.conf
+server {
+  listen 80;
+  server_name localhost;
+  access_log /var/log/nginx/custom.host.access.log main;
+  location / {
+    root /usr/share/nginx/html;
+    index index.html index.htm;
+  }
+}
+^Da483e7b0c806:ch04 z004h51$ cat >example.conf[1Pvi example.conf [1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KHMM[Kcat example.log [10Pls -aldocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+docker: Error response from daemon: Conflict. The container name "/diaweb" is already in use by container "05be71d108656fe1e704e461d5a2391b4d951f2726269bebe752bab5e3dce5a8". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[Acat >example.conf[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pvi example.conf [1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KHMM[Kcat example.log HMM[Kcat example.conf [1Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat >example.confCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker rm -f diaweb
+diaweb
+a483e7b0c806:ch04 z004h51$ docker rm -f diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+a18125d633ad2bb3be9593ee0da91d10360b991f6593831f11e2e02dae499398
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[Adocker rm -f diaweb[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[Acat >example.conf[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pvi example.conf [1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KHMM[Kcat example.log [10Pls -aldocker logs diaweb
+a483e7b0c806:ch04 z004h51$ docker logs diaweb
+2019/12/17 17:10:58 [error] 6#6: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+a483e7b0c806:ch04 z004h51$ ld -l
+ld: library not found for -l
+a483e7b0c806:ch04 z004h51$ ls -l
+total 64
+-rw-r--r--  1 z004h51  DHC\Domain Users    189 Dec 17 11:10 example.conf
+-rw-r--r--  1 z004h51  DHC\Domain Users    425 Dec 17 11:10 example.log
+-rw-r--r--  1 z004h51  DHC\Domain Users  22726 Dec 17 11:11 typescript
+a483e7b0c806:ch04 z004h51$ cat example.log 
+172.17.0.1 - - [17/Dec/2019:17:10:58 +0000] "GET / HTTP/1.1" 200 612 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15" "-"
+172.17.0.1 - - [17/Dec/2019:17:10:58 +0000] "GET /favicon.ico HTTP/1.1" 404 153 "http://localhost/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1.1 Safari/605.1.15" "-"
+a483e7b0c806:ch04 z004h51$ cat example.log ls -l[Kd[C[C[Cdocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[Adocker rm -f diaweb[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+diaweb
+a483e7b0c806:ch04 z004h51$ docker rm -f diaweb[3Pcat example.log ls -l[Kd[C[C[Cdocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ docker rm -f diaweb[3Pcat example.log ls -l[Kd[C[C[Cdocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C aweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG[1@_[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[H[2Ja483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name di aweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOGG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.a ccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} [K,rea donly=true --mountty[K[K type=bind,src=${LOG_SRC},dst=${LOG_DST_[K} -p 80:80 nginx:latest
+docker: Error response from daemon: invalid mount config for type "bind": bind source path does not exist: /Users/z004h51/dev/misc/test/docker/docker-in-action/ch04/exalog/nginx/custom.host.access.log.
+See 'docker run --help'.
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker rm -f diaweb[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcat example.log docker rm -f diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory | tail -1
+  526  history | tail -1
+a483e7b0c806:ch04 z004h51$ history | tail -10
+  518  CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/log/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+  519  docker logs diaweb
+  520  docker logs diaweb
+  521  ld -l
+  522  ls -l
+  523  cat example.log 
+  524  docker rm -f diaweb
+  525  CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.access.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+  526  history | tail -1
+  527  history | tail -10
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.a ccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},rea donly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+docker: Error response from daemon: invalid mount config for type "bind": bind source path does not exist: /Users/z004h51/dev/misc/test/docker/docker-in-action/ch04/exalog/nginx/custom.host.access.log.
+See 'docker run --help'.
+a483e7b0c806:ch04 z004h51$ pwd
+/Users/z004h51/dev/misc/test/docker/docker-in-action/ch04
+a483e7b0c806:ch04 z004h51$ ls -al
+total 80
+drwxr-xr-x  5 z004h51  DHC\Domain Users    160 Dec 17 11:09 .
+drwxr-xr-x  5 z004h51  DHC\Domain Users    160 Dec 17 09:23 ..
+-rw-r--r--  1 z004h51  DHC\Domain Users    189 Dec 17 11:10 example.conf
+-rw-r--r--  1 z004h51  DHC\Domain Users    425 Dec 17 11:10 example.log
+-rw-r--r--  1 z004h51  DHC\Domain Users  31467 Dec 17 15:06 typescript
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.a ccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},rea donly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+a483e7b0c806:ch04 z004h51$ ls -al[3PpwdCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory | tail -10[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+  522  ls -l
+  523  cat example.log 
+  524  docker rm -f diaweb
+  525  CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.access.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+  526  history | tail -1
+  527  history | tail -10
+  528  CONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.access.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest
+  529  pwd
+  530  ls -al
+  531  history | tail -10
+a483e7b0c806:ch04 z004h51$ ls
+example.conf	example.log	typescript
+a483e7b0c806:ch04 z004h51$ CONF_SRC=$(pwd)/example.conf ; \
+> CONF_DST=/etc/nginx/conf.d/default.conf ; \
+> LOG_SRC=$(pwd)/example.log ; \
+> LOG_DST=/var/log/nginx/custom.host.access.log ; \
+> docker run -d --name diaweb --mount type=bind,src[Kc=$CONF_SRC,dsr[Kt=$ONCF_[K[K[K[K[KCONT[KF_DST,ra[Keadonly=trye[K[Kue --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} - p 80:80 nginx:latest
+66970adc2171f38a4279b2cb5161bfbb15bd7bc785c24643f5b8364e47cd0404
+a483e7b0c806:ch04 z004h51$ docker exec diaweb sed -i "s/listen 80/listen 8080/" /etc/nginx/conf.d/default.conf
+sed: cannot rename /etc/nginx/conf.d/sedqIlCTg: Device or resource busy
+a483e7b0c806:ch04 z004h51$ docker exec diaweb sed -i "s/listen 80/listen 8080/" /etc/nginx/conf.d/default.conf[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCONF_SRC=$(pwd)/example.conf ; CONF_DST=/etc/nginx/conf.d/default.conf ; LOG_SRC=$(pwd)/example.log ; LOG_DST=/vaar/log/nginx/custom.host.access.log ; docker run -d --name diaweb --mount type=bind,src=$CONF_SRC,dst=$CONF_DST,readonly=true --mount type=bbind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory | tail -10[12Pls -al[3PpwdCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chistory | tail -10[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[KCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/exalog/nginx/custom.host.acccess.log ;LOG_DST=/var/log/nginx/custom.host.access.log; docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST},readdonly=true --mount type=bind,src=${LOG_SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker rm -f diaweb[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pcat example.log ls -l[Kd[C[C[Cdocker logs diawebCONF_SRC=$(pwd)/example.conf ;CONF_DST=/etc/nginx/conf.d/default.conf ;LOG_SRC=$(pwd)/example.log ;LOG_DST=/var/llog/nginx/custom.host.access.log ;docker run -d --name diaweb --mount type=bind,src=${CONF_SRC},dst=${CONF_DST} --mount type=bind,src=${LOG__SRC},dst=${LOG_DST} -p 80:80 nginx:latest[A[Adocker rm -f diaweb[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+diaweb
+a483e7b0c806:ch04 z004h51$ docker run -r[K[K--rm --mount type=tmpfs,ts[K[Kdst=/tmp --entrypoint mount alpine:kat[K[K[Klatest -v
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+
+[1A[2K89d9c30c1d48: Pulling fs layer [1B[1A[2K89d9c30c1d48: Downloading [>                                                  ]  30.37kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [==>                                                ]  161.4kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [========>                                          ]  489.1kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [=====================>                             ]  1.177MB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [============================================>      ]  2.488MB/2.787MB[1B[1A[2K89d9c30c1d48: Verifying Checksum [1B[1A[2K89d9c30c1d48: Download complete [1B[1A[2K89d9c30c1d48: Extracting [>                                                  ]  32.77kB/2.787MB[1B[1A[2K89d9c30c1d48: Extracting [=========>                                         ]  557.1kB/2.787MB[1B[1A[2K89d9c30c1d48: Extracting [==================================================>]  2.787MB/2.787MB[1B[1A[2K89d9c30c1d48: Pull complete [1BDigest: sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a
+Status: Downloaded newer image for alpine:latest
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/NSWL2NYUHJQUSHN5KRVUDYUG74:/var/lib/docker/overlay2/l/Z5PE266O7YC3FTSEWDELY5TXH3,upperdir=/var/lib/docker/overlay2/58020d390b010c897ad3555b9434a1610d1f878739f000f125ca757b8ba04234/diff,workdir=/var/lib/docker/overlay2/58020d390b010c897ad3555b9434a1610d1f878739f000f125ca757b8ba04234/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,relatime,mode=755)
+cpuset on /sys/fs/cgroup/cpuset type cgroup (ro,nosuid,nodev,noexec,relatime,cpuset)
+cpu on /sys/fs/cgroup/cpu type cgroup (ro,nosuid,nodev,noexec,relatime,cpu)
+cpuacct on /sys/fs/cgroup/cpuacct type cgroup (ro,nosuid,nodev,noexec,relatime,cpuacct)
+blkio on /sys/fs/cgroup/blkio type cgroup (ro,nosuid,nodev,noexec,relatime,blkio)
+memory on /sys/fs/cgroup/memory type cgroup (ro,nosuid,nodev,noexec,relatime,memory)
+devices on /sys/fs/cgroup/devices type cgroup (ro,nosuid,nodev,noexec,relatime,devices)
+freezer on /sys/fs/cgroup/freezer type cgroup (ro,nosuid,nodev,noexec,relatime,freezer)
+net_cls on /sys/fs/cgroup/net_cls type cgroup (ro,nosuid,nodev,noexec,relatime,net_cls)
+perf_event on /sys/fs/cgroup/perf_event type cgroup (ro,nosuid,nodev,noexec,relatime,perf_event)
+net_prio on /sys/fs/cgroup/net_prio type cgroup (ro,nosuid,nodev,noexec,relatime,net_prio)
+hugetlb on /sys/fs/cgroup/hugetlb type cgroup (ro,nosuid,nodev,noexec,relatime,hugetlb)
+pids on /sys/fs/cgroup/pids type cgroup (ro,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/systemd type cgroup (ro,nosuid,nodev,noexec,relatime,name=systemd)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /etc/resolv.conf type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hostname type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hosts type ext4 (rw,relatime,data=ordered)
+proc on /proc/bus type proc (ro,relatime)
+proc on /proc/fs type proc (ro,relatime)
+proc on /proc/irq type proc (ro,relatime)
+proc on /proc/sys type proc (ro,relatime)
+proc on /proc/sysrq-trigger type proc (ro,relatime)
+tmpfs on /proc/acpi type tmpfs (ro,relatime)
+tmpfs on /proc/kcore type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/keys type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/timer_list type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/sched_debug type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /sys/firmware type tmpfs (ro,relatime)
+a483e7b0c806:ch04 z004h51$ docker run --rm --mount type=tmpfs,dst=/tmp --entrypoint mount alpine:latest -v[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker rmp[Ki c19173c5ada610a5
+Error: No such image: c19173c5ada610a5
+a483e7b0c806:ch04 z004h51$ docker rmi c19173c5ada610a5[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K -f c19173c5ada610a5[K[K[K[K[K[K[K
+Error: No such container: c19173c5a
+a483e7b0c806:ch04 z004h51$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+a483e7b0c806:ch04 z004h51$ docoker
+bash: docoker: command not found
+a483e7b0c806:ch04 z004h51$ c[Kdocker
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/z004h51/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context
+                           set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/z004h51/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/z004h51/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/z004h51/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+a483e7b0c806:ch04 z004h51$ roc[K[K[Kdockerokerker ps -arm -f c19173c5a[1P c19173c5a[1P c19173c5a[1Pc19173c5a
+Error: No such container: c19173c5a
+a483e7b0c806:ch04 z004h51$ ;2Adocker rm c19173c5a[K
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/z004h51/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context
+                           set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/z004h51/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/z004h51/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/z004h51/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+a483e7b0c806:ch04 z004h51$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               latest              231d40e811cd        3 weeks ago         126MB
+alpine              latest              965ea09ff2eb        8 weeks ago         5.55MB
+a483e7b0c806:ch04 z004h51$ docker images[K rm c19173c5a[K rm c19173c5a[K[K[K[K[K[K[K[K[K965
+Error: No such container: 965
+a483e7b0c806:ch04 z004h51$ docker rm 965i 965
+Untagged: alpine:latest
+Untagged: alpine@sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a
+Deleted: sha256:965ea09ff2ebd2b9eeec88cd822ce156f6674c7e99be082c7efac3c62f3ff652
+Deleted: sha256:77cae8ab23bf486355d1b3191259705374f4a11d483b24964d2f729dd8c076a0
+a483e7b0c806:ch04 z004h51$ docker rmi 965[1P 965images[K rm c19173c5a[Kokerker ps -arm -f c19173c5ai c19173c5ada610a5un --rm --mount type=tmpfs,dst=/tmp --entrypoint mount alpine:latest -vvv
+Unable to find image 'alpine:latest' locally
+latest: Pulling from library/alpine
+
+[1A[2K89d9c30c1d48: Pulling fs layer [1B[1A[2K89d9c30c1d48: Downloading [>                                                  ]  30.37kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [===>                                               ]  194.2kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [===========>                                       ]  620.2kB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [============================>                      ]   1.57MB/2.787MB[1B[1A[2K89d9c30c1d48: Downloading [==================================================>]  2.787MB/2.787MB[1B[1A[2K89d9c30c1d48: Download complete [1B[1A[2K89d9c30c1d48: Extracting [>                                                  ]  32.77kB/2.787MB[1B[1A[2K89d9c30c1d48: Extracting [=============>                                     ]  753.7kB/2.787MB[1B[1A[2K89d9c30c1d48: Extracting [==================================================>]  2.787MB/2.787MB[1B[1A[2K89d9c30c1d48: Pull complete [1BDigest: sha256:c19173c5ada610a5989151111163d28a67368362762534d8a8121ce95cf2bd5a
+Status: Downloaded newer image for alpine:latest
+overlay on / type overlay (rw,relatime,lowerdir=/var/lib/docker/overlay2/l/6RN5O3CXBUXH2D7LKX2IBAHR6F:/var/lib/docker/overlay2/l/BIPU5KJQUK7Z732EOXI4DLKT6I,upperdir=/var/lib/docker/overlay2/0269c6eccd5cc089358600283f59d510ba0cfc1d0c39076dbcb157b15a0749a6/diff,workdir=/var/lib/docker/overlay2/0269c6eccd5cc089358600283f59d510ba0cfc1d0c39076dbcb157b15a0749a6/work)
+proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+tmpfs on /dev type tmpfs (rw,nosuid,size=65536k,mode=755)
+devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,gid=5,mode=620,ptmxmode=666)
+sysfs on /sys type sysfs (ro,nosuid,nodev,noexec,relatime)
+tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,relatime,mode=755)
+cpuset on /sys/fs/cgroup/cpuset type cgroup (ro,nosuid,nodev,noexec,relatime,cpuset)
+cpu on /sys/fs/cgroup/cpu type cgroup (ro,nosuid,nodev,noexec,relatime,cpu)
+cpuacct on /sys/fs/cgroup/cpuacct type cgroup (ro,nosuid,nodev,noexec,relatime,cpuacct)
+blkio on /sys/fs/cgroup/blkio type cgroup (ro,nosuid,nodev,noexec,relatime,blkio)
+memory on /sys/fs/cgroup/memory type cgroup (ro,nosuid,nodev,noexec,relatime,memory)
+devices on /sys/fs/cgroup/devices type cgroup (ro,nosuid,nodev,noexec,relatime,devices)
+freezer on /sys/fs/cgroup/freezer type cgroup (ro,nosuid,nodev,noexec,relatime,freezer)
+net_cls on /sys/fs/cgroup/net_cls type cgroup (ro,nosuid,nodev,noexec,relatime,net_cls)
+perf_event on /sys/fs/cgroup/perf_event type cgroup (ro,nosuid,nodev,noexec,relatime,perf_event)
+net_prio on /sys/fs/cgroup/net_prio type cgroup (ro,nosuid,nodev,noexec,relatime,net_prio)
+hugetlb on /sys/fs/cgroup/hugetlb type cgroup (ro,nosuid,nodev,noexec,relatime,hugetlb)
+pids on /sys/fs/cgroup/pids type cgroup (ro,nosuid,nodev,noexec,relatime,pids)
+cgroup on /sys/fs/cgroup/systemd type cgroup (ro,nosuid,nodev,noexec,relatime,name=systemd)
+mqueue on /dev/mqueue type mqueue (rw,nosuid,nodev,noexec,relatime)
+shm on /dev/shm type tmpfs (rw,nosuid,nodev,noexec,relatime,size=65536k)
+tmpfs on /tmp type tmpfs (rw,nosuid,nodev,noexec,relatime)
+/dev/sda1 on /etc/resolv.conf type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hostname type ext4 (rw,relatime,data=ordered)
+/dev/sda1 on /etc/hosts type ext4 (rw,relatime,data=ordered)
+proc on /proc/bus type proc (ro,relatime)
+proc on /proc/fs type proc (ro,relatime)
+proc on /proc/irq type proc (ro,relatime)
+proc on /proc/sys type proc (ro,relatime)
+proc on /proc/sysrq-trigger type proc (ro,relatime)
+tmpfs on /proc/acpi type tmpfs (ro,relatime)
+tmpfs on /proc/kcore type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/keys type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/timer_list type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /proc/sched_debug type tmpfs (rw,nosuid,size=65536k,mode=755)
+tmpfs on /sys/firmware type tmpfs (ro,relatime)
+a483e7b0c806:ch04 z004h51$ docker
+
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/z004h51/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context
+                           set with "docker context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket(s) to connect to
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/z004h51/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/Users/z004h51/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/Users/z004h51/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Management Commands:
+  builder     Manage builds
+  config      Manage Docker configs
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  network     Manage networks
+  node        Manage Swarm nodes
+  plugin      Manage plugins
+  secret      Manage Docker secrets
+  service     Manage services
+  stack       Manage Docker stacks
+  swarm       Manage Swarm
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  build       Build an image from a Dockerfile
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  exec        Run a command in a running container
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  images      List images
+  import      Import the contents from a tarball to create a filesystem image
+  info        Display system-wide information
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  login       Log in to a Docker registry
+  logout      Log out from a Docker registry
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  ps          List containers
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  run         Run a command in a new container
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  search      Search the Docker Hub for images
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  version     Show the Docker version information
+  wait        Block until one or more containers stop, then print their exit codes
+
+Run 'docker COMMAND --help' for more information on a command.
+a483e7b0c806:ch04 z004h51$ docker col[K[K[Kvolume inspect
+"docker volume inspect" requires at least 1 argument.
+See 'docker volume inspect --help'.
+
+Usage:  docker volume inspect [OPTIONS] VOLUME [VOLUME...]
+
+Display detailed information on one or more volumes
+a483e7b0c806:ch04 z004h51$ docker col[K[K[Kvolume create --driver local --label example-[K=location lc[Kocation-example
+location-example
+a483e7b0c806:ch04 z004h51$ docker volume inp[Kspect location-example
+[
+    {
+        "CreatedAt": "2019-12-17T21:44:09Z",
+        "Driver": "local",
+        "Labels": {
+            "example": "location"
+        },
+        "Mountpoint": "/var/lib/docker/volumes/location-example/_data",
+        "Name": "location-example",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+a483e7b0c806:ch04 z004h51$ pwd
+/Users/z004h51/dev/misc/test/docker/docker-in-action/ch04
+a483e7b0c806:ch04 z004h51$ docker volume create --driver local --lable exa[K[K[K[K[K[Ke; [K[Kl example=a[Kcassandra cass-shared
+cass-shared
+a483e7b0c806:ch04 z004h51$ docker run -d --volume cass-shared:/var/lib/cassanr[Kdre[Ka/data --name cass1 cassandra:2.2
+Unable to find image 'cassandra:2.2' locally
+2.2: Pulling from library/cassandra
+
+[1A[2Kd599a449871e: Pulling fs layer [1B
+[1A[2K2eec1599a0f8: Pulling fs layer [1B
+[1A[2K2c355fffba20: Pulling fs layer [1B
+[1A[2K0b4ad26c76e2: Pulling fs layer [1B
+[1A[2K362e3f1f548f: Pulling fs layer [1B
+[1A[2K21eec0045186: Pulling fs layer [1B[3A[2K0b4ad26c76e2: Waiting [3B
+[1A[2K9a387bb044ab: Pulling fs layer [1B[3A[2K362e3f1f548f: Waiting [3B
+[1A[2Kc1b7eef57e18: Pulling fs layer [1B
+[1A[2K7d7b6ae6ccd9: Pulling fs layer [1B
+[1A[2Kf1e94740a94d: Pulling fs layer [1B[4A[2K9a387bb044ab: Waiting [4B[3A[2Kc1b7eef57e18: Waiting [3B[5A[2K21eec0045186: Waiting [5B[2A[2K7d7b6ae6ccd9: Waiting [2B[9A[2K2eec1599a0f8: Downloading [=============>                                     ]     467B/1.747kB[9B[9A[2K2eec1599a0f8: Downloading [==================================================>]  1.747kB/1.747kB[9B[9A[2K2eec1599a0f8: Download complete [9B[7A[2K0b4ad26c76e2: Downloading [>                                                  ]  13.98kB/958.2kB[7B[7A[2K0b4ad26c76e2: Downloading [=====>                                             ]   95.9kB/958.2kB[7B[7A[2K0b4ad26c76e2: Downloading [===================>                               ]  374.4kB/958.2kB[7B[7A[2K0b4ad26c76e2: Downloading [===============================================>   ]  915.1kB/958.2kB[7B[7A[2K0b4ad26c76e2: Download complete [7B[6A[2K362e3f1f548f: Downloading [=>                                                 ]     466B/18.22kB[6B[6A[2K362e3f1f548f: Downloading [==================================================>]  18.22kB/18.22kB[6B[6A[2K362e3f1f548f: Verifying Checksum [6B[6A[2K362e3f1f548f: Download complete [6B[5A[2K21eec0045186: Downloading [>                                                  ]  530.1kB/177.4MB[5B[5A[2K21eec0045186: Downloading [>                                                  ]  1.595MB/177.4MB[5B[5A[2K21eec0045186: Downloading [>                                                  ]  3.192MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [>                                                  ]  63.13kB/5.727MB[8B[5A[2K21eec0045186: Downloading [=>                                                 ]   4.79MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [===>                                               ]  349.9kB/5.727MB[8B[5A[2K21eec0045186: Downloading [=>                                                 ]  6.396MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [========>                                          ]  923.3kB/5.727MB[8B[8A[2K2c355fffba20: Downloading [================>                                  ]   1.89MB/5.727MB[8B[5A[2K21eec0045186: Downloading [==>                                                ]  7.469MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [========================>                          ]  2.791MB/5.727MB[8B[8A[2K2c355fffba20: Downloading [============================>                      ]  3.307MB/5.727MB[8B[5A[2K21eec0045186: Downloading [==>                                                ]  8.534MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [================================>                  ]  3.741MB/5.727MB[8B[5A[2K21eec0045186: Downloading [==>                                                ]  9.599MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [=====================================>             ]  4.331MB/5.727MB[8B[5A[2K21eec0045186: Downloading [===>                                               ]  10.67MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [=========================================>         ]  4.724MB/5.727MB[8B[5A[2K21eec0045186: Downloading [===>                                               ]  11.74MB/177.4MB[5B[8A[2K2c355fffba20: Downloading [=============================================>     ]  5.183MB/5.727MB[8B[5A[2K21eec0045186: Downloading [===>                                               ]  12.83MB/177.4MB[5B[8A[2K2c355fffba20: Verifying Checksum [8B[8A[2K2c355fffba20: Download complete [8B[5A[2K21eec0045186: Downloading [===>                                               ]  13.36MB/177.4MB[5B[5A[2K21eec0045186: Downloading [====>                                              ]  14.97MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [>                                                  ]    227kB/22.52MB[10B[5A[2K21eec0045186: Downloading [====>                                              ]  16.05MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [=>                                                 ]  685.7kB/22.52MB[10B[5A[2K21eec0045186: Downloading [====>                                              ]  17.12MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [==>                                                ]  1.144MB/22.52MB[10B[10A[2Kd599a449871e: Downloading [===>                                               ]  1.611MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=====>                                             ]  18.19MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [====>                                              ]   2.07MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=====>                                             ]  19.26MB/177.4MB[5B[4A[2K9a387bb044ab: Downloading [====>                                              ]     467B/4.892kB[4B[4A[2K9a387bb044ab: Download complete [4B[10A[2Kd599a449871e: Downloading [=====>                                             ]  2.537MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=====>                                             ]  20.33MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [======>                                            ]  2.998MB/22.52MB[10B[5A[2K21eec0045186: Downloading [======>                                            ]   21.4MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [=======>                                           ]  3.233MB/22.52MB[10B[10A[2Kd599a449871e: Downloading [=========>                                         ]  4.152MB/22.52MB[10B[5A[2K21eec0045186: Downloading [======>                                            ]  22.48MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [===========>                                       ]  5.068MB/22.52MB[10B[5A[2K21eec0045186: Downloading [======>                                            ]  23.56MB/177.4MB[5B[3A[2Kc1b7eef57e18: Downloading [====================>                              ]     467B/1.162kB[3B[10A[2Kd599a449871e: Downloading [=============>                                     ]  5.994MB/22.52MB[10B[3A[2Kc1b7eef57e18: Downloading [==================================================>]  1.162kB/1.162kB[3B[3A[2Kc1b7eef57e18: Download complete [3B[10A[2Kd599a449871e: Downloading [==============>                                    ]  6.689MB/22.52MB[10B[5A[2K21eec0045186: Downloading [======>                                            ]   24.1MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [================>                                  ]  7.379MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=======>                                           ]  25.16MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [=================>                                 ]  8.067MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=======>                                           ]  26.24MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [===================>                               ]  8.763MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=======>                                           ]  27.33MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [=====================>                             ]  9.468MB/22.52MB[10B[5A[2K21eec0045186: Downloading [========>                                          ]   28.4MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [======================>                            ]  10.16MB/22.52MB[10B[2A[2K7d7b6ae6ccd9: Downloading [==================================================>]     121B/121B[2B[2A[2K7d7b6ae6ccd9: Verifying Checksum [2B[2A[2K7d7b6ae6ccd9: Download complete [2B[5A[2K21eec0045186: Downloading [========>                                          ]  29.47MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [========================>                          ]  11.09MB/22.52MB[10B[5A[2K21eec0045186: Downloading [========>                                          ]     30MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [===========================>                       ]  12.25MB/22.52MB[10B[5A[2K21eec0045186: Downloading [========>                                          ]  31.08MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [============================>                      ]  12.93MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=========>                                         ]  32.14MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [==============================>                    ]  13.86MB/22.52MB[10B[10A[2Kd599a449871e: Downloading [================================>                  ]  14.79MB/22.52MB[10B[1A[2Kf1e94740a94d: Downloading [=>                                                 ]     466B/22.5kB[1B[5A[2K21eec0045186: Downloading [=========>                                         ]  33.74MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [==================================>                ]  15.71MB/22.52MB[10B[1A[2Kf1e94740a94d: Downloading [==================================================>]   22.5kB/22.5kB[1B[1A[2Kf1e94740a94d: Verifying Checksum [1B[1A[2Kf1e94740a94d: Download complete [1B[10A[2Kd599a449871e: Downloading [====================================>              ]  16.64MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=========>                                         ]  34.82MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [======================================>            ]  17.34MB/22.52MB[10B[5A[2K21eec0045186: Downloading [==========>                                        ]  35.89MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [========================================>          ]  18.27MB/22.52MB[10B[5A[2K21eec0045186: Downloading [==========>                                        ]  36.96MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [==========================================>        ]  18.95MB/22.52MB[10B[5A[2K21eec0045186: Downloading [==========>                                        ]  38.57MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [===========================================>       ]  19.65MB/22.52MB[10B[5A[2K21eec0045186: Downloading [===========>                                       ]  39.63MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [============================================>      ]  20.11MB/22.52MB[10B[5A[2K21eec0045186: Downloading [===========>                                       ]   40.7MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [==============================================>    ]  20.81MB/22.52MB[10B[5A[2K21eec0045186: Downloading [===========>                                       ]  41.78MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [===============================================>   ]  21.27MB/22.52MB[10B[5A[2K21eec0045186: Downloading [============>                                      ]  42.87MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [================================================>  ]  21.96MB/22.52MB[10B[5A[2K21eec0045186: Downloading [============>                                      ]  44.47MB/177.4MB[5B[10A[2Kd599a449871e: Downloading [=================================================> ]  22.42MB/22.52MB[10B[10A[2Kd599a449871e: Verifying Checksum [10B[10A[2Kd599a449871e: Download complete [10B[10A[2Kd599a449871e: Extracting [>                                                  ]  229.4kB/22.52MB[10B[5A[2K21eec0045186: Downloading [============>                                      ]  46.09MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=============>                                     ]   47.7MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [=>                                                 ]  458.8kB/22.52MB[10B[5A[2K21eec0045186: Downloading [=============>                                     ]  49.31MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [======>                                            ]  2.753MB/22.52MB[10B[5A[2K21eec0045186: Downloading [==============>                                    ]  50.91MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [===============>                                   ]  7.111MB/22.52MB[10B[5A[2K21eec0045186: Downloading [==============>                                    ]  52.52MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [=======================>                           ]  10.78MB/22.52MB[10B[5A[2K21eec0045186: Downloading [===============>                                   ]  54.12MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [================================>                  ]  14.68MB/22.52MB[10B[5A[2K21eec0045186: Downloading [===============>                                   ]  55.72MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [=======================================>           ]  17.66MB/22.52MB[10B[5A[2K21eec0045186: Downloading [================>                                  ]  57.33MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [=============================================>     ]  20.41MB/22.52MB[10B[5A[2K21eec0045186: Downloading [================>                                  ]  58.93MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [===============================================>   ]  21.56MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=================>                                 ]  60.54MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [================================================>  ]  21.79MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=================>                                 ]  62.14MB/177.4MB[5B[10A[2Kd599a449871e: Extracting [==================================================>]  22.52MB/22.52MB[10B[5A[2K21eec0045186: Downloading [=================>                                 ]  63.75MB/177.4MB[5B[10A[2Kd599a449871e: Pull complete [10B[9A[2K2eec1599a0f8: Extracting [==================================================>]  1.747kB/1.747kB[9B[9A[2K2eec1599a0f8: Extracting [==================================================>]  1.747kB/1.747kB[9B[5A[2K21eec0045186: Downloading [==================>                                ]  65.88MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===================>                               ]  67.49MB/177.4MB[5B[9A[2K2eec1599a0f8: Pull complete [9B[8A[2K2c355fffba20: Extracting [>                                                  ]  65.54kB/5.727MB[8B[5A[2K21eec0045186: Downloading [===================>                               ]  69.63MB/177.4MB[5B[8A[2K2c355fffba20: Extracting [==>                                                ]  327.7kB/5.727MB[8B[8A[2K2c355fffba20: Extracting [=================================>                 ]  3.801MB/5.727MB[8B[5A[2K21eec0045186: Downloading [====================>                              ]  71.77MB/177.4MB[5B[8A[2K2c355fffba20: Extracting [==================================================>]  5.727MB/5.727MB[8B[5A[2K21eec0045186: Downloading [====================>                              ]  73.92MB/177.4MB[5B[8A[2K2c355fffba20: Pull complete [8B[7A[2K0b4ad26c76e2: Extracting [=>                                                 ]  32.77kB/958.2kB[7B[7A[2K0b4ad26c76e2: Extracting [=======================>                           ]  458.8kB/958.2kB[7B[7A[2K0b4ad26c76e2: Extracting [==================================================>]  958.2kB/958.2kB[7B[5A[2K21eec0045186: Downloading [=====================>                             ]  75.54MB/177.4MB[5B[7A[2K0b4ad26c76e2: Pull complete [7B[6A[2K362e3f1f548f: Extracting [==================================================>]  18.22kB/18.22kB[6B[6A[2K362e3f1f548f: Extracting [==================================================>]  18.22kB/18.22kB[6B[5A[2K21eec0045186: Downloading [=====================>                             ]  77.13MB/177.4MB[5B[5A[2K21eec0045186: Downloading [======================>                            ]  79.28MB/177.4MB[5B[6A[2K362e3f1f548f: Pull complete [6B[5A[2K21eec0045186: Downloading [======================>                            ]  80.88MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=======================>                           ]  82.48MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=======================>                           ]  84.09MB/177.4MB[5B[5A[2K21eec0045186: Downloading [========================>                          ]  85.68MB/177.4MB[5B[5A[2K21eec0045186: Downloading [========================>                          ]  87.28MB/177.4MB[5B[5A[2K21eec0045186: Downloading [========================>                          ]  88.35MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=========================>                         ]  89.95MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=========================>                         ]  91.55MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==========================>                        ]   93.7MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==========================>                        ]   95.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===========================>                       ]  97.45MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===========================>                       ]  99.06MB/177.4MB[5B[5A[2K21eec0045186: Downloading [============================>                      ]  100.7MB/177.4MB[5B[5A[2K21eec0045186: Downloading [============================>                      ]  102.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=============================>                     ]  103.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=============================>                     ]  105.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==============================>                    ]  107.6MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==============================>                    ]  109.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===============================>                   ]  111.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===============================>                   ]  113.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [================================>                  ]  115.1MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=================================>                 ]  117.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=================================>                 ]  118.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=================================>                 ]  120.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==================================>                ]  122.6MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==================================>                ]  123.2MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===================================>               ]  124.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===================================>               ]  125.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===================================>               ]  126.4MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===================================>               ]  127.4MB/177.4MB[5B[5A[2K21eec0045186: Downloading [====================================>              ]  128.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [====================================>              ]  130.1MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=====================================>             ]  131.7MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=====================================>             ]  133.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [======================================>            ]  134.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [======================================>            ]  136.6MB/177.4MB[5B[5A[2K21eec0045186: Downloading [======================================>            ]  138.2MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=======================================>           ]  139.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=======================================>           ]  141.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [========================================>          ]    144MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=========================================>         ]  145.6MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=========================================>         ]  147.2MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=========================================>         ]  148.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==========================================>        ]  149.9MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==========================================>        ]  151.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===========================================>       ]  153.7MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===========================================>       ]  155.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [============================================>      ]  157.4MB/177.4MB[5B[5A[2K21eec0045186: Downloading [============================================>      ]    159MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=============================================>     ]  161.1MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=============================================>     ]  162.2MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==============================================>    ]  163.8MB/177.4MB[5B[5A[2K21eec0045186: Downloading [==============================================>    ]  165.4MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===============================================>   ]    167MB/177.4MB[5B[5A[2K21eec0045186: Downloading [===============================================>   ]  169.1MB/177.4MB[5B[5A[2K21eec0045186: Downloading [================================================>  ]  171.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [================================================>  ]  172.3MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=================================================> ]  174.5MB/177.4MB[5B[5A[2K21eec0045186: Downloading [=================================================> ]  176.6MB/177.4MB[5B[5A[2K21eec0045186: Verifying Checksum [5B[5A[2K21eec0045186: Download complete [5B[5A[2K21eec0045186: Extracting [>                                                  ]  557.1kB/177.4MB[5B[5A[2K21eec0045186: Extracting [=>                                                 ]  5.014MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==>                                                ]  10.03MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===>                                               ]  13.93MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=====>                                             ]   19.5MB/177.4MB[5B[5A[2K21eec0045186: Extracting [========>                                          ]  28.97MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=========>                                         ]  33.98MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===========>                                       ]  39.55MB/177.4MB[5B[5A[2K21eec0045186: Extracting [============>                                      ]  45.12MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==============>                                    ]  50.14MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==============>                                    ]  51.25MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===============>                                   ]  54.59MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=================>                                 ]  61.83MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===================>                               ]  67.96MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=====================>                             ]  75.76MB/177.4MB[5B[5A[2K21eec0045186: Extracting [======================>                            ]  79.66MB/177.4MB[5B[5A[2K21eec0045186: Extracting [========================>                          ]  86.34MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=========================>                         ]  91.91MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===========================>                       ]  98.04MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=============================>                     ]  104.7MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==============================>                    ]  108.1MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===============================>                   ]  111.4MB/177.4MB[5B[5A[2K21eec0045186: Extracting [================================>                  ]  114.2MB/177.4MB[5B[5A[2K21eec0045186: Extracting [================================>                  ]    117MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===================================>               ]  126.5MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=======================================>           ]  140.4MB/177.4MB[5B[5A[2K21eec0045186: Extracting [========================================>          ]  144.8MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=========================================>         ]  148.7MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==========================================>        ]  149.8MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===========================================>       ]  155.4MB/177.4MB[5B[5A[2K21eec0045186: Extracting [============================================>      ]  157.6MB/177.4MB[5B[5A[2K21eec0045186: Extracting [============================================>      ]  159.3MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=============================================>     ]    161MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=============================================>     ]  161.5MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==============================================>    ]  163.2MB/177.4MB[5B[5A[2K21eec0045186: Extracting [===============================================>   ]  169.9MB/177.4MB[5B[5A[2K21eec0045186: Extracting [================================================>  ]  171.6MB/177.4MB[5B[5A[2K21eec0045186: Extracting [================================================>  ]  173.2MB/177.4MB[5B[5A[2K21eec0045186: Extracting [=================================================> ]    176MB/177.4MB[5B[5A[2K21eec0045186: Extracting [==================================================>]  177.4MB/177.4MB[5B[5A[2K21eec0045186: Pull complete [5B[4A[2K9a387bb044ab: Extracting [==================================================>]  4.892kB/4.892kB[4B[4A[2K9a387bb044ab: Extracting [==================================================>]  4.892kB/4.892kB[4B[4A[2K9a387bb044ab: Pull complete [4B[3A[2Kc1b7eef57e18: Extracting [==================================================>]  1.162kB/1.162kB[3B[3A[2Kc1b7eef57e18: Extracting [==================================================>]  1.162kB/1.162kB[3B[3A[2Kc1b7eef57e18: Pull complete [3B[2A[2K7d7b6ae6ccd9: Extracting [==================================================>]     121B/121B[2B[2A[2K7d7b6ae6ccd9: Extracting [==================================================>]     121B/121B[2B[2A[2K7d7b6ae6ccd9: Pull complete [2B[1A[2Kf1e94740a94d: Extracting [==================================================>]   22.5kB/22.5kB[1B[1A[2Kf1e94740a94d: Extracting [==================================================>]   22.5kB/22.5kB[1B[1A[2Kf1e94740a94d: Pull complete [1BDigest: sha256:0f245ee44f461e5f0a4355712a6dfc2ff35e43548603324ca696902c9ad6dbd8
+Status: Downloaded newer image for cassandra:2.2
+3c95cc185659c638cfc9bca636a14488c7c7941a2f1fe1c299e0624b662feca7
+a483e7b0c806:ch04 z004h51$ docker run --it [K[K[K[Kit --rm --link cass1:cass cassandra:2.2 shq[K[Kqlsh cass[1P[1@c[C[C[C[C[C[C[C[C[C
+Connected to [0;1;34mTest Cluster[0m at cass:9042.
+[cqlsh 5.0.1 | Cassandra 2.2.15 | CQL spec 3.3.1 | Native protocol v4]
+Use HELP for help.
+cqlsh> select * from d systm em.schema_keyspaces;
+
+ [0;1;31mkeyspace_name[0m      | [0;1;35mdurable_writes[0m | [0;1;35mstrategy_class[0m                              | [0;1;35mstrategy_options[0m
+--------------------+----------------+---------------------------------------------+----------------------------
+        [0;1;33msystem_auth[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"1"}[0m
+ [0;1;33msystem_distributed[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"3"}[0m
+             [0;1;33msystem[0m |           [0;1;32mTrue[0m |  [0;1;33morg.apache.cassandra.locator.LocalStrategy[0m |                         [0;1;33m{}[0m
+      [0;1;33msystem_traces[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"2"}[0m
+
+(4 rows)
+cqlsh> create keyspace hellos _f docker_world with replication = { 'class': 'SimpleStrategy', 'R replication_factor': 1 };
+cqlsh> create keyspace hello_docker_world with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };cqlsh> [71Pselect * from system.schema_keyspaces;
+
+ [0;1;31mkeyspace_name[0m      | [0;1;35mdurable_writes[0m | [0;1;35mstrategy_class[0m                              | [0;1;35mstrategy_options[0m
+--------------------+----------------+---------------------------------------------+----------------------------
+        [0;1;33msystem_auth[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"1"}[0m
+ [0;1;33mhello_docker_world[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"1"}[0m
+ [0;1;33msystem_distributed[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"3"}[0m
+             [0;1;33msystem[0m |           [0;1;32mTrue[0m |  [0;1;33morg.apache.cassandra.locator.LocalStrategy[0m |                         [0;1;33m{}[0m
+      [0;1;33msystem_traces[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"2"}[0m
+
+(5 rows)
+cqlsh> select * from system.schema_keyspaces;  where keyspace_name = 'docker_hello_work ld';
+
+ [0;1;31mkeyspace_name[0m | [0;1;35mdurable_writes[0m | [0;1;35mstrategy_class[0m | [0;1;35mstrategy_options[0m
+---------------+----------------+----------------+------------------
+
+(0 rows)
+cqlsh> select * from system.schema_keyspaces where keyspace_name = 'docker_hello_world';;[Kcqlsh> [71@create keyspace hello_docker_world with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };[1@h[1@e[1@l[1@l[1@i[1Po[1@o[1@_[1P[1P[1P[1P[1P[1Pocker_whello_orlcreate keyspace hocker_whello_orld with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+cqlsh> create keyspace docker_hello_world with with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+[0;1;31mSyntaxException: line 1:40 no viable alternative at input 'with' (create keyspace docker_hello_world with [with]...)[0m
+cqlsh> create keyspace docker_hello_world with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };
+cqlsh> create keyspace docker_hello_world with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };cqlsh> create keyspace docker_hello_world with [5@with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };cqlsh> create keyspace [5Phocker_whello_orld with replication = { 'class': 'SimpleStrategy', 'replication_factor': 1 };cqlsh> [28Pselect * from system.schema_keyspaces where keyspace_name = 'docker_hello_world';
+
+ [0;1;31mkeyspace_name[0m      | [0;1;35mdurable_writes[0m | [0;1;35mstrategy_class[0m                              | [0;1;35mstrategy_options[0m
+--------------------+----------------+---------------------------------------------+----------------------------
+ [0;1;33mdocker_hello_world[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"1"}[0m
+
+(1 rows)
+cqlsh> quit
+a483e7b0c806:ch04 z004h51$ docker stop cass1
+cass1
+a483e7b0c806:ch04 z004h51$ docker rm -vf cass1
+cass1
+a483e7b0c806:ch04 z004h51$ docker rm -vf cass1[2Pstop[C[C[C[C[C[C[2@rm -vf[C[C[C[C[C[C[Kdocker volume list
+DRIVER              VOLUME NAME
+local               4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+local               1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+local               479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               cass-shared
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+a483e7b0c806:ch04 z004h51$ docker volume listrm -vf cass1[2Pstop[C[C[C[C[C[Crun -it --rm --link cass1:cass cassandra:2.2 cqlsh cass[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd --volume cass-shared:/var/lib/cassandra/data --name cass1 cassandra:2.2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pit --rm --link cass1:cass cassandra:2.2 cqlsh cass[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd --volume cass-shared:/var/lib/cassandra/data --name cass1 cassandra:2.2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P cassandra:2.22 cassandra:2.2
+1f74089c1a8fbf0998c039dc00bd4176b2ddc312c1628399e9feb9688558089c
+a483e7b0c806:ch04 z004h51$ docker run -d --volume cass-shared:/var/lib/cassandra/data --name cass2 cassandra:2.2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvolume list[Krm -vf cass1[2Pstop[C[C[C[C[C[Crun -it --rm --link cass1:cass cassandra:2.2 cqlsh cass[C[C[C[C[C[1P[1@2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Connected to [0;1;34mTest Cluster[0m at cass:9042.
+[cqlsh 5.0.1 | Cassandra 2.2.15 | CQL spec 3.3.1 | Native protocol v4]
+Use HELP for help.
+cqlsh> select *
+   ... from system.schema_keyspaces
+   ... where keyspace_name = 'docker_hello_world';
+
+ [0;1;31mkeyspace_name[0m      | [0;1;35mdurable_writes[0m | [0;1;35mstrategy_class[0m                              | [0;1;35mstrategy_options[0m
+--------------------+----------------+---------------------------------------------+----------------------------
+ [0;1;33mdocker_hello_world[0m |           [0;1;32mTrue[0m | [0;1;33morg.apache.cassandra.locator.SimpleStrategy[0m | [0;1;33m{"replication_factor":"1"}[0m
+
+(1 rows)
+cqlsh> 
+a483e7b0c806:ch04 z004h51$ docker rm -vf casse[K2 cass-shared
+cass2
+Error: No such container: cass-shared
+a483e7b0c806:ch04 z004h51$ docker rm -vf cass2 cass-sharedun -it --rm --link cass2:cass cassandra:2.2 cqlsh cass[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd --volume cass-shared:/var/lib/cassandra/data --name cass2 cassandra:2.2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvolume list[K
+DRIVER              VOLUME NAME
+local               4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+local               1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+local               479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               cass-shared
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+a483e7b0c806:ch04 z004h51$ docker volume list[K[K[K[K[K
+
+Usage:	docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+a483e7b0c806:ch04 z004h51$ docker volume list[K[K[K[Krm cass-shared
+cass-shared
+a483e7b0c806:ch04 z004h51$ docker volume rm cass-shared[K list
+DRIVER              VOLUME NAME
+local               4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+local               1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+local               479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+a483e7b0c806:ch04 z004h51$ docker volume list[KLOG_SRC=$(pwd)/web-logs-example
+a483e7b0c806:ch04 z004h51$ mkdir $LOG_SRC
+a483e7b0c806:ch04 z004h51$ docker run --name plate[Khg[K -d --maoun[K[K[K[Kount type=bind,set[K[Krc=$LOG_SRC,dst=/data alping[Ke:latest head /data/logA
+6611e0f3931dc002615db0ce82cd7ef14e434bb48b2bf367ff145b2a80e0b51a
+a483e7b0c806:ch04 z004h51$ cat $LOG_SRC/logA
+cat: /Users/z004h51/dev/misc/test/docker/docker-in-action/ch04/web-logs-example/logA: No such file or directory
+a483e7b0c806:ch04 z004h51$ docker rm -f plath
+plath
+a483e7b0c806:ch04 z004h51$ docker rm -f plath[1Pcat $LOG_SRC/logAdocker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir $LOG_SRC[Kdocker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat $LOG_SRC/logA[Kdocker rm -f plath[Kdocker run 00rm[K[K[K-[K[K--rn[Km --nuy[K[K=[K[Kn[Kmount type=vind[K[K[K[Kbind [K,scr=[K[K[Krc=$LOG_SRC,dst=/data alp[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker rm -f plath[1Pcat $LOG_SRC/logAdocker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdockerinactouin[K[K[K[Kion [K/ch4_writer+a[K[K_a
+Unable to find image 'dockerinaction/ch4_writer_a:latest' locally
+latest: Pulling from dockerinaction/ch4_writer_a
+Image docker.io/dockerinaction/ch4_writer_a:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+
+[1A[2Ka3ed95caeb02: Pulling fs layer [1B
+[1A[2K1db09adb5ddd: Pulling fs layer [1B[2A[2Ka3ed95caeb02: Downloading [==================================================>]      32B/32B[2B[2A[2Ka3ed95caeb02: Verifying Checksum [2B[2A[2Ka3ed95caeb02: Download complete [2B[2A[2Ka3ed95caeb02: Extracting [==================================================>]      32B/32B[2B[2A[2Ka3ed95caeb02: Extracting [==================================================>]      32B/32B[2B[2A[2Ka3ed95caeb02: Pull complete [2B[1A[2K1db09adb5ddd: Downloading [>                                                  ]  14.01kB/1.145MB[1B[1A[2K1db09adb5ddd: Downloading [==========>                                        ]  243.4kB/1.145MB[1B[1A[2K1db09adb5ddd: Downloading [===================>                               ]    440kB/1.145MB[1B[1A[2K1db09adb5ddd: Downloading [==================================>                ]  800.4kB/1.145MB[1B[1A[2K1db09adb5ddd: Downloading [==========================================>        ]  972.5kB/1.145MB[1B[1A[2K1db09adb5ddd: Download complete [1B[1A[2K1db09adb5ddd: Extracting [=>                                                 ]  32.77kB/1.145MB[1B[1A[2K1db09adb5ddd: Extracting [========================>                          ]  557.1kB/1.145MB[1B[1A[2K1db09adb5ddd: Extracting [==================================================>]  1.145MB/1.145MB[1B[1A[2K1db09adb5ddd: Extracting [==================================================>]  1.145MB/1.145MB[1B[1A[2K1db09adb5ddd: Pull complete [1BDigest: sha256:a463caa10df11ff0bbcaa04918e04f83efe2b61da05b3e0a6be305e5779f790d
+Status: Downloaded newer image for dockerinaction/ch4_writer_a:latest
+d0600424fa65330d7144471d5c56e94f0343f97237e82f4ed976a750847869c7
+a483e7b0c806:ch04 z004h51$ docker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data dockerinaction/ch4_writer_a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -f plath[K[1Pcat $LOG_SRC/logAdocker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cmkdir $LOG_SRC[Kdocker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA
+docker: Error response from daemon: Conflict. The container name "/plath" is already in use by container "d0600424fa65330d7144471d5c56e94f0343f97237e82f4ed976a750847869c7". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+a483e7b0c806:ch04 z004h51$ docker run --name plath -d --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@r[1@m
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+a483e7b0c806:ch04 z004h51$ ls -l
+total 280
+-rw-r--r--  1 z004h51  DHC\Domain Users     189 Dec 17 11:10 example.conf
+-rw-r--r--  1 z004h51  DHC\Domain Users     425 Dec 17 11:10 example.log
+-rw-r--r--  1 z004h51  DHC\Domain Users  108254 Dec 18 15:03 typescript
+drwxr-xr-x  3 z004h51  DHC\Domain Users      96 Dec 18 15:02 web-logs-example
+a483e7b0c806:ch04 z004h51$ cat example.[K[K[K[K[K[K[K[Kweb-logs-example/logA 
+example.conf      example.log       typescript        web-logs-example/ 
+a483e7b0c806:ch04 z004h51$ cat web-logs-example/logA 
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+a483e7b0c806:ch04 z004h51$ docker b[Kvolume create --driver local logging-example
+logging-example
+a483e7b0c806:ch04 z004h51$ docker volume create --driver local logging-example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pcat web-logs-example/logA ls -l[Kdocker run --rm --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11@name plath -d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1@v[1@o[1@l[1@u[1@m[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1@l[1@o[1@g[1@g[1@i[1@n[1@g[1@-[1@e[1@x[1@a[1@m[1@p[1@l[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K dockerinaction/ch4_writer_a
+docker: Error response from daemon: Conflict. The container name "/plath" is already in use by container "d0600424fa65330d7144471d5c56e94f0343f97237e82f4ed976a750847869c7". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+a483e7b0c806:ch04 z004h51$ docker rm plath
+Error response from daemon: You cannot remove a running container d0600424fa65330d7144471d5c56e94f0343f97237e82f4ed976a750847869c7. Stop the container before attempting removal or force remove
+a483e7b0c806:ch04 z004h51$ docker rm plath[1P plath[1P plaths platht platho plathp plath
+
+
+
+plath
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ 
+a483e7b0c806:ch04 z004h51$ docker stop plath[2Prm[C[C[C[C[C[C-plathfplath plath
+plath
+a483e7b0c806:ch04 z004h51$ docker rm -f plath[1Pstop[C[C[C[C[C[C[2Prm[C[C[C[C[C[Cun --name plath -d --mount type=volume,src=logging-example,dst=/data dockerinaction/ch4_writer_a
+fef42f90af5dadfdd29a9eef62cca7f380d0a9bb2b3b93c75d449239066b5e35
+a483e7b0c806:ch04 z004h51$ docker run --name plath -d --mount type=volume,src=logging-example,dst=/data dockerinaction/ch4_writer_a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -f plath[K[1Pstop[C[C[C[C[C[C[2Prm[C[C[C[C[C[Cun --name plath -d --mount type=volume,src=logging-example,dst=/data dockerinaction/ch4_writer_a[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[53Pvolume create --driver local logging-example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[25Pcat web-logs-example/logA ls -l[Kdocker run --rm --mount type=bind,src=$LOG_SRC,dst=/data alpine:latest head /data/logA[1P[1P[1P[1P[1@v[1@o[1@l[1@u[1@m[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[1P[1P[1P[1P[1P[1P[1@l[1@o[1@g[1@g[1@i[1@n[1@g[1@-[1@e[1@x[1@a[1@m[1@p[1@l[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+I would venture to guess that Anon, who wrote so many poems without signing them, was often a woman.
+a483e7b0c806:ch04 z004h51$ docker volume inspect logging-example
+[
+    {
+        "CreatedAt": "2019-12-18T21:05:48Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/logging-example/_data",
+        "Name": "logging-example",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+a483e7b0c806:ch04 z004h51$ cat /var/lib/docker/volumes/logging-example/_data
+cat: /var/lib/docker/volumes/logging-example/_data: No such file or directory
+a483e7b0c806:ch04 z004h51$ cat /var/lib/docker/volumes/logging-example/_data[C[C[1P /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+ls: /var/lib/docker/volumes/logging-example/_data: No such file or directory
+a483e7b0c806:ch04 z004h51$ ls /var/lib/docker/volumes/logging-example/_data[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+postfix
+a483e7b0c806:ch04 z004h51$ ls /var/lib/[K[K[K[K
+agentx		backups		folders		lib		mail		networkd	run		tmp
+at		db		install		log		msgs		root		rwho		vm
+audit		empty		jabberd		ma		netboot		rpc		spool		yp
+a483e7b0c806:ch04 z004h51$ ls /var/lib/docker/volumes/logging-example/_data[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Pls[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@cat[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pdocker volume inspect logging-example=logging-example=logging-example[1Plogging-example[1Plogging-example-logging-example-logging-exampleflogging-exampleologging-examplerlogging-examplemlogging-examplealogging-exampletlogging-example logging-example"logging-example"logging-example logging-example[1@{[1@{[1@}[1@}[1@j[1@s[1@o[1@n[1@ [1@.[1@M[1@o[1@u[1@n[1@t[1@p[1@o[1@i[1@n[1@t
+"/var/lib/docker/volumes/logging-example/_data"
+a483e7b0c806:ch04 z004h51$ docker volume inspect --format "{{json .Mountpoint}}" logging-example[1@c[1@a[1@t[C[1@ 
+a483e7b0c806:ch04 z004h51$ docker volume inspect --format "{{json .Mountpoint}}" logging-example[1@c[1@a[1@t[1@ [1@$[1@([C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C)/loga[KA
+cat: "/var/lib/docker/volumes/logging-example/_data"/logA: No such file or directory
+a483e7b0c806:ch04 z004h51$ cat $(docker volume inspect --format "{{json .Mountpoint}}" logging-example)/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pdocker volume inspect --format "{{json .Mountpoint}}" logging-example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls /var/[Kdocker volume inspect --format "{{json .Mountpoint}}" logging-example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccat $(docker volume inspect --format "{{json .Mountpoint}}" logging-example)/logA[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker stop plath
+plath
+a483e7b0c806:ch04 z004h51$ docker volue [K[Kme list
+DRIVER              VOLUME NAME
+local               4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+local               1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+local               479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+local               logging-example
+a483e7b0c806:ch04 z004h51$ docker volume remove 4ba 143 b79
+Error: No such volume: 4ba
+Error: No such volume: 143
+Error: No such volume: b79
+a483e7b0c806:ch04 z004h51$ docker volume remove 4ba 143 b79list[K
+DRIVER              VOLUME NAME
+local               4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+local               1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+local               479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+local               logging-example
+a483e7b0c806:ch04 z004h51$ docker volume listremove 4ba 143 b79[K[K[K[K[K[K[K[K[K[K[K[K 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6 68c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771
+1436b2861e3e349863e4363ad668c983210af458cb878dfcad510ad3b9c582b8
+479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8
+a483e7b0c806:ch04 z004h51$ docker volume remove 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6668c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremove 4ba 143 b79list[Kremove 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6668c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+a483e7b0c806:ch04 z004h51$ docker volume remove 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6668c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremove 4ba 143 b79list[K
+DRIVER              VOLUME NAME
+local               a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+local               b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+local               d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+local               fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+local               location-example
+local               logging-example
+a483e7b0c806:ch04 z004h51$ docker volume prune
+WARNING! This will remove all local volumes not used by at least one container.
+Are you sure you want to continue? [y/N] y
+Deleted Volumes:
+b794b87aaf9d34400fc84b311cff2dddd214b373ba5964bb6de7f689b47bfe8b
+d9c6d8b5522d7158eaf733040685b2c6d011c4dec50ec64e93c25d839328dd5a
+fcaed142bdf630e1f147fd1619a98b5a922d75e1383bd715881e775400e65b18
+location-example
+a2e20be4722a49f95f7bc18de306a7c2b13f92ba8e90d094e05e0f54eec66086
+
+Total reclaimed space: 296.7MB
+a483e7b0c806:ch04 z004h51$ docker volume prune[1Plist
+DRIVER              VOLUME NAME
+local               logging-example
+a483e7b0c806:ch04 z004h51$ docker volume listprune logging-example
+"docker volume prune" accepts no arguments.
+See 'docker volume prune --help'.
+
+Usage:  docker volume prune [OPTIONS]
+
+Remove all unused local volumes
+a483e7b0c806:ch04 z004h51$ docker volume prune logging-examplelist[Kprune[1Plistremove 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6668c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremove 4babd799f906e962e61e3ea60779ca9ae402e14609dff678a5d22de542095771 1436b2861e3e349863e4363ad6668c983210af458cb878dfcad510ad3b9c582b8 479384ba796f940ba7f7f8e9fb8e9fc9c79ee59ba54e221a1ea09970b463d2b8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cprune[1Plistprune logging-example[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+a483e7b0c806:ch04 z004h51$ docker volume
+
+Usage:	docker volume COMMAND
+
+Manage volumes
+
+Commands:
+  create      Create a volume
+  inspect     Display detailed information on one or more volumes
+  ls          List volumes
+  prune       Remove all unused local volumes
+  rm          Remove one or more volumes
+
+Run 'docker volume COMMAND --help' for more information on a command.
+a483e7b0c806:ch04 z004h51$ docker volume prune logging-example[1P logging-example[1P logging-example[1P logging-example[1P logging-example[1P logging-exampler logging-examplem logging-example
+Error response from daemon: remove logging-example: volume is in use - [fef42f90af5dadfdd29a9eef62cca7f380d0a9bb2b3b93c75d449239066b5e35]
+a483e7b0c806:ch04 z004h51$ docker ps -a
+CONTAINER ID        IMAGE                         COMMAND                  CREATED             STATUS                        PORTS               NAMES
+fef42f90af5d        dockerinaction/ch4_writer_a   "/bin/sh -c 'while :…"   34 minutes ago      Exited (137) 31 minutes ago                       plath
+a483e7b0c806:ch04 z004h51$ docker rm -f plath
+plath
+a483e7b0c806:ch04 z004h51$ docker rm -f plath[6Pps -avolume rm logging-exampleps -a[K
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+a483e7b0c806:ch04 z004h51$ docker ps -arm -f plath[6Pps -avolume rm logging-example[K prune logging-examplelist[K
+DRIVER              VOLUME NAME
+local               logging-example
+a483e7b0c806:ch04 z004h51$ docker volume list[6Pps -arm -f plath[6Pps -avolume rm logging-example
+logging-example
+a483e7b0c806:ch04 z004h51$ docker volume rm logging-examplelist[K
+DRIVER              VOLUME NAME
+a483e7b0c806:ch04 z004h51$ exit
+
+Script done on Thu Dec 19 09:19:33 2019
