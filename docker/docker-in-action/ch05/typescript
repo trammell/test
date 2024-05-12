@@ -1,0 +1,343 @@
+Script started on Thu Dec 19 09:20:08 2019
+[?1034ha483e7b0c806:ch05 z004h51$ docker netwro[K[Kro[K[Kork ls
+NETWORK ID          NAME                DRIVER              SCOPE
+6c10e029e0dc        bridge              bridge              local
+9d6e53abae50        host                host                local
+d1cc966fa145        none                null                local
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridh[Kge --labve[K[Kel project=dockerinaction --label chapter=5 --attachable ==sco[K[K[K[K[K--scope local --subnet 10.0.42.128/25 user-network
+278bd62d595100321d6cd61d63ca618e887f2ce521073dd5f4b981b4d3ee9fae
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 user-network[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kcreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 user-network[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+a483e7b0c806:ch05 z004h51$ docker network ls
+NETWORK ID          NAME                DRIVER              SCOPE
+6c10e029e0dc        bridge              bridge              local
+9d6e53abae50        host                host                local
+d1cc966fa145        none                null                local
+278bd62d5951        user-network        bridge              local
+a483e7b0c806:ch05 z004h51$ docker network
+
+Usage:	docker network COMMAND
+
+Manage networks
+
+Commands:
+  connect     Connect a container to a network
+  create      Create a network
+  disconnect  Disconnect a container from a network
+  inspect     Display detailed information on one or more networks
+  ls          List networks
+  prune       Remove all unused networks
+  rm          Remove one or more networks
+
+Run 'docker network COMMAND --help' for more information on a command.
+a483e7b0c806:ch05 z004h51$ docker network inspect user-network
+[
+    {
+        "Name": "user-network",
+        "Id": "278bd62d595100321d6cd61d63ca618e887f2ce521073dd5f4b981b4d3ee9fae",
+        "Created": "2019-12-19T21:24:11.8820762Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "10.0.42.128/25"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "chapter": "5",
+            "project": "dockerinaction"
+        }
+    }
+]
+a483e7b0c806:ch05 z004h51$  docker network inspect user-network[K lscreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 user-network-user-network-user-networkiuser-networkpuser-network-user-networkruser-networkauser-network [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnuser-networkk[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cguser-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceuser-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C4user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.user-network1user-network[C2user-network[C[C8user-network[C[C[C/user-network[C[C[C[C2user-network[C[C[C[C[C5user-network[C[C[C[C[C[C user-network[C[C[C[C[C[C[C
+Error response from daemon: network with name user-network already exists
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network[A[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker network rm user-network
+user-network
+a483e7b0c806:ch05 z004h51$ docker network rm user-networkcreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kdocker network rm user-networkcreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network
+331e670d23b6c0f40be8d8bba377ef5852a273f41497a66f8188dd36d63de1d2
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinspect user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[
+    {
+        "Name": "user-network",
+        "Id": "331e670d23b6c0f40be8d8bba377ef5852a273f41497a66f8188dd36d63de1d2",
+        "Created": "2019-12-19T21:32:35.1392954Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "10.0.42.128/25",
+                    "IPRange": "10.0.42.128/25"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "chapter": "5",
+            "project": "dockerinaction"
+        }
+    }
+]
+a483e7b0c806:ch05 z004h51$ docker network inspect user-networkcreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.128/25 --ip-range 10.0.42.1128/25 user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+user-network
+a483e7b0c806:ch05 z004h51$ docker network create --dif[K[Krib[Kver bridge --label project=dockerinsa[K[Kaction --labelchap[K[K[K[K chapter=5 --attachable --scope local \
+> --subnet 10.0.42.0/24 --ip-range 10.0.42.128/25 user-network
+1da16a0c49a174ad14cd7a0959fa896ec1f1567214cdc054abaca1b807f90a74
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 10.0.42.0/24 --ip-range 10.0.42.1288/25 user-network[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@inspect[C[C[C[C[C[C[C[C[C[C[C[C[C
+[
+    {
+        "Name": "user-network",
+        "Id": "1da16a0c49a174ad14cd7a0959fa896ec1f1567214cdc054abaca1b807f90a74",
+        "Created": "2019-12-19T21:34:39.9394577Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "10.0.42.0/24",
+                    "IPRange": "10.0.42.128/25"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": true,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {},
+        "Options": {},
+        "Labels": {
+            "chapter": "5",
+            "project": "dockerinaction"
+        }
+    }
+]
+a483e7b0c806:ch05 z004h51$ docker run -it --network user-network --name network-explorer alpin3[Ke:3.8 sh
+Unable to find image 'alpine:3.8' locally
+3.8: Pulling from library/alpine
+
+[1A[2Kc87736221ed0: Pulling fs layer [1B[1A[2Kc87736221ed0: Downloading [>                                                  ]  22.13kB/2.207MB[1B[1A[2Kc87736221ed0: Downloading [===>                                               ]  169.6kB/2.207MB[1B[1A[2Kc87736221ed0: Downloading [===========>                                       ]  489.1kB/2.207MB[1B[1A[2Kc87736221ed0: Downloading [==========================>                        ]  1.177MB/2.207MB[1B[1A[2Kc87736221ed0: Downloading [==================================================>]  2.207MB/2.207MB[1B[1A[2Kc87736221ed0: Verifying Checksum [1B[1A[2Kc87736221ed0: Extracting [>                                                  ]  32.77kB/2.207MB[1B[1A[2Kc87736221ed0: Extracting [========>                                          ]  360.4kB/2.207MB[1B[1A[2Kc87736221ed0: Extracting [==================================================>]  2.207MB/2.207MB[1B[1A[2Kc87736221ed0: Pull complete [1BDigest: sha256:04696b491e0cc3c58a75bace8941c14c924b9f313b03ce5029ebbc040ed9dcd9
+Status: Downloaded newer image for alpine:3.8
+/ # [6n/ # [Jip -f inet -4 -o addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+169: eth0    inet 10.0.42.129/24 brd 10.0.42.255 scope global eth0\       valid_lft forever preferred_lft forever
+/ # [6na483e7b0c806:ch05 z004h51$ exit
+
+Script done on Thu Dec 19 15:43:45 2019
+Script started on Thu Dec 19 15:43:51 2019
+[?1034ha483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinsac[K[K[Kaction --label chapter=5 --attachable --scope local --subnet 1 0.0.43.0/24 --ip-range 10.0.43.128/25 user-network3[K2
+937aa1a0b172ef0066dbe20c1bd3827f9a51653256c9e2847f43e20a8cd9938f
+a483e7b0c806:ch05 z004h51$ docker network create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 100.0.43.0/24 --ip-range 10.0.43.128/25 user-network2[A[49Prun -it --network user-network --name network-explorer alpine:3.8 sh
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+docker: Error response from daemon: Conflict. The container name "/network-explorer" is already in use by container "c674f42b30ba63196a11a402b32474ab2a3fb69f6dd7702157ec1969626e5500". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+a483e7b0c806:ch05 z004h51$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+a483e7b0c806:ch05 z004h51$ docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+c674f42b30ba        alpine:3.8          "sh"                9 minutes ago       Exited (0) 2 minutes ago                       network-explorer
+a483e7b0c806:ch05 z004h51$ docker rm -f network-explorer
+network-explorer
+a483e7b0c806:ch05 z004h51$ docker rm -f network-explorerps -a[K[Krun -it --network user-network --name network-explorer alpine:3.8 sh
+/ # [6n/ # [Ja483e7b0c806:ch05 z004h51$ docker network connect user-network2 network-explorer
+a483e7b0c806:ch05 z004h51$ docker attach network-explorer
+/ # [J/ # [Jip -f inet -4 -o addr
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+172: eth0    inet 10.0.42.129/24 brd 10.0.42.255 scope global eth0\       valid_lft forever preferred_lft forever
+174: eth1    inet 10.0.43.129/24 brd 10.0.43.255 scope global eth1\       valid_lft forever preferred_lft forever
+/ # [6napk update
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.8/community/x86_64/APKINDEX.tar.gz
+v3.8.4-252-g756199c70f [http://dl-cdn.alpinelinux.org/alpine/v3.8/main]
+v3.8.4-244-g50796da3f3 [http://dl-cdn.alpinelinux.org/alpine/v3.8/community]
+OK: 9565 distinct packages available
+/ # [6napk add nmpa[J[Jap
+(1/4) Installing libgcc (6.4.0-r9)
+7  0%                                                                                                                                                  8[0K(2/4) Installing libpcap (1.8.1-r1)
+7  0%                                                                                                                                                  8[0K(3/4) Installing libstdc++ (6.4.0-r9)
+7  2% ###                                                                                                                                              8[0K(4/4) Installing nmap (7.70-r2)
+7 12% #################                                                                                                                                8[0K7 26% ######################################                                                                                                           8[0K7 33% ################################################                                                                                                 8[0K7 35% ###################################################                                                                                              8[0K7 42% #############################################################                                                                                    8[0K7 57% ###################################################################################                                                              8[0K7 72% ########################################################################################################                                         8[0K7 77% ################################################################################################################                                 8[0K7 92% ######################################################################################################################################           8[0K7 94% #########################################################################################################################################        8[0K7 95% #########################################################################################################################################        8[0K7 99% ###############################################################################################################################################  8[0K7 99% ################################################################################################################################################ 8[0K7100% #################################################################################################################################################8[0KExecuting busybox-1.28.4-r3.trigger
+OK: 18 MiB in 17 packages
+/ # [6nnmap -an[J[Jsn 10.0.42.* -sn 20.[J[J[J10.0.43.* -oG /dev/stdout | greo [J[Jp Status
+Host: 10.0.42.128 ()	Status: Up
+Host: 10.0.42.129 (cd95e0c1c8c1)	Status: Up
+Host: 10.0.43.128 ()	Status: Up
+Host: 10.0.43.129 (cd95e0c1c8c1)	Status: Up
+/ # [6nread escape sequence
+a483e7b0c806:ch05 z004h51$ docker run -d --name lighthouse --network user-network2 alpine:3.8 sleep 1d
+0474b89911198b4e5b37e0879fb9f6d56dc5bf2d0f133da7156b14ffb4b8cdb0
+a483e7b0c806:ch05 z004h51$ docker run -d --name lighthouse --network user-network2 alpine:3.8 sleep 1d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[45Pattach network-explorer[23@network connect user-network2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[23Pattach[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+/ # [J/ # [J/ # nmap -sn 10.0.42.* -sn 10.0.43.* -oG /dev/stdout | grep Status[J
+Host: 10.0.42.128 ()	Status: Up
+Host: 10.0.42.129 (cd95e0c1c8c1)	Status: Up
+Host: 10.0.43.128 ()	Status: Up
+Host: 10.0.43.130 (lighthouse.user-network2)	Status: Up
+Host: 10.0.43.129 (cd95e0c1c8c1)	Status: Up
+/ # [6ndig lighthouse
+sh: dig: not found
+/ # [6nn[J/ # dig lighthouse[J/ # nmap -sn 10.0.42.* -sn 10.0.43.* -oG /dev/stdout | grep Status[J/ # apk add nmap[J/ # apk update[J/ # apk add nmap[J[J[J[J[Jdig
+ERROR: unsatisfiable constraints:
+  dig (missing):
+    required by: world[dig]
+/ # [6n/ # apk add dig[J/ # dig lighthouse[J/ # nmap -sn 10.0.42.* -sn 10.0.43.* -oG /dev/stdout | grep Status[J/ # dig lighthouse[J/ # apk add dig[J/ # [Jnslookup lighthouse
+nslookup: can't resolve '(null)': Name does not resolve
+
+Name:      lighthouse
+Address 1: 10.0.43.130 lighthouse.user-network2
+/ # [6ndocker network likst
+sh: docker: not found
+/ # [6n/ # docker network likst[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[J[Ja483e7b0c806:ch05 z004h51$ 
+a483e7b0c806:ch05 z004h51$ docker attach network-explorerrun -d --name lighthouse --network user-network2 alpine:3.8 sleep 1d[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[45Pattach network-explorer[23@network connect user-network2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crun -it --network user-network --name network-explorer alpine:3.8 sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm -f network-explorer[Kps -a[K[Krun -it --network user-network --name network-explorer alpine:3.8 sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnetwork create --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 100.0.43.0/24 --ip-range 10.0.43.128/25 user-network2[A[49Prun -it --network user-network --name network-explorer alpine:3.8 sh
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[40Pnetwork inspect user-networkcreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 100.0.42.0/24 --ip-range 10.0.42.128/25 user-network[Arm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[5@inspect[C[C[C[C[C[C[C[C[C[C[C[C[Ccreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 100.0.42.128/25 --ip-range 10.0.42.128/25 user-network[Arm user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccreate --driver bridge --label project=dockerinaction --label chapter=5 --attachable --scope local --subnet 100.0.42.128/25 --ip-range 10.0.42.128/25 user-network[Ainspect user-network[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K ls
+NETWORK ID          NAME                DRIVER              SCOPE
+6c10e029e0dc        bridge              bridge              local
+9d6e53abae50        host                host                local
+d1cc966fa145        none                null                local
+1da16a0c49a1        user-network        bridge              local
+937aa1a0b172        user-network2       bridge              local
+a483e7b0c806:ch05 z004h51$ docker network ls[K[Klist
+NETWORK ID          NAME                DRIVER              SCOPE
+6c10e029e0dc        bridge              bridge              local
+9d6e53abae50        host                host                local
+d1cc966fa145        none                null                local
+1da16a0c49a1        user-network        bridge              local
+937aa1a0b172        user-network2       bridge              local
+a483e7b0c806:ch05 z004h51$ docker run --rm --network host alpine:3.8 ip -o addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+1: lo    inet 127.0.0.1/8 brd 127.255.255.255 scope host lo\       valid_lft forever preferred_lft forever
+1: lo    inet6 ::1/128 scope host \       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP qlen 1000\    link/ether 02:50:00:00:00:01 brd ff:ff:ff:ff:ff:ff
+2: eth0    inet 192.168.65.3/24 brd 192.168.65.255 scope global eth0\       valid_lft forever preferred_lft forever
+2: eth0    inet6 fe80::50:ff:fe00:1/64 scope link \       valid_lft forever preferred_lft forever
+3: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN qlen 1\    link/ipip 0.0.0.0 brd 0.0.0.0
+4: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN qlen 1\    link/tunnel6 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 brd 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN \    link/ether 02:42:28:71:e5:22 brd ff:ff:ff:ff:ff:ff
+5: docker0    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0\       valid_lft forever preferred_lft forever
+5: docker0    inet6 fe80::42:28ff:fe71:e522/64 scope link \       valid_lft forever preferred_lft forever
+168: br-1da16a0c49a1: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN \    link/ether 02:42:ea:b4:c4:d2 brd ff:ff:ff:ff:ff:ff
+168: br-1da16a0c49a1    inet 10.0.42.128/24 brd 10.0.42.255 scope global br-1da16a0c49a1\       valid_lft forever preferred_lft forever
+168: br-1da16a0c49a1    inet6 fe80::42:eaff:feb4:c4d2/64 scope link \       valid_lft forever preferred_lft forever
+171: br-937aa1a0b172: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP \    link/ether 02:42:2e:9f:24:37 brd ff:ff:ff:ff:ff:ff
+171: br-937aa1a0b172    inet 10.0.43.128/24 brd 10.0.43.255 scope global br-937aa1a0b172\       valid_lft forever preferred_lft forever
+171: br-937aa1a0b172    inet6 fe80::42:2eff:fe9f:2437/64 scope link \       valid_lft forever preferred_lft forever
+177: veth883b0ef@if176: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1500 qdisc noqueue master br-937aa1a0b172 state UP \    link/ether 8e:4e:51:78:3f:b5 brd ff:ff:ff:ff:ff:ff
+177: veth883b0ef    inet6 fe80::8c4e:51ff:fe78:3fb5/64 scope link \       valid_lft forever preferred_lft forever
+a483e7b0c806:ch05 z004h51$ docker run --rm --network host alpine:3.8 ip -o addr[1P[1P[1P[1P[1@n[1@o[1@n[1@e
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN qlen 1\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+1: lo    inet 127.0.0.1/8 scope host lo\       valid_lft forever preferred_lft forever
+2: tunl0@NONE: <NOARP> mtu 1480 qdisc noop state DOWN qlen 1\    link/ipip 0.0.0.0 brd 0.0.0.0
+3: ip6tnl0@NONE: <NOARP> mtu 1452 qdisc noop state DOWN qlen 1\    link/tunnel6 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00 brd 00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+a483e7b0c806:ch05 z004h51$ docker run --rm --network none alpine:3.8 ip -o addr[K[K[K[K[K[K[K[K[K[Kping -w 8/[K.8.8.8
+ping: invalid number '8.8.8.8'
+a483e7b0c806:ch05 z004h51$ docker run --rm --network none alpine:3.8 ping -w 8.8.8.838.8.8.8 8.8.8.8
+ping: sendto: Network unreachable
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+a483e7b0c806:ch05 z004h51$ docker run --rm --network none alpine:3.8 ping -w 3 8.8.8.8[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kman ping
+docker: Error response from daemon: OCI runtime create failed: container_linux.go:346: starting container process caused "exec: \"man\": executable file not found in $PATH": unknown.
+a483e7b0c806:ch05 z004h51$ docker run --rm --network none alpine:3.8 man ping[C[C[C[C[C[C[C[Cping -w 3 8.8.8.8[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+a483e7b0c806:ch05 z004h51$ docker run --rm alpine:3.8 ping -w 3 8.8.8.8[C[1@-[1@-[1@n[1@e[1@t[1@w[1@o[1@r[1@k[1@ [1@y[1@s[1@e[1@r[1P[1P[1P[1P[1@u[1@s[1@e[1@r[1@-[1@b[1@e[1P[1P[1@n[1@e[1@t[1@w[1@o[1@r[1@k[1@ 
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+
+--- 8.8.8.8 ping statistics ---
+3 packets transmitted, 0 packets received, 100% packet loss
+a483e7b0c806:ch05 z004h51$ docker port
+"docker port" requires at least 1 and at most 2 arguments.
+See 'docker port --help'.
+
+Usage:  docker port CONTAINER [PRIVATE_PORT[/PROTO]]
+
+List port mappings or a specific mapping for the container
+a483e7b0c806:ch05 z004h51$ docker port[Kdocker run -d -p 8080 --name listeneer[K[Kr alip[K[Kpine:3.8 sleep 300
+2ed12854f1c045f8048b276133be794090b364881a5523af84143ee2b19e22af
+a483e7b0c806:ch05 z004h51$ docker run -d -p 8080 --name listener alpine:3.8 sleep 300[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cport[K listener
+8080/tcp -> 0.0.0.0:32768
+a483e7b0c806:ch05 z004h51$ docker ps
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                     NAMES
+2ed12854f1c0        alpine:3.8          "sleep 300"         28 seconds ago      Up 27 seconds       0.0.0.0:32768->8080/tcp   listener
+0474b8991119        alpine:3.8          "sleep 1d"          23 minutes ago      Up 23 minutes                                 lighthouse
+a483e7b0c806:ch05 z004h51$ docker psort listenerrun -d -p 8080 --name listener alpine:3.8 sleep 300[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cport listener[K
+8080/tcp -> 0.0.0.0:32768
+a483e7b0c806:ch05 z004h51$ docker port listener 8080
+0.0.0.0:32768
+a483e7b0c806:ch05 z004h51$ docker run --rm --hostname barker alpine:38.[K[K.8 nslookup barker
+nslookup: can't resolve '(null)': Name does not resolve
+
+Name:      barker
+Address 1: 172.17.0.2 barker
+a483e7b0c806:ch05 z004h51$ docker run --rm --sn[K[Kdns 8.8.8.8 a;p[K[Klpine:3.8 nslookup docker.com
+
+nslookup: can't resolve '(null)': Name does not resolve
+nslookup: can't resolve 'docker.com': Try again
+a483e7b0c806:ch05 z004h51$ docker run --rm --add-host test:10.10.10.255 alpine:3.8 nslookup test
+
+Name:      test
+Address 1: 10.10.10.255 test
+nslookup: can't resolve '(null)': Name does not resolve
+a483e7b0c806:ch05 z004h51$ docker run --rm --add-host test:10.10.10.255 alpine:3.8 nslookup test 8/[K.8.8.8
+Server:    8.8.8.8
+Address 1: 8.8.8.8 dns.google
+
+Name:      test
+Address 1: 10.10.10.255 test
+a483e7b0c806:ch05 z004h51$ docker run --rm --add-host test:10.10.10.255 alpine:3.8 nslookup test 8.8.8.8[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Pdns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8
+Server:    8.8.8.8
+nslookup: can't resolve 'docker.com': Try again
+Address 1: 8.8.8.8
+
+a483e7b0c806:ch05 z004h51$ docker run --rm --dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[C[C[1@-[C[C[1@-[1@h[1@o[1@s[1@t[1@n[1@a[1@m[1@e[1@ [1@m[1@y[1@c[1@o[1@n[1@t[1@a[1@i[1@n[1@e[1@r[1@ [C[C[1@-[C[C[1@-[1@a[1@d[1@d[C[C[1@-[1@h[1@o[1@s[1@t[1@ [1@d[1@o[1@c[1@k[1@e[1@r[1@.[1@c[1@o[1@m[1@:[1@1[1@2[1@7[1@.[1@0[1@.[1@0[1@.[1@1[1@ [C[C-dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8 [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.88[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ch--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct--dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C --dns 8.8.8.8 alpine:3.8 nslookup docker.com 8.8.8.8[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct--dns 8.8.8.8 alpine:3.8 nslookup docker.c[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce--dns 8.8.8.8 alpine:3.8 nslookup docker.[1@c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs--dns 8.8.8.8 alpine:3.8 nslookup docker[1@.[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct--dns 8.8.8.8 alpine:3.8 nslookup docke[1@r[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C:--dns 8.8.8.8 alpine:3.8 nslookup dock[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1--dns 8.8.8.8 alpine:3.8 nslookup doc[1@k[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0--dns 8.8.8.8 alpine:3.8 nslookup do[1@c[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.--dns 8.8.8.8 alpine:3.8 nslookup d[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1--dns 8.8.8.8 alpine:3.8 nslookup [1@d[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0--dns 8.8.8.8 alpine:3.8 nslookup[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.--dns 8.8.8.8 alpine:3.8 nslooku[1@p[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C1--dns 8.8.8.8 alpine:3.8 nslook[1@u[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C0--dns 8.8.8.8 alpine:3.8 nsloo[1@k[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C.--dns 8.8.8.8 alpine:3.8 nslo[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2--dns 8.8.8.8 alpine:3.8 nsl[C[1@o[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C --dns 8.8.8.8 alpine:3.8 ns[1@l[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nsl[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslo[C[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nsloo[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslook[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslooku[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup d[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup do[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup doc[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup dock[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup docke[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup docker[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Calpine:3.8 nslookup docker.[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat /etc/hosts
+127.0.0.1	localhost
+::1	localhost ip6-localhost ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+127.0.0.1	docker.com
+10.10.10.2	test
+172.17.0.2	mycontainer
+a483e7b0c806:ch05 z004h51$ exit
+
+Script done on Fri Dec 20 13:51:03 2019
