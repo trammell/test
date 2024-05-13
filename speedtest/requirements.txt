@@ -1,1 +1,1 @@
-influxdb_client_3
+influxdb3-python~=0.4.0
