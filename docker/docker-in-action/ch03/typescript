@@ -1,0 +1,486 @@
+Script started on Mon Dec 16 16:02:19 2019
+[?1034ha483e7b0c806:ch03 z004h51$ docker pull busybox:latest
+latest: Pulling from library/busybox
+
+[1A[2K322973677ef5: Pulling fs layer [1B[1A[2K322973677ef5: Downloading     14kB/760.9kB[1B[1A[2K322973677ef5: Downloading  374.4kB/760.9kB[1B[1A[2K322973677ef5: Verifying Checksum [1B[1A[2K322973677ef5: Download complete [1B[1A[2K322973677ef5: Extracting  32.77kB/760.9kB[1B[1A[2K322973677ef5: Extracting  760.9kB/760.9kB[1B[1A[2K322973677ef5: Pull complete [1BDigest: sha256:1828edd60c5efd34b2bf5dd3282ec0cc04d47b2ff9caa0b6d4f07a21d1c08084
+Status: Downloaded newer image for busybox:latest
+docker.io/library/busybox:latest
+a483e7b0c806:ch03 z004h51$ docker save -o mys[Kfile.tar busybox:latest
+a483e7b0c806:ch03 z004h51$ sl[K[Kls -l
+total 2840
+-rw-------  1 z004h51  DHC\Domain Users  1446400 Dec 16 16:02 myfile.tar
+-rw-r--r--  1 z004h51  DHC\Domain Users      770 Dec 16 16:02 typescript
+a483e7b0c806:ch03 z004h51$ docker rmp[Ki busybox
+Untagged: busybox:latest
+Untagged: busybox@sha256:1828edd60c5efd34b2bf5dd3282ec0cc04d47b2ff9caa0b6d4f07a21d1c08084
+Deleted: sha256:b534869c81f05ce6fbbdd3a3293e64fd032e059ab4b28a0e0d5b485cf904be4b
+Deleted: sha256:eac247cb7af5edc34d3620e8bce653d4af7d4e3a0427d487a97530c7fac0b841
+a483e7b0c806:ch03 z004h51$ tar tzf myfile.tar 
+2ec9d8fd000cf6929df9aa7a58b6d872f5588e097d18d91cadc2a08dd563d590/
+2ec9d8fd000cf6929df9aa7a58b6d872f5588e097d18d91cadc2a08dd563d590/VERSION
+2ec9d8fd000cf6929df9aa7a58b6d872f5588e097d18d91cadc2a08dd563d590/json
+2ec9d8fd000cf6929df9aa7a58b6d872f5588e097d18d91cadc2a08dd563d590/layer.tar
+b534869c81f05ce6fbbdd3a3293e64fd032e059ab4b28a0e0d5b485cf904be4b.json
+manifest.json
+repositories
+a483e7b0c806:ch03 z004h51$ docker load -i myfile.tar 
+
+[1A[2Keac247cb7af5: Loading layer  32.77kB/1.437MB[1B[1A[2Keac247cb7af5: Loading layer  294.9kB/1.437MB[1B[1A[2Keac247cb7af5: Loading layer  1.437MB/1.437MB[1B[1A[2Keac247cb7af5: Loading layer  1.437MB/1.437MB[1BLoaded image: busybox:latest
+a483e7b0c806:ch03 z004h51$ docker images
+REPOSITORY                   TAG                   IMAGE ID            CREATED             SIZE
+busybox                      latest                b534869c81f0        12 days ago         1.22MB
+mysql                        5.7                   1e4405fe1ea9        3 weeks ago         437MB
+nginx                        latest                231d40e811cd        3 weeks ago         126MB
+busybox                      1.29                  758ec7f3a1ee        11 months ago       1.15MB
+wordpress                    5.0.0-php7.2-apache   55b751a7663f        12 months ago       423MB
+tutum/lamp                   latest                3d49e175ec00        3 years ago         427MB
+dockerinaction/hello_world   latest                a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch2_mailer    latest                d4bd30aedcdc        4 years ago         2.45MB
+dockerinaction/ch2_agent     latest                dcd74f00ef30        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ git clone https://github.com/dockerins[Kaction/ch3_dockerfile.giy[Kt
+Cloning into 'ch3_dockerfile'...
+remote: Enumerating objects: 7, done.[K
+remote: Counting objects:  14% (1/7)[Kremote: Counting objects:  28% (2/7)[Kremote: Counting objects:  42% (3/7)[Kremote: Counting objects:  57% (4/7)[Kremote: Counting objects:  71% (5/7)[Kremote: Counting objects:  85% (6/7)[Kremote: Counting objects: 100% (7/7)[Kremote: Counting objects: 100% (7/7), done.[K
+remote: Compressing objects:  14% (1/7)[Kremote: Compressing objects:  28% (2/7)[Kremote: Compressing objects:  42% (3/7)[Kremote: Compressing objects:  57% (4/7)[Kremote: Compressing objects:  71% (5/7)[Kremote: Compressing objects:  85% (6/7)[Kremote: Compressing objects: 100% (7/7)[Kremote: Compressing objects: 100% (7/7), done.[K
+remote: Total 7 (delta 0), reused 7 (delta 0), pack-reused 0[K
+Unpacking objects:  14% (1/7)   Unpacking objects:  28% (2/7)   Unpacking objects:  42% (3/7)   Unpacking objects:  57% (4/7)   Unpacking objects:  71% (5/7)   Unpacking objects:  85% (6/7)   Unpacking objects: 100% (7/7)   Unpacking objects: 100% (7/7), done.
+a483e7b0c806:ch03 z004h51$ docker build -t d[K[K dia_ch3/dockerfile:latest ch3_dockerfile/[K
+Sending build context to Docker daemon  61.44kB
+Step 1/5 : FROM busybox:latest
+ ---> b534869c81f0
+Step 2/5 : MAINTAINER dia@allingeek.com
+ ---> Running in 1463d5a0cc54
+Removing intermediate container 1463d5a0cc54
+ ---> 49a36bcd5dd1
+Step 3/5 : ADD demo.sh /demo/
+ ---> 050ff86c8675
+Step 4/5 : WORKDIR /demo/
+ ---> Running in 9344e3fc2f3f
+Removing intermediate container 9344e3fc2f3f
+ ---> ae653747fa5c
+Step 5/5 : CMD ./demo.sh
+ ---> Running in 3bbede170379
+Removing intermediate container 3bbede170379
+ ---> a34b3e732f61
+Successfully built a34b3e732f61
+Successfully tagged dia_ch3/dockerfile:latest
+a483e7b0c806:ch03 z004h51$ cat 
+ch3_dockerfile/ myfile.tar      typescript      
+a483e7b0c806:ch03 z004h51$ cat ch3_dockerfile/
+.git/       Dockerfile  README.md   demo.sh     
+a483e7b0c806:ch03 z004h51$ cat ch3_dockerfile/Dockerfile 
+FROM busybox:latest
+MAINTAINER dia@allingeek.com
+ADD demo.sh /demo/
+WORKDIR /demo/
+CMD ./demo.sh
+a483e7b0c806:ch03 z004h51$ cat ch3_dockerfile/Dockerfile [K[K[K[K[K[K[K[K[K[K[Kdemo.sh 
+#!/bin/sh
+echo This image was built from a Dockerfile
+a483e7b0c806:ch03 z004h51$ ls ch3_dockerfile/
+Dockerfile	README.md	demo.sh
+a483e7b0c806:ch03 z004h51$ ls ch3_dockerfile/[K/README.md 
+ch3_dockerfile/README.md
+a483e7b0c806:ch03 z004h51$ cat !$
+cat ch3_dockerfile/README.md
+Build Instructions
+==================
+First clone the repo and change into the newly created directory. Then run:
+
+    docker build -t dockerinaction/ch3_dockerfile .
+
+After doing so, you will have built the image. To run the example run:
+
+    docker run --rm dockerinaction/ch3_dockerfile 
+a483e7b0c806:ch03 z004h51$ cat ch3_dockerfile/README.mdls ch3_dockerfile/README.md [Kcat ch3_dockerfile/demo.sh [3@Dockerfile[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker build -t dia_ch3/dockerfile:latest ch3_dockerfile[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit clone https://github.com/dockerinaction/ch3_dockerfile.git[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker images[K
+REPOSITORY                   TAG                   IMAGE ID            CREATED              SIZE
+dia_ch3/dockerfile           latest                a34b3e732f61        About a minute ago   1.22MB
+busybox                      latest                b534869c81f0        12 days ago          1.22MB
+mysql                        5.7                   1e4405fe1ea9        3 weeks ago          437MB
+nginx                        latest                231d40e811cd        3 weeks ago          126MB
+busybox                      1.29                  758ec7f3a1ee        11 months ago        1.15MB
+wordpress                    5.0.0-php7.2-apache   55b751a7663f        12 months ago        423MB
+tutum/lamp                   latest                3d49e175ec00        3 years ago          427MB
+dockerinaction/hello_world   latest                a1a9a5ed65e9        4 years ago          2.43MB
+dockerinaction/ch2_mailer    latest                d4bd30aedcdc        4 years ago          2.45MB
+dockerinaction/ch2_agent     latest                dcd74f00ef30        4 years ago          2.45MB
+a483e7b0c806:ch03 z004h51$ docker imagescat ch3_dockerfile/README.mdls ch3_dockerfile/README.md [Kcat ch3_dockerfile/demo.sh [3@Dockerfile[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdocker build -t dia_ch3/dockerfile:latest ch3_dockerfile[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@f[1@l[1@o[1@o[1@p[1@y[1@/[1@f[1@l[1@a[1@p[1@p[1@y
+Sending build context to Docker daemon  61.44kB
+Step 1/5 : FROM busybox:latest
+ ---> b534869c81f0
+Step 2/5 : MAINTAINER dia@allingeek.com
+ ---> Using cache
+ ---> 49a36bcd5dd1
+Step 3/5 : ADD demo.sh /demo/
+ ---> Using cache
+ ---> 050ff86c8675
+Step 4/5 : WORKDIR /demo/
+ ---> Using cache
+ ---> ae653747fa5c
+Step 5/5 : CMD ./demo.sh
+ ---> Using cache
+ ---> a34b3e732f61
+Successfully built a34b3e732f61
+Successfully tagged floopy/flappy:latest
+a483e7b0c806:ch03 z004h51$ docker build -t floopy/flappy:latest ch3_dockerfile[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[K
+REPOSITORY                   TAG                   IMAGE ID            CREATED              SIZE
+dia_ch3/dockerfile           latest                a34b3e732f61        About a minute ago   1.22MB
+floopy/flappy                latest                a34b3e732f61        About a minute ago   1.22MB
+busybox                      latest                b534869c81f0        12 days ago          1.22MB
+mysql                        5.7                   1e4405fe1ea9        3 weeks ago          437MB
+nginx                        latest                231d40e811cd        3 weeks ago          126MB
+busybox                      1.29                  758ec7f3a1ee        11 months ago        1.15MB
+wordpress                    5.0.0-php7.2-apache   55b751a7663f        12 months ago        423MB
+tutum/lamp                   latest                3d49e175ec00        3 years ago          427MB
+dockerinaction/hello_world   latest                a1a9a5ed65e9        4 years ago          2.43MB
+dockerinaction/ch2_mailer    latest                d4bd30aedcdc        4 years ago          2.45MB
+dockerinaction/ch2_agent     latest                dcd74f00ef30        4 years ago          2.45MB
+a483e7b0c806:ch03 z004h51$ docker run -it --rm dockerinaction/ch3_ex2_hunt
+Unable to find image 'dockerinaction/ch3_ex2_hunt:latest' locally
+latest: Pulling from dockerinaction/ch3_ex2_hunt
+Image docker.io/dockerinaction/ch3_ex2_hunt:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+
+[1A[2Ka3ed95caeb02: Already exists [1B
+[1A[2K1db09adb5ddd: Already exists [1B[2A[2Ka3ed95caeb02: Already exists [2B
+[1A[2K9c100fbe0062: Pulling fs layer [1B[3A[2Ka3ed95caeb02: Pulling fs layer [3B
+[1A[2K87ab31c5e204: Pulling fs layer [1B
+[1A[2K461ab2f06946: Pulling fs layer [1B
+[1A[2K834090314475: Pulling fs layer [1B[2A[2K461ab2f06946: Waiting [2B[1A[2K834090314475: Waiting [1B[6A[2Ka3ed95caeb02: Downloading      32B/32B[6B[6A[2Ka3ed95caeb02: Verifying Checksum [6B[6A[2Ka3ed95caeb02: Download complete [6B[3A[2K87ab31c5e204: Downloading     496B/826B[3B[3A[2K87ab31c5e204: Downloading     826B/826B[3B[3A[2K87ab31c5e204: Verifying Checksum [3B[3A[2K87ab31c5e204: Download complete [3B[4A[2K9c100fbe0062: Downloading     482B/8.576kB[4B[4A[2K9c100fbe0062: Downloading  8.576kB/8.576kB[4B[4A[2K9c100fbe0062: Verifying Checksum [4B[4A[2K9c100fbe0062: Download complete [4B[4A[2K9c100fbe0062: Extracting  8.576kB/8.576kB[4B[4A[2K9c100fbe0062: Extracting  8.576kB/8.576kB[4B[4A[2K9c100fbe0062: Pull complete [4B[6A[2Ka3ed95caeb02: Extracting      32B/32B[6B[6A[2Ka3ed95caeb02: Extracting      32B/32B[6B[6A[2Ka3ed95caeb02: Pull complete [6B[3A[2K87ab31c5e204: Extracting     826B/826B[3B[3A[2K87ab31c5e204: Extracting     826B/826B[3B[3A[2K87ab31c5e204: Pull complete [3B[1A[2K834090314475: Downloading     263B/263B[1B[1A[2K834090314475: Verifying Checksum [1B[1A[2K834090314475: Download complete [1B[2A[2K461ab2f06946: Downloading     495B/618B[2B[2A[2K461ab2f06946: Downloading     618B/618B[2B[2A[2K461ab2f06946: Verifying Checksum [2B[2A[2K461ab2f06946: Download complete [2B[2A[2K461ab2f06946: Extracting     618B/618B[2B[2A[2K461ab2f06946: Extracting     618B/618B[2B[2A[2K461ab2f06946: Pull complete [2B[1A[2K834090314475: Extracting     263B/263B[1B[1A[2K834090314475: Extracting     263B/263B[1B[1A[2K834090314475: Pull complete [1BDigest: sha256:671ee5e18d067a7dd4ec4a9540f4572cf01e49b371f2eb1551c2d10e775bdf9e
+Status: Downloaded newer image for dockerinaction/ch3_ex2_hunt:latest
+Thanks for running the Docker in Action Chapter 3 scavenger hunt.
+Enter the password: abc
+Incorrect. Maybe you could find another image that contains the answer?
+a483e7b0c806:ch03 z004h51$ docker run -it --rm dockerinaction/ch3_ex2_huntanswer
+Unable to find image 'dockerinaction/ch3_ex2_huntanswer:latest' locally
+latest: Pulling from dockerinaction/ch3_ex2_huntanswer
+Image docker.io/dockerinaction/ch3_ex2_huntanswer:latest uses outdated schema1 manifest format. Please upgrade to a schema2 image for better future compatibility. More information at https://docs.docker.com/registry/spec/deprecated-schema-v1/
+
+[1A[2Ka3ed95caeb02: Already exists [1B
+[1A[2K1db09adb5ddd: Already exists [1B[2A[2Ka3ed95caeb02: Already exists [2B
+[1A[2K39827757001c: Pulling fs layer [1B[3A[2Ka3ed95caeb02: Pulling fs layer [3B[3A[2Ka3ed95caeb02: Downloading      32B/32B[3B[3A[2Ka3ed95caeb02: Verifying Checksum [3B[3A[2Ka3ed95caeb02: Download complete [3B[1A[2K39827757001c: Downloading     494B/7.691kB[1B[1A[2K39827757001c: Downloading  7.691kB/7.691kB[1B[1A[2K39827757001c: Verifying Checksum [1B[1A[2K39827757001c: Download complete [1B[1A[2K39827757001c: Extracting  7.691kB/7.691kB[1B[1A[2K39827757001c: Extracting  7.691kB/7.691kB[1B[1A[2K39827757001c: Pull complete [1B[3A[2Ka3ed95caeb02: Extracting      32B/32B[3B[3A[2Ka3ed95caeb02: Extracting      32B/32B[3B[3A[2Ka3ed95caeb02: Pull complete [3BDigest: sha256:80ab199bbdcbf8dbdd5ea4ae8c209ff051721a83b9ba8c95dc57ca4f39ea0482
+Status: Downloaded newer image for dockerinaction/ch3_ex2_huntanswer:latest
+faa747bc1a89fbb3e38872ad2c7ca77f918a565c
+a483e7b0c806:ch03 z004h51$ docker run -it --rm dockerinaction/ch3_ex2_huntanswer[K
+Thanks for running the Docker in Action Chapter 3 scavenger hunt.
+Enter the password: faa747bc1a89fbb3e38872ad2c7ca77f918a565c
+Congratulations! You've found the password using Docker Hub and used an interactive container!
+a483e7b0c806:ch03 z004h51$ docker run -it --rm dockerinaction/ch3_ex2_huntanswer[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[K
+REPOSITORY                          TAG                   IMAGE ID            CREATED             SIZE
+dia_ch3/dockerfile                  latest                a34b3e732f61        17 minutes ago      1.22MB
+floopy/flappy                       latest                a34b3e732f61        17 minutes ago      1.22MB
+busybox                             latest                b534869c81f0        12 days ago         1.22MB
+mysql                               5.7                   1e4405fe1ea9        3 weeks ago         437MB
+nginx                               latest                231d40e811cd        3 weeks ago         126MB
+busybox                             1.29                  758ec7f3a1ee        11 months ago       1.15MB
+wordpress                           5.0.0-php7.2-apache   55b751a7663f        12 months ago       423MB
+tutum/lamp                          latest                3d49e175ec00        3 years ago         427MB
+dockerinaction/hello_world          latest                a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_huntanswer   latest                e1a82132d3b2        4 years ago         2.45MB
+dockerinaction/ch3_ex2_hunt         latest                8e90e0f43d12        4 years ago         2.45MB
+dockerinaction/ch2_mailer           latest                d4bd30aedcdc        4 years ago         2.45MB
+dockerinaction/ch2_agent            latest                dcd74f00ef30        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker rmi dcd7
+Untagged: dockerinaction/ch2_agent:latest
+Untagged: dockerinaction/ch2_agent@sha256:85a9dfe1851f6e8bcc8111cb3f14cc8df07eb4221aaa448df0f3fd1ddc485e9b
+Deleted: sha256:dcd74f00ef301023825f58ae50a1aac85df8a364b55df467c926bd66f1a0837d
+Deleted: sha256:1a409a2fcb8a35f021f1b9460ac0778d8231828496fee1893322cf2fc918b90e
+Deleted: sha256:9b1eb50d53c5b09e668c1d7647f27524cb9206a3b488376bda81387e6b173ec4
+Deleted: sha256:90a952d27dba255debb4bcaba5b475ad9fca1cae5f792ea0f462bb3cb2f3cb97
+Deleted: sha256:96a3cf644f8207e17aca221bfa34afd35e57c7cea7dd375de08eecbe7bf0dc7e
+Deleted: sha256:325b567cd784e42042bcb0b7f8e28f92e57500c4e265ef4aef613832ce11697c
+Deleted: sha256:096dc188b58d13ac726aee5bb0b7981e63258d1913145213c9cfd7e32380da26
+Deleted: sha256:61b78decf6081c11293ecd611150a47850b9ff84855f8ba69755bc51c5d7380d
+a483e7b0c806:ch03 z004h51$ docker rmi dcd7[2Pimagesrmi dcd7[2Pimages
+REPOSITORY                          TAG                   IMAGE ID            CREATED             SIZE
+dia_ch3/dockerfile                  latest                a34b3e732f61        17 minutes ago      1.22MB
+floopy/flappy                       latest                a34b3e732f61        17 minutes ago      1.22MB
+busybox                             latest                b534869c81f0        12 days ago         1.22MB
+mysql                               5.7                   1e4405fe1ea9        3 weeks ago         437MB
+nginx                               latest                231d40e811cd        3 weeks ago         126MB
+busybox                             1.29                  758ec7f3a1ee        11 months ago       1.15MB
+wordpress                           5.0.0-php7.2-apache   55b751a7663f        12 months ago       423MB
+tutum/lamp                          latest                3d49e175ec00        3 years ago         427MB
+dockerinaction/hello_world          latest                a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_huntanswer   latest                e1a82132d3b2        4 years ago         2.45MB
+dockerinaction/ch3_ex2_hunt         latest                8e90e0f43d12        4 years ago         2.45MB
+dockerinaction/ch2_mailer           latest                d4bd30aedcdc        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ [5P(reverse-i-search)`':[Cp': docker build -t floopy/flappy:latest ch3_dockerfile[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[24Pu': docker pull busybox:latest[1@l[C[C[C[C[C[C[C[C[C[C[1@l[C[C[C[C[C[C[C[C[C[C[1@a483e7b0c806:ch03 z004h51$[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdockerinaction/ch3_myapp
+Using default tag: latest
+latest: Pulling from dockerinaction/ch3_myapp
+
+[1A[2Kf5d23c7fed46: Pulling fs layer [1B
+[1A[2Keaa7ca9a16a1: Pulling fs layer [1B
+[1A[2Kd7d34b884c95: Pulling fs layer [1B
+[1A[2Kd0f024ff373b: Pulling fs layer [1B
+[1A[2K9384c9efb97d: Pulling fs layer [1B
+[1A[2Ka7e74b426681: Pulling fs layer [1B
+[1A[2K6f1c51bc28c2: Pulling fs layer [1B
+[1A[2Kce0e70589db8: Pulling fs layer [1B
+[1A[2Kdf420ec9fa4c: Pulling fs layer [1B[5A[2K9384c9efb97d: Waiting [5B[4A[2Ka7e74b426681: Waiting [4B[3A[2K6f1c51bc28c2: Waiting [3B[2A[2Kce0e70589db8: Waiting [2B[1A[2Kdf420ec9fa4c: Waiting [1B[7A[2Kd7d34b884c95: Downloading     209B/209B[7B[7A[2Kd7d34b884c95: Verifying Checksum [7B[7A[2Kd7d34b884c95: Download complete [7B[6A[2Kd0f024ff373b: Downloading    530kB/196MB[6B[6A[2Kd0f024ff373b: Downloading  1.595MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  3.725MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  5.855MB/196MB[6B[6A[2Kd0f024ff373b: Downloading   7.46MB/196MB[6B[6A[2Kd0f024ff373b: Downloading   9.59MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  11.72MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  13.32MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  15.45MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  17.58MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  19.71MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  21.84MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  38.57kB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  23.97MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  202.4kB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  25.56MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  661.2kB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  26.63MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  1.415MB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  28.23MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  1.972MB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  30.36MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  2.234MB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  31.95MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading   2.66MB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  34.08MB/196MB[6B[8A[2Keaa7ca9a16a1: Downloading  3.192MB/3.247MB[8B[8A[2Keaa7ca9a16a1: Verifying Checksum [8B[8A[2Keaa7ca9a16a1: Download complete [8B[6A[2Kd0f024ff373b: Downloading  36.21MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  37.81MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  39.42MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  41.56MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  43.18MB/196MB[6B[5A[2K9384c9efb97d: Downloading     483B/540B[5B[6A[2Kd0f024ff373b: Downloading  44.78MB/196MB[6B[5A[2K9384c9efb97d: Download complete [5B[6A[2Kd0f024ff373b: Downloading  46.91MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  49.04MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  51.17MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  53.31MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  55.97MB/196MB[6B[6A[2Kd0f024ff373b: Downloading   58.1MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  60.23MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  62.36MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  64.49MB/196MB[6B[4A[2Ka7e74b426681: Downloading     494B/1.343kB[4B[4A[2Ka7e74b426681: Downloading  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Verifying Checksum [4B[4A[2Ka7e74b426681: Download complete [4B[6A[2Kd0f024ff373b: Downloading  66.62MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  276.1kB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  68.22MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  70.37MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  547.5kB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  72.51MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading   1.12MB/27.09MB[9B[9A[2Kf5d23c7fed46: Downloading  1.405MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  73.58MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  75.18MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  2.243MB/27.09MB[9B[9A[2Kf5d23c7fed46: Downloading  3.357MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  76.78MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  4.742MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  78.38MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  5.586MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  79.98MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  6.428MB/27.09MB[9B[3A[2K6f1c51bc28c2: Downloading     112B/112B[3B[3A[2K6f1c51bc28c2: Verifying Checksum [3B[3A[2K6f1c51bc28c2: Download complete [3B[6A[2Kd0f024ff373b: Downloading  81.59MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  6.985MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  83.19MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  7.822MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  84.78MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  8.682MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  86.38MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  9.517MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  87.45MB/196MB[6B[2A[2Kce0e70589db8: Downloading     483B/548B[2B[9A[2Kf5d23c7fed46: Downloading  10.36MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  87.99MB/196MB[6B[2A[2Kce0e70589db8: Downloading     548B/548B[2B[2A[2Kce0e70589db8: Verifying Checksum [2B[2A[2Kce0e70589db8: Download complete [2B[6A[2Kd0f024ff373b: Downloading  89.59MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  11.19MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading   91.2MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  12.02MB/27.09MB[9B[9A[2Kf5d23c7fed46: Downloading  12.86MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading   92.8MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  13.69MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  94.39MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  96.02MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  14.53MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  97.61MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  15.08MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  99.21MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  15.36MB/27.09MB[9B[1A[2Kdf420ec9fa4c: Downloading     496B/927B[1B[1A[2Kdf420ec9fa4c: Downloading     927B/927B[1B[1A[2Kdf420ec9fa4c: Verifying Checksum [1B[1A[2Kdf420ec9fa4c: Download complete [1B[9A[2Kf5d23c7fed46: Downloading  15.93MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  100.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  102.4MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  16.77MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading    104MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  17.61MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  105.6MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  18.72MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  107.8MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading     19MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  109.9MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  19.56MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading    111MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  20.95MB/27.09MB[9B[9A[2Kf5d23c7fed46: Downloading  21.78MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  112.5MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  22.61MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  114.2MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  114.7MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  23.17MB/27.09MB[9B[9A[2Kf5d23c7fed46: Downloading  24.29MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  115.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  116.8MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  25.41MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  117.9MB/196MB[6B[9A[2Kf5d23c7fed46: Downloading  26.27MB/27.09MB[9B[9A[2Kf5d23c7fed46: Verifying Checksum [9B[9A[2Kf5d23c7fed46: Download complete [9B[6A[2Kd0f024ff373b: Downloading  119.5MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  294.9kB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  121.1MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  4.424MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  122.7MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  8.847MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  124.8MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  12.68MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading    127MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  15.63MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  129.1MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  16.81MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  131.2MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  18.87MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  132.8MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  22.71MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading    135MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  25.07MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  136.1MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  26.25MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  137.7MB/196MB[6B[9A[2Kf5d23c7fed46: Extracting  27.09MB/27.09MB[9B[6A[2Kd0f024ff373b: Downloading  139.8MB/196MB[6B[9A[2Kf5d23c7fed46: Pull complete [9B[8A[2Keaa7ca9a16a1: Extracting  32.77kB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  141.9MB/196MB[6B[8A[2Keaa7ca9a16a1: Extracting  262.1kB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  144.1MB/196MB[6B[8A[2Keaa7ca9a16a1: Extracting  2.916MB/3.247MB[8B[8A[2Keaa7ca9a16a1: Extracting  3.247MB/3.247MB[8B[6A[2Kd0f024ff373b: Downloading  146.2MB/196MB[6B[8A[2Keaa7ca9a16a1: Pull complete [8B[7A[2Kd7d34b884c95: Extracting     209B/209B[7B[7A[2Kd7d34b884c95: Extracting     209B/209B[7B[6A[2Kd0f024ff373b: Downloading  148.4MB/196MB[6B[6A[2Kd0f024ff373b: Downloading    150MB/196MB[6B[7A[2Kd7d34b884c95: Pull complete [7B[6A[2Kd0f024ff373b: Downloading  152.1MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  154.2MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  156.4MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  158.5MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  160.7MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  162.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  164.4MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  166.5MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  168.7MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  170.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  172.9MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  175.1MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  176.7MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  178.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  180.4MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  182.6MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  184.7MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  186.8MB/196MB[6B[6A[2Kd0f024ff373b: Downloading    189MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  191.1MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  193.2MB/196MB[6B[6A[2Kd0f024ff373b: Downloading  195.4MB/196MB[6B[6A[2Kd0f024ff373b: Verifying Checksum [6B[6A[2Kd0f024ff373b: Download complete [6B[6A[2Kd0f024ff373b: Extracting  557.1kB/196MB[6B[6A[2Kd0f024ff373b: Extracting  16.15MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  35.09MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  51.25MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  64.06MB/196MB[6B[6A[2Kd0f024ff373b: Extracting   79.1MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  88.01MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  91.91MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  95.26MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  102.5MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  108.6MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  115.3MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  121.4MB/196MB[6B[6A[2Kd0f024ff373b: Extracting    127MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  132.6MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  139.3MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  152.1MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  158.8MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  177.1MB/196MB[6B[6A[2Kd0f024ff373b: Extracting  193.9MB/196MB[6B[6A[2Kd0f024ff373b: Extracting    196MB/196MB[6B[6A[2Kd0f024ff373b: Pull complete [6B[5A[2K9384c9efb97d: Extracting     540B/540B[5B[5A[2K9384c9efb97d: Extracting     540B/540B[5B[5A[2K9384c9efb97d: Pull complete [5B[4A[2Ka7e74b426681: Extracting  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Extracting  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Pull complete [4B[3A[2K6f1c51bc28c2: Extracting     112B/112B[3B[3A[2K6f1c51bc28c2: Extracting     112B/112B[3B[3A[2K6f1c51bc28c2: Pull complete [3B[2A[2Kce0e70589db8: Extracting     548B/548B[2B[2A[2Kce0e70589db8: Extracting     548B/548B[2B[2A[2Kce0e70589db8: Pull complete [2B[1A[2Kdf420ec9fa4c: Extracting     927B/927B[1B[1A[2Kdf420ec9fa4c: Extracting     927B/927B[1B[1A[2Kdf420ec9fa4c: Pull complete [1BDigest: sha256:2e492fedd50d9d4ef5e8ea92c32795c3f53836199322cb85eafb93c2e139b3f1
+Status: Downloaded newer image for dockerinaction/ch3_myapp:latest
+docker.io/dockerinaction/ch3_myapp:latest
+a483e7b0c806:ch03 z004h51$ docker pull dockerinaction/ch3_myappoapptapphappeapprapp
+Using default tag: latest
+latest: Pulling from dockerinaction/ch3_myotherapp
+
+[1A[2Kf5d23c7fed46: Already exists [1B
+[1A[2Keaa7ca9a16a1: Already exists [1B
+[1A[2Kd7d34b884c95: Already exists [1B
+[1A[2Kd0f024ff373b: Already exists [1B
+[1A[2Kb739d2c7836e: Pulling fs layer [1B
+[1A[2K79f97461601b: Pulling fs layer [1B
+[1A[2K1c2b86e90a51: Pulling fs layer [1B
+[1A[2K57ebdb20c65a: Pulling fs layer [1B
+[1A[2K1558a979f442: Pulling fs layer [1B[2A[2K57ebdb20c65a: Waiting [2B[1A[2K1558a979f442: Waiting [1B[3A[2K1c2b86e90a51: Downloading     112B/112B[3B[3A[2K1c2b86e90a51: Verifying Checksum [3B[3A[2K1c2b86e90a51: Download complete [3B[5A[2Kb739d2c7836e: Downloading     481B/10.3kB[5B[5A[2Kb739d2c7836e: Downloading   10.3kB/10.3kB[5B[5A[2Kb739d2c7836e: Download complete [5B[5A[2Kb739d2c7836e: Extracting   10.3kB/10.3kB[5B[5A[2Kb739d2c7836e: Extracting   10.3kB/10.3kB[5B[5A[2Kb739d2c7836e: Pull complete [5B[1A[2K1558a979f442: Downloading     495B/867B[1B[1A[2K1558a979f442: Downloading     867B/867B[1B[1A[2K1558a979f442: Verifying Checksum [1B[1A[2K1558a979f442: Download complete [1B[2A[2K57ebdb20c65a: Downloading     495B/549B[2B[2A[2K57ebdb20c65a: Downloading     549B/549B[2B[2A[2K57ebdb20c65a: Verifying Checksum [2B[2A[2K57ebdb20c65a: Download complete [2B
+
+
+^C
+a483e7b0c806:ch03 z004h51$ docker pull dockerinaction/ch3_myotherapp
+Using default tag: latest
+latest: Pulling from dockerinaction/ch3_myotherapp
+
+[1A[2Kf5d23c7fed46: Already exists [1B
+[1A[2Keaa7ca9a16a1: Already exists [1B
+[1A[2Kd7d34b884c95: Already exists [1B
+[1A[2Kd0f024ff373b: Already exists [1B
+[1A[2Kb739d2c7836e: Pulling fs layer [1B
+[1A[2K79f97461601b: Pulling fs layer [1B[2A[2Kb739d2c7836e: Downloading     481B/10.3kB[2B[2A[2Kb739d2c7836e: Downloading   10.3kB/10.3kB[2B[2A[2Kb739d2c7836e: Download complete [2B[2A[2Kb739d2c7836e: Extracting   10.3kB/10.3kB[2B[2A[2Kb739d2c7836e: Extracting   10.3kB/10.3kB[2B[2A[2Kb739d2c7836e: Pull complete [2B^C
+a483e7b0c806:ch03 z004h51$ docker pull dockerinaction/ch3_myotherapp[5Pappimages[K
+REPOSITORY                          TAG                   IMAGE ID            CREATED             SIZE
+dia_ch3/dockerfile                  latest                a34b3e732f61        21 minutes ago      1.22MB
+floopy/flappy                       latest                a34b3e732f61        21 minutes ago      1.22MB
+busybox                             latest                b534869c81f0        12 days ago         1.22MB
+mysql                               5.7                   1e4405fe1ea9        3 weeks ago         437MB
+nginx                               latest                231d40e811cd        3 weeks ago         126MB
+dockerinaction/ch3_myapp            latest                0858f7736a46        4 months ago        401MB
+busybox                             1.29                  758ec7f3a1ee        11 months ago       1.15MB
+wordpress                           5.0.0-php7.2-apache   55b751a7663f        12 months ago       423MB
+tutum/lamp                          latest                3d49e175ec00        3 years ago         427MB
+dockerinaction/hello_world          latest                a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_huntanswer   latest                e1a82132d3b2        4 years ago         2.45MB
+dockerinaction/ch3_ex2_hunt         latest                8e90e0f43d12        4 years ago         2.45MB
+dockerinaction/ch2_mailer           latest                d4bd30aedcdc        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker imagespull dockerinaction/ch3_myotherapp[5Pappimages[Krmi dcd7[K[K[K[Ka34b b53 55b 3d4
+Untagged: wordpress:5.0.0-php7.2-apache
+Untagged: wordpress@sha256:871ae0ebe72e7eef309bf2b2b9a33ddaba19410a0b3b487b83a7b0252681659a
+Deleted: sha256:55b751a7663f6d4fdd0d5f3785b0a846868147dceff99dd169f0a33214be3452
+Deleted: sha256:b77cc5ec3211711a89140882f7d03016a1ebe90b7e09cd0296cd83c61e4c5129
+Deleted: sha256:15bbf56783c3047c5c7fac474c734dd2e5b586a8e7431deafd8d3fb54cc1aa6e
+Deleted: sha256:332287f564aee931c7492c5d0a75b9043f58408a595ae06588de2f4079d93c80
+Deleted: sha256:02c151bdce350914856c28f7c6e3ffeb555c2ffb474c84a49f3680117ce1e900
+Deleted: sha256:292d895e724e2e7bbcd53e99b5026f84a201b88018c3199d4cad382b6c0f82ff
+Deleted: sha256:9244534ecdb99e8f88b2cde1a1d12bd2eb6379f7f4be2539c724caebc81bdb97
+Deleted: sha256:157d3ef9be7015482d804a7bf6d61fd1921a1fb925510b799a0b6a40d24e2524
+Deleted: sha256:20775c61c3861783ba724a4dcf880d0d13eff639318a054fcf67561c9afb1d7a
+Deleted: sha256:e7bacdb49dffefd002958037d4947a6f88ce93ddd24c8142cf36541e0b446b0a
+Deleted: sha256:4653c4db5d5711ad80b5db1ab5add674368dfeaa969d7133591c5e75de16e44d
+Deleted: sha256:a3fb42337848a3f10cf22cdfbdc3f3302834dce1273a42eee08f03d87ac556dc
+Deleted: sha256:c28002c6361685939ac90359cd2a2fa7d00e0f9167f296faba6a6f1db2accf0e
+Deleted: sha256:65f9a3bc538043c685e4d96ea8b975a4c4023109a284096f9cc063b83de4ebff
+Deleted: sha256:66c3921bae0a85a26ad35c2432b15b256e184d30e108306c83deec03f3514294
+Deleted: sha256:d22fa61d3c16004d6ac33d1ab1b03139433375b8427fd81222baff8bd9c4927a
+Deleted: sha256:5e16161993d29f75ba030368b49b6ae0793e6022f115070e7116f1a9707a2e1e
+Deleted: sha256:76e96d6d15a0b6608b4646a15ac7258028ebee1828b5122e1ddbc317f0ab9110
+Deleted: sha256:7ec6ba7709d4f96109012e4b85020b07de97500bb046f482979758d52f1d6318
+Deleted: sha256:ef68f6734aa485edf13a8509fe60e4272428deaf63f446a441b79d47fc5d17d3
+Untagged: tutum/lamp:latest
+Untagged: tutum/lamp@sha256:d332e7e97606ac6407b0ba9ae9e9383c89d7e04c6f4853332e98f7d326408329
+Deleted: sha256:3d49e175ec00e715e738fac12412be23dac3e3d5bd718ca9e45ee3d2b963704c
+Deleted: sha256:7ddfcbcfcf7afcb5d48bf5715079d215983fc1d8992e8cacb27a1c02454f16f3
+Deleted: sha256:e9c646fc6b21797879d7200b0bd30f520107e0cfd81b9a5c90b20a421f2f162b
+Deleted: sha256:9a994cd02363098307d237b4c30e77af987a7bf131385b945282c726510c6b3a
+Deleted: sha256:fe775652bb65164e5620f50d561eaf3bfb99ae7668a0796ca1173d04e77b4bcd
+Deleted: sha256:cce24556a3654308e5c1b7223845a7a2e886c981da83e024febe5481ac6345a4
+Deleted: sha256:2c8de1897e4065c2f6d8f23b32e7ab0a7a7d171cf722002c2555a073d500997a
+Deleted: sha256:c01e9b68abce68db4a344b8b397bda7d086c512907e93885535c62e97de6828b
+Deleted: sha256:2a7c3e27b88d4e91d4e1d08ea4cd8438d780014963d8f3115299ed295a6ce970
+Deleted: sha256:ffd65963cb3e9c9db522413382c3b19d40e9ac56966962c2ed760019f3b5b40e
+Deleted: sha256:247a2184f8cfe17080b6a397851bc0c6f78ef8ca3f12f74d7886a484250e1c59
+Deleted: sha256:fcaf782c12005f5f63dfa5abd8d49df69b8d9cd9a065e76ca41270f3df95ca56
+Deleted: sha256:71761d7331712895e5033095534152ca2713be7147aa0415d7632e7e55ac902d
+Deleted: sha256:d16afa56f6dd6f0ffad83e3dab63456300774a83c32a8d4ef4697649efccd30b
+Deleted: sha256:318b5d6981881c4b68f83aab9e91400105ee20fdf0962a3682a43c3a688c1796
+Deleted: sha256:8605118a0a24fb580f328ccfa115d86ca97d5e3945626ee7a12b26d2502dd999
+Deleted: sha256:32196a6a54798a0c9161bf5f4df7240c69b52d3f19ac19f5a54277a5c7713316
+Deleted: sha256:ca63695aaf19c2858bdc0e8d6e4383eec08f2cac089d3c51c0d839c68ec7ba30
+Deleted: sha256:bb043559508d9f6fb056ec0f678b5c23afe1332ac4fadbb982066ec5783fd182
+Deleted: sha256:cffc76de072f9a396146d441e0ef8b2b112f678cf8367d62daf8fc710c850bfa
+Deleted: sha256:7f017c10a6f68f4533e0ad951f19680c6af67ee92a2bb3d8f7867f21e3548c31
+Deleted: sha256:ee950b0564f9a1a1f7cd66fbaa90a0c31f2d9416c782cad6afdf8b5e1e75a90d
+Deleted: sha256:134c6c1dedde243aebb02b34dc826b582b87535a4b41503fcd208108ad550d5a
+Deleted: sha256:947a3e7125fffa10ed14c49c9dccdcfd64aef816c4affa8d5d2b57ae7a2e8b6d
+Deleted: sha256:5fdb9f26c74d68049527b951ad0cd2a50893d41f5fbf2f2042ec6c592445c2f1
+Deleted: sha256:37b9c1ff87ee1d64a110df0a092c262219382c009d86ae4cc84433f6cb29e7cb
+Deleted: sha256:8698b31c92d5cf4ee37154fc560516040f372bd45707c3161be479443970d8a2
+Error response from daemon: conflict: unable to delete a34b3e732f61 (must be forced) - image is referenced in multiple repositories
+Error response from daemon: conflict: unable to delete b534869c81f0 (cannot be forced) - image has dependent child images
+a483e7b0c806:ch03 z004h51$ docker rmi a34b b53 55b 3d4[C[1@-[1@f[1@ 
+Untagged: dia_ch3/dockerfile:latest
+Untagged: floopy/flappy:latest
+Deleted: sha256:a34b3e732f614e2626ec5613559b7df8abfb2aa3e266740dc4790956bc323e64
+Deleted: sha256:ae653747fa5c7b403834fd1cc0d4b7dbcfcc02ce3d95397f733043f83f134e81
+Deleted: sha256:050ff86c86758a7982516e379b63ea68d87fbcfecf18698fd842b00f63aaa83b
+Deleted: sha256:b43b8f764bde951cd4bc37810997acffff65bf56f08d4265ad0746a3b0f7cc77
+Deleted: sha256:49a36bcd5dd1a2275c57333050b9503731f0f249585f3533ec2d3afbd9f6a935
+Untagged: busybox:latest
+Deleted: sha256:b534869c81f05ce6fbbdd3a3293e64fd032e059ab4b28a0e0d5b485cf904be4b
+Deleted: sha256:eac247cb7af5edc34d3620e8bce653d4af7d4e3a0427d487a97530c7fac0b841
+Error: No such image: 55b
+Error: No such image: 3d4
+a483e7b0c806:ch03 z004h51$ docker rmi -f a34b b53 55b 3d4[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[K
+REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
+mysql                               5.7                 1e4405fe1ea9        3 weeks ago         437MB
+nginx                               latest              231d40e811cd        3 weeks ago         126MB
+dockerinaction/ch3_myapp            latest              0858f7736a46        4 months ago        401MB
+busybox                             1.29                758ec7f3a1ee        11 months ago       1.15MB
+dockerinaction/hello_world          latest              a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_huntanswer   latest              e1a82132d3b2        4 years ago         2.45MB
+dockerinaction/ch3_ex2_hunt         latest              8e90e0f43d12        4 years ago         2.45MB
+dockerinaction/ch2_mailer           latest              d4bd30aedcdc        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker imagesrmi -f a34b b53 55b 3d4[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K1e44
+Untagged: mysql:5.7
+Untagged: mysql@sha256:5779c71a4730da36f013a23a437b5831198e68e634575f487d37a0639470e3a8
+Deleted: sha256:1e4405fe1ea9e45247b512b578d5563e70fef24889ca6fa01336b4c05ddf2dc3
+Deleted: sha256:6c1f0bd364c236676b089c7e0e681f525c9bda54a2756a5414086846aadd5b2a
+Deleted: sha256:8edbd8112bf7941fc923b38fba627953f7f7bf4c87d958c2aff32d118fde09a0
+Deleted: sha256:c6f708b845d4fe1d1199e6c5c3f59ddfa141464d69d954f233db7c15c565c90f
+Deleted: sha256:133e1235076c3b02c5e8b8ff2a64f478929e6b5908fc51a123c53337b6b5c94d
+Deleted: sha256:716f31b2e8d6601d02f6b47152ae5014c53c1239bfc46fce1dae97e6c332e94c
+Deleted: sha256:b931154d48fa379790de00f12cb8ef69c4a2a0de1503a12de6524b13d4d81e15
+Deleted: sha256:23564e7a9d5d1538f334f9a6b05b8c5f140356a83fe818c3a2e60903196263e8
+Deleted: sha256:47bd75b99433b84ea120085de92e11cc2a77664be8be33db10542443dbb888e2
+Deleted: sha256:4122ef4cce751f9a349611026d962d7eefedea9af10939fe90b1d49670bb72bb
+Deleted: sha256:de2a383a7557d4bc8388ec86422dd01be3b1413dc55ee3f5e82342a226274392
+Deleted: sha256:99b5261d397c75b1de2c91f0c89f4e6f287248669b72de6cb143e82ea67ad056
+a483e7b0c806:ch03 z004h51$ docker rmi -f 1e44[5Pimages
+REPOSITORY                          TAG                 IMAGE ID            CREATED             SIZE
+nginx                               latest              231d40e811cd        3 weeks ago         126MB
+dockerinaction/ch3_myapp            latest              0858f7736a46        4 months ago        401MB
+busybox                             1.29                758ec7f3a1ee        11 months ago       1.15MB
+dockerinaction/hello_world          latest              a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_huntanswer   latest              e1a82132d3b2        4 years ago         2.45MB
+dockerinaction/ch3_ex2_hunt         latest              8e90e0f43d12        4 years ago         2.45MB
+dockerinaction/ch2_mailer           latest              d4bd30aedcdc        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker imagesrmi -f 1e44[K[K[K[Kd4b e1a 085
+Untagged: dockerinaction/ch2_mailer:latest
+Untagged: dockerinaction/ch2_mailer@sha256:a6937a6871ecf9d96d93ae77863d07efb5f35d1523d67590f5be43e9c5f8c9dc
+Deleted: sha256:d4bd30aedcdcf95cda3b5c115796a75b4646d5c98c53391e5158e533bedca1dc
+Deleted: sha256:9decfc33cb1c891bb6df0e5f739f652145580e38eba0e54033562ed534fecbf1
+Deleted: sha256:40b123980b6b1c4efae502d1a8f6fbd1bb47cc5f2a3eb380bf837c64805602dc
+Deleted: sha256:127b4ea0077dbce349a9500be8e493eb3a072d2e0ce2d4ffa10dfa8699710ee5
+Deleted: sha256:00cc94ddf37d96fc446379ae0a0d7d5d48058fbc907367664c4c28bd5e294118
+Deleted: sha256:29868bb882018f72f53027673c9238bd9f255577cb57cd73901e9212fd00bada
+Deleted: sha256:4f7d3643870e8003b3f8d0d671d03303bb9287c9284a2f952b9a2d1c468089db
+Deleted: sha256:e1b3e0698ab03ad19cbd65fb7d9018deb886ae495bae8c35a0a97826b15e0bb9
+Deleted: sha256:096d31e49b4e017738e0ad477180d9329356957e7a03faab13bd9b7e8c4b4a5d
+Untagged: dockerinaction/ch3_ex2_huntanswer:latest
+Untagged: dockerinaction/ch3_ex2_huntanswer@sha256:80ab199bbdcbf8dbdd5ea4ae8c209ff051721a83b9ba8c95dc57ca4f39ea0482
+Deleted: sha256:e1a82132d3b2bf37db1008bd30106dc6b1646f51a7fe9c05bc82516672e9ad4d
+Deleted: sha256:d4bbe88871ff841d28b3186b59f5db40b2f274590dab748447a1103dd12cf746
+Deleted: sha256:1404bf5fbc107779978aab61c33ca3403b2faf8860a5d3a2f351780fced0509f
+Untagged: dockerinaction/ch3_myapp:latest
+Untagged: dockerinaction/ch3_myapp@sha256:2e492fedd50d9d4ef5e8ea92c32795c3f53836199322cb85eafb93c2e139b3f1
+Deleted: sha256:0858f7736a46812e9c9497e80e3910a0da289d5adae3f326e286ca6d5d17d357
+Deleted: sha256:9d82415d5dd6eb130f7e31a63b0a1fe4ee0211695a9107e99e31d6f52317f3c0
+Deleted: sha256:56e5a73ed823387ff13046553f77b15e95cb46688de5904d1856617d19cfb7be
+Deleted: sha256:c084037b4ce41eedf0587475136e089f87e91241b8bfbb802f75256c1fd7e326
+Deleted: sha256:4bc56a53687e59d4d1ef77582cbcaabefdb54324ad96cee6dd72db3ddabe1b70
+Deleted: sha256:ca9440f8b97b5a921636f79bd92cff411d87ded7ebae8854457b2026f744004e
+a483e7b0c806:ch03 z004h51$ docker rmi -f d4b e1a 085[12Pimages
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+nginx                         latest              231d40e811cd        3 weeks ago         126MB
+busybox                       1.29                758ec7f3a1ee        11 months ago       1.15MB
+dockerinaction/hello_world    latest              a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_hunt   latest              8e90e0f43d12        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker imagesrmi -f d4b e1a 085[12Pimagesrmi -f 1e44[5Pimagesrmi -f a34b b53 55b 3d4[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[Kpull dockerinaction/ch3_myotherapp[5Papp
+Using default tag: latest
+latest: Pulling from dockerinaction/ch3_myapp
+
+[1A[2Kf5d23c7fed46: Already exists [1B
+[1A[2Keaa7ca9a16a1: Already exists [1B
+[1A[2Kd7d34b884c95: Already exists [1B
+[1A[2Kd0f024ff373b: Already exists [1B
+[1A[2K9384c9efb97d: Pulling fs layer [1B
+[1A[2Ka7e74b426681: Pulling fs layer [1B
+[1A[2K6f1c51bc28c2: Pulling fs layer [1B
+[1A[2Kce0e70589db8: Pulling fs layer [1B
+[1A[2Kdf420ec9fa4c: Pulling fs layer [1B[2A[2Kce0e70589db8: Waiting [2B[1A[2Kdf420ec9fa4c: Waiting [1B[3A[2K6f1c51bc28c2: Waiting [3B[4A[2Ka7e74b426681: Downloading     485B/1.343kB[4B[5A[2K9384c9efb97d: Downloading     483B/540B[5B[5A[2K9384c9efb97d: Downloading     540B/540B[5B[5A[2K9384c9efb97d: Verifying Checksum [5B[5A[2K9384c9efb97d: Download complete [5B[5A[2K9384c9efb97d: Extracting     540B/540B[5B[5A[2K9384c9efb97d: Extracting     540B/540B[5B[4A[2Ka7e74b426681: Downloading  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Verifying Checksum [4B[4A[2Ka7e74b426681: Download complete [4B[5A[2K9384c9efb97d: Pull complete [5B[4A[2Ka7e74b426681: Extracting  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Extracting  1.343kB/1.343kB[4B[4A[2Ka7e74b426681: Pull complete [4B[2A[2Kce0e70589db8: Downloading     483B/548B[2B[2A[2Kce0e70589db8: Downloading     548B/548B[2B[2A[2Kce0e70589db8: Verifying Checksum [2B[2A[2Kce0e70589db8: Download complete [2B[3A[2K6f1c51bc28c2: Downloading     112B/112B[3B[3A[2K6f1c51bc28c2: Verifying Checksum [3B[3A[2K6f1c51bc28c2: Download complete [3B[3A[2K6f1c51bc28c2: Extracting     112B/112B[3B[3A[2K6f1c51bc28c2: Extracting     112B/112B[3B[3A[2K6f1c51bc28c2: Pull complete [3B[2A[2Kce0e70589db8: Extracting     548B/548B[2B[2A[2Kce0e70589db8: Extracting     548B/548B[2B[2A[2Kce0e70589db8: Pull complete [2B[1A[2Kdf420ec9fa4c: Downloading     486B/927B[1B[1A[2Kdf420ec9fa4c: Downloading     927B/927B[1B[1A[2Kdf420ec9fa4c: Verifying Checksum [1B[1A[2Kdf420ec9fa4c: Download complete [1B[1A[2Kdf420ec9fa4c: Extracting     927B/927B[1B[1A[2Kdf420ec9fa4c: Extracting     927B/927B[1B[1A[2Kdf420ec9fa4c: Pull complete [1BDigest: sha256:2e492fedd50d9d4ef5e8ea92c32795c3f53836199322cb85eafb93c2e139b3f1
+Status: Downloaded newer image for dockerinaction/ch3_myapp:latest
+docker.io/dockerinaction/ch3_myapp:latest
+a483e7b0c806:ch03 z004h51$ docker pull dockerinaction/ch3_myappimages[Krmi -f d4b e1a 085[12Pimagesrmi -f 1e44[5Pimagesrmi -f a34b b53 55b 3d4[3P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages[Kpull dockerinaction/ch3_myotherapp
+Using default tag: latest
+latest: Pulling from dockerinaction/ch3_myotherapp
+
+[1A[2Kf5d23c7fed46: Already exists [1B
+[1A[2Keaa7ca9a16a1: Already exists [1B
+[1A[2Kd7d34b884c95: Already exists [1B
+[1A[2Kd0f024ff373b: Already exists [1B
+[1A[2Kb739d2c7836e: Already exists [1B
+[1A[2K79f97461601b: Pulling fs layer [1B^C
+a483e7b0c806:ch03 z004h51$ docker pull dockerinaction/ch3_myotherapp[5Pappimages[K -a
+REPOSITORY                    TAG                 IMAGE ID            CREATED             SIZE
+nginx                         latest              231d40e811cd        3 weeks ago         126MB
+dockerinaction/ch3_myapp      latest              0858f7736a46        4 months ago        401MB
+busybox                       1.29                758ec7f3a1ee        11 months ago       1.15MB
+dockerinaction/hello_world    latest              a1a9a5ed65e9        4 years ago         2.43MB
+dockerinaction/ch3_ex2_hunt   latest              8e90e0f43d12        4 years ago         2.45MB
+a483e7b0c806:ch03 z004h51$ docker images -apull dockerinaction/ch3_myotherapp[5Pappimages[Krmi -f d4b e1a 085 231 085 758 a1a 8e9
+Untagged: dockerinaction/ch3_myapp:latest
+Untagged: dockerinaction/ch3_myapp@sha256:2e492fedd50d9d4ef5e8ea92c32795c3f53836199322cb85eafb93c2e139b3f1
+Deleted: sha256:0858f7736a46812e9c9497e80e3910a0da289d5adae3f326e286ca6d5d17d357
+Deleted: sha256:9d82415d5dd6eb130f7e31a63b0a1fe4ee0211695a9107e99e31d6f52317f3c0
+Deleted: sha256:56e5a73ed823387ff13046553f77b15e95cb46688de5904d1856617d19cfb7be
+Deleted: sha256:c084037b4ce41eedf0587475136e089f87e91241b8bfbb802f75256c1fd7e326
+Deleted: sha256:4bc56a53687e59d4d1ef77582cbcaabefdb54324ad96cee6dd72db3ddabe1b70
+Deleted: sha256:ca9440f8b97b5a921636f79bd92cff411d87ded7ebae8854457b2026f744004e
+Untagged: nginx:latest
+Untagged: nginx@sha256:50cf965a6e08ec5784009d0fccb380fc479826b6e0e65684d9879170a9df8566
+Deleted: sha256:231d40e811cd970168fb0c4770f2161aa30b9ba6fe8e68527504df69643aa145
+Deleted: sha256:dc8adf8fa0fc82a56c32efac9d0da5f84153888317c88ab55123d9e71777bc62
+Deleted: sha256:77fcff986d3b13762e4777046b9210a109fda20cb261bd3bbe5d7161d4e73c8e
+Deleted: sha256:831c5620387fb9efec59fc82a42b948546c6be601e3ab34a87108ecf852aa15f
+Untagged: busybox:1.29
+Untagged: busybox@sha256:8ccbac733d19c0dd4d70b4f0c1e12245b5fa3ad24758a11035ee505c629c0796
+Deleted: sha256:758ec7f3a1ee85f8f08399b55641bfb13e8c1109287ddc5e22b68c3d653152ee
+Deleted: sha256:23bc2b70b2014dec0ac22f27bb93e9babd08cdd6f1115d0c955b9ff22b382f5a
+Untagged: dockerinaction/hello_world:latest
+Untagged: dockerinaction/hello_world@sha256:cfebf86139a3b21797765a3960e13dee000bcf332be0be529858fca840c00d7f
+Deleted: sha256:a1a9a5ed65e9083dce88ada93a3290b08af9b44a27930e4bdad4da59d728c911
+Deleted: sha256:94d2256953fb45ae6d71b09c840b42b490b8437c318d2ccc624f23aae1fa52f6
+Untagged: dockerinaction/ch3_ex2_hunt:latest
+Untagged: dockerinaction/ch3_ex2_hunt@sha256:671ee5e18d067a7dd4ec4a9540f4572cf01e49b371f2eb1551c2d10e775bdf9e
+Deleted: sha256:8e90e0f43d12323a9b8964bc99781307b23f76e2fafb36d23a9f727f9ea61ada
+Deleted: sha256:47e7318d8243a4aa26286fe331ffb650cd6244f64e3be2f36468ba2c6ee18e97
+Deleted: sha256:e23d19aac6305174fcf9b0220be07f947fde7c80a02692c3b9913bce7a5e2e08
+Deleted: sha256:68d713b0c46ea9d08b215e0352877b7a03f87af7ca8b21a78581f7d9b1aedebf
+Deleted: sha256:b592a54fd3e377bb44bb2dbdd00087075b213a3d286a45bf4a1c7572a0d16efd
+Deleted: sha256:a4ebc1394b6d91384667e4fafe3fd03d228fba5180675602085905ac2bca9a3b
+Deleted: sha256:5d0727d170749df798738b01773d63a2c8bf595175a8f2dd34f947b3ac303a5f
+Deleted: sha256:069848330b9bbdf10dfe0889af0df0d3fb198dea1506aa0cb407b8319b05ba73
+Deleted: sha256:1a22c6462844ec4c40a854d696a7d532a3d946546986701c6a520649818dfc7f
+Deleted: sha256:be0afd7c222710fd2d083bf77227b607cb57490f9b9b0b74c91402c49f2eaef6
+Deleted: sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef
+Error: No such image: d4b
+Error: No such image: e1a
+Error: No such image: 085
+a483e7b0c806:ch03 z004h51$ docker rmi -f d4b e1a 085 231 085 758 a1a 8e9[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cimages -a[K
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+a483e7b0c806:ch03 z004h51$ info
+[?1h=[?1049h[H[2J[27;1HWelcome to Info version 4.8. Type ? for help, m for menu item.[1;1HFile: dir       Node: Top       This is the top of the INFO tree[2;1H  This (the Directory node) gives a menu of major topics. [3;1H  Typing "d" returns here, "q" exits, "?" lists all INFO commands, "h" [4;1H  gives a primer for first-timers, "mEmacs<Return>" visits the Emacs topic,[5;1H  etc.[6;1H  In Emacs, you can click mouse button 2 on a menu item or cross reference[7;1H  to select it.[8;1H  --- PLEASE ADD DOCUMENTATION TO THIS TREE. (See INFO topic first.) ---[10;1H* Menu: The list of major topics begins on the next line.[12;1HEmacs[13;1H* Ada mode: (ada-mode). The GNU Emacs mode for editing Ada.[14;1H* Autotype: (autotype). Convenient features for text that you enter frequently[15;1H                          in Emacs.[16;1H* CC Mode: (ccmode).   Emacs mode for editing C, C++, Objective-C,[17;1H                          Java, Pike, and IDL code.[18;1H* CL: (cl).             Partial Common Lisp support for Emacs Lisp.[19;1H* Dired-X: (dired-x).   Dired Extra Features.[20;1H* EUDC: (eudc).   A client for directory servers (LDAP, PH)[21;1H* Ebrowse: (ebrowse).   A C++ class browser for Emacs.[22;1H* Ediff: (ediff).       A visual interface for comparing and merging programs.[23;1H* Emacs: (emacs).       The extensible self-documenting text editor.[24;1H* Emacs FAQ: (efaq).    Frequently Asked Questions about Emacs.[25;1H* Emacs MIME: (emacs-mime).   The MIME de/composition library.[26;1H[7m-----Info: (dir)Top, 157 lines --Top----------------------------------------------------------------------[0m[1;1H[27;1H[K[27;1H[K[?1l>[?1049la483e7b0c806:ch03 z004h51$ ls -l
+total 2944
+drwxr-xr-x  6 z004h51  DHC\Domain Users      192 Dec 16 16:06 ch3_dockerfile
+-rw-------  1 z004h51  DHC\Domain Users  1446400 Dec 16 16:02 myfile.tar
+-rw-r--r--  1 z004h51  DHC\Domain Users    55160 Dec 16 16:47 typescript
+a483e7b0c806:ch03 z004h51$ pinfo
+bash: pinfo: command not found
+a483e7b0c806:ch03 z004h51$ brew install[K[K[K[K[K[K[K[K[K[K[K[Kbrew search info
+[33mWarning:[0m Cask 'goatify' is unreadable: undefined method `method_missing_message' for Utils:Module
+[34m==>[0m [1mFormulae[0m
+clinfo               ipinfo               libosinfo            mp3info              [1mshared-mime-info [32m✔[0m[0m
+inform6              jpeginfo             media-info           pinfo                texinfo
+
+[34m==>[0m [1mCasks[0m
+bdinfo               cpuinfo              inform               mediainfo            pdfinfo
+a483e7b0c806:ch03 z004h51$ exit
+
+Script done on Tue Dec 17 09:22:25 2019

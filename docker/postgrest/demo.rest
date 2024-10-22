@@ -1,0 +1,13 @@
+
+
+GET localhost:3000
+
+
+
+
+
+###
+
+
+GET localhost:8080/application
+

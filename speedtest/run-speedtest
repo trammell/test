@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source ~/Library/Credentials/speedtest/influxdata.sh
+
+pushd /home/jotr/src/github.com/trammell/test/speedtest
+
+python3.11 speedtest.py
+
+
