@@ -10,7 +10,6 @@ from influxdb_client_3 import InfluxDBClient3, Point
 
 
 
-TOKEN = os.environ["INFLUXDATA_PAT"]
 
 
 
@@ -50,54 +49,30 @@ def get_results() -> Tuple[float, float, float, float, float]:
 
 
 def persist(latency: float, jitter: float, download: float, upload: float, duration: float):
-    measurement = {
-        "measurement": "speedtest",
-        "tags": {
-            "host": "furby",
-        },
-        "fields" : {
-            "latency": latency,
-            "jitter": jitter,
-            "download": download,
-            "upload": upload,
-        },
-    }
-    client = InfluxDBClient3(token=TOKEN,
+    client = InfluxDBClient3(token=os.environ["INFLUXDATA_PAT"],
                              host="https://us-east-1-1.aws.cloud2.influxdata.com",
                              org="network",
                              database="speedtest")
-
-    pt = (Point("measurement").tag("location", "meowmeownet").tag("host", "furby")
-          .field("latency", latency).field("jitter",jitter))
-
-    client.write(pt)
-
-
-
-def _timestamp() -> str:
-    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-
-def main():
-    """
-
-    """
-    latency, jitter, download, upload, duration = get_results()
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(f'{timestamp} {latency=}s {jitter=}s {download=}b/s {upload=}b/s {duration=}s')
-    persist(latency, jitter, download, upload, duration)
+    p = (Point("measurement").tag("location", "meowmeownet").tag("host", "furby")
+         .field("latency", latency).field("jitter",jitter))
+    client.write(p)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-n", "--dry-run", action="store_true",
+    parser.add_argument("-s", "--skip-speedtest", action="store_true",
                         help="Don't actually run the speed test (use dummy values).")
+    parser.add_argument("-n", "--dry-run", action="store_true",
+                        help="Don't persist the speed test results.")
     args = parser.parse_args()
-    if args.dry_run:
-        latency, jitter, download, upload, duration = (0.01, 0.001, 500001, 500002, 1.5)
-        timestamp = _timestamp()
-        print(f'{timestamp} {latency=}s {jitter=}s {download=}b/s {upload=}b/s {duration=}s')
-        persist(latency, jitter, download, upload, duration)
-    else:
-        main()
 
+    if args.skip_speedtest:
+        latency, jitter, download, upload, duration = (0.01, 0.001, 500001, 500002, 9.8)
+    else:
+        latency, jitter, download, upload, duration = get_results()
+
+    ts = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f'{ts} {latency=}s {jitter=}s {download=}b/s {upload=}b/s {duration=}s')
+
+    if not args.dry_run:
+        persist(latency, jitter, download, upload, duration)
