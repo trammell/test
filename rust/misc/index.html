@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="bootstrap.min.css">
+<title>Rust and WebAssembly</title>
+<script src="utils.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>Rust and WebAssembly</h1>
+2 + 3 = <span id="sum"></span>.
+</div>
+<script>
+fetchAndInstantiate('add.wasm').then(function(instance) {
+var add = instance.exports.add(2,3);
+var sum_elt = document.getElementById('sum');
+sum_elt.innerText=add;
+});
+</script>
+</body>
+</html>
