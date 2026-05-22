@@ -1,0 +1,1 @@
+/Users/tram0004/Documents/Code/trammell/test/rust/hello-wasm-bindgen/target/wasm32-unknown-unknown/release/hello_wasm_bindgen.wasm: /Users/tram0004/Documents/Code/trammell/test/rust/hello-wasm-bindgen/src/lib.rs
