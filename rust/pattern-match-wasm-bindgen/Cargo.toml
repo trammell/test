@@ -1,0 +1,23 @@
+[package]
+name = "pattern-match-wasm-bindgen"
+version = "0.1.0"
+edition = "2024"
+description = "Rust / bindgen experiments"
+repository = "https://github.com/trammell/test/rust/pattern-match-wasm-bindgen"
+license = "GPL"
+
+[dependencies]
+wasm-bindgen = "0.2.122"
+
+[dependencies.web-sys]
+version = "0.3.99"
+features = [
+  "Document",
+  "HtmlElement",
+  "Window",
+  "Node",
+  "Element"
+]
+
+[lib]
+crate-type = ["cdylib", "rlib"]
