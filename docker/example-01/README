@@ -1,0 +1,20 @@
+  136  ls -al
+  137  mkdir docker
+  138  cd docker/
+  139  ls -al
+  140  git init
+  141  sl -al
+  142  ls -al
+  143  mkdir example-01
+  144  cd example-01
+  145  ls -la
+  146  vi Dockerfile
+  147  ls -la
+  148  docker build -t hw .
+  149  docker ps -l
+  150  docker ps
+  151  docker ps -a
+  152  docker run --rm hw
+  153  ls -al
+  154  history | tail 20 > README
+  155  history | tail -20 > README
